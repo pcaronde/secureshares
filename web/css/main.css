@@ -1,0 +1,221 @@
+body {
+        background: url(../img/background.png); 
+	background-repeat: no-repeat;
+	background-position:center; 
+}
+
+div#content {
+	margin:0 auto;
+	width: 80%;
+	font: 20px normal georgia, sans-serif;
+	text-indent:20px;
+        padding:50px 0 0 0;
+}
+
+div#h1 {
+	margin:0 auto;
+	text-align: center;
+	font: 48px normal georgia, sans-serif;
+
+        padding:50px 0 0 0;
+}
+
+div#h2 {
+	margin:0 auto;
+	text-align: center;
+	font: 28px normal georgia, sans-serif;
+
+        padding:50px 0 0 0;
+}
+
+table { width: 75%; align:center; margin: 80px; border-collapse: collapse; }
+
+td { padding: .3em; border: 1px #96c7ff solid; text-align: center; }
+
+th { padding: .3em; border: 1px #96c7ff solid; background: #bdd2e9;}
+
+thead { background: #bdd2e9; } 
+
+p {
+margin-top : 0;
+text-align : justify;
+}
+
+h2 {
+	margin:0 auto;
+	text-align: center;
+	font: 38px normal georgia, sans-serif;
+	color: #7d775c;
+        padding:50px 0 0 0;
+}
+
+h3 {
+	font : italic normal 1.4em georgia, sans-serif;
+	letter-spacing : 1px;
+	margin-bottom : 0;
+	color : #7d775c;
+}
+
+a:link {
+	font-weight : bold;
+	text-decoration : none;
+	color : #b7a5df;
+<!-- } -->
+
+a:visited {
+	font-weight : bold;
+	text-decoration : none;
+	color : #d4cddc;
+}
+
+a:hover, a:active {
+	text-decoration : underline;
+	color : #9685ba;
+}
+	acronym {
+	border-bottom : none;
+}
+#container {
+background : url(/001/zen-bg.jpg) no-repeat left top;
+padding : 0 175px 0 110px;
+margin : 0;
+position : relative;
+}
+#intro {
+min-width : 470px;
+width : 100%;
+}
+#pageHeader h1 {
+
+margin-top : 10px;
+display : block;
+width : 219px;
+height : 87px;
+float : left;
+}
+#pageHeader h1 span {
+display : none;
+}
+#pageHeader h2 {
+<!--background : transparent url(/001/h2.gif) no-repeat left top;-->
+margin-top : 28px;
+margin-bottom : 40px;
+
+align: center;
+}
+#pageHeader h2 span {
+display : none;
+}
+#pageHeader {
+padding-top : 20px;
+height : 87px;
+}
+#quickSummary {
+clear : both;
+margin : 20px 20px 20px 10px;
+width : 160px;
+float : left;
+}
+#quickSummary p {
+font : italic 1.1em/2.2 georgia;
+text-align : center;
+}
+#preamble {
+clear : right;
+padding : 0 10px 0 10px;
+}
+#supportingText {
+padding-left : 10px;
+margin-bottom : 40px;
+}
+#footer {
+text-align : center;
+}
+#footer a:link, #footer a:visited {
+margin-right : 20px;
+}
+#linkList {
+margin-left : 600px;
+position : absolute;
+top : 0;
+right : 0;
+}
+#linkList2 {
+font : 10px verdana, sans-serif;
+<!--background : transparent url(/001/paper-bg.jpg) repeat-y left top;-->
+padding : 10px;
+margin-top : 150px;
+
+width : 130px;
+}
+#linkList h3.select {
+background : transparent url(/001/h3.gif) no-repeat left top;
+margin : 10px 0 5px 0;
+width : 97px;
+height : 16px;
+}
+#linkList h3.select span {
+display : none;
+}
+#linkList h3.favorites {
+background : transparent url(/001/h4.gif) no-repeat left top;
+margin : 25px 0 5px 0;
+width : 60px;
+height : 18px;
+}
+#linkList h3.favorites span {
+display : none;
+}
+#linkList h3.archives {
+background : transparent url(/001/h5.gif) no-repeat left top;
+margin : 25px 0 5px 0;
+width : 57px;
+height : 14px;
+}
+#linkList h3.archives span {
+display : none;
+}
+#linkList h3.resources {
+background : transparent url(/001/h6.gif) no-repeat left top;
+margin : 25px 0 5px 0;
+width : 63px;
+height : 10px;
+}
+#linkList h3.resources span {
+display : none;
+}
+
+#extraDiv1 {
+background : transparent url(/001/cr2.gif) no-repeat left top;
+position : absolute;
+top : 40px;
+right : 0;
+width : 148px;
+height : 110px;
+}
+.accesskey {
+text-decoration : underline;
+} 
+
+#header {
+	height: 130px;
+}
+
+#centreposition {
+	padding-right: 20px;
+	padding-left: 22%;
+	background-color: #FFFFF7;
+}
+
+/* The centrecontent style is set up for a 2 column layout.  
+If you want a 3 column layout then change the centreposition style like this:   padding-right: 200px; 
+<div id="right"> Write the content for your right hand column inside an id-"right" div like this </div> 
+*/
+
+#centrecontent {
+	z-index: 100;
+	min-width: 1px;
+	background-color: #FFFFFF;
+	border: 1px solid #999999;
+	padding: 10px;
+}
