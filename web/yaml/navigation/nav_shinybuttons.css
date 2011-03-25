@@ -10,8 +10,8 @@
  * @link            http://www.yaml.de
  * @package         yaml
  * @version         3.3
- * @revision        $Revision: 1.1 $
- * @lastmodified    $Date: 2011/03/24 21:24:38 $
+ * @revision        $Revision: 1.2 $
+ * @lastmodified    $Date: 2011/03/25 07:35:46 $
  */
 
 @media all
@@ -33,6 +33,7 @@
     border-top:1px #333 solid;
     border-bottom:1px #333 solid;
     line-height:0;
+    font: Helvetica, Arial, sans-serif;
   }
 
   .hlist ul {
