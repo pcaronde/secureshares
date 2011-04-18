@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+    <Resource
+          auth="Container"
+          driverClassName="com.mysql.jdbc.Driver"
+          maxActive="4"
+          maxIdle="2"
+          maxWait="5000"
+          name="jdbc/ewops"
+          password="##db.pwd##"
+          type="javax.sql.DataSource"
+          url="jdbc:mysql://localhost:3306/securedshares?connectTimeout=5000&amp;socketTimeout=8000&amp;useUsageAdvisor=false"
+          username="##db.user##"
+          validationQuery="select 1"
+          testOnBorrow="true"
+          testWhileIdle="true"
+          timeBetweenEvictionRunsMillis="3600000"
+          numTestsPerEvictionRun="5"
+          minEvictableIdleTimeMillis="600000"/>
+
+    <Realm className="org.apache.catalina.realm.JDBCRealm"
+           connectionName="##db.user##"
+           connectionPassword="##db.pwd##"
+           connectionURL="jdbc:mysql://localhost:3306/securedshares?connectTimeout=5000&amp;socketTimeout=8000&amp;useUsageAdvisor=false"
+           digest="md5"
+           driverName="com.mysql.jdbc.Driver"
+           roleNameCol="rolename"
+           userCredCol="password"
+           userNameCol="username"
+           userRoleTable="roles"
+           userTable="users"/>
+
+</Context>
