@@ -19,6 +19,11 @@
     <property name="dbfile" value="${root}/db/securedshares.sql"/>
     <property name="applet" value="${name}.applet.-1.0"/>
 
+    <propertyset id="project">
+        <propertyref prefix="${ENV}"/>
+        <mapper type="glob" from="${ENV}*" to="ENV*"/>
+    </propertyset>
+
 
     <path id="classpath">
         <pathelement path="${java.class.path}"/>
@@ -95,16 +100,16 @@
                 <include name="META-INF/*.xml"/>
             </fileset>
         </copy>
-        <replace file="${web}/META-INF/context.xml" token="##db.user##" value="${db.user}"/>
-        <replace file="${web}/META-INF/context.xml" token="##db.pwd##" value="${db.pwd}"/>
 
-<!--
         <replace file="${web}/META-INF/context.xml" propertyfile="conf/project.properties">
             <replacefilter
-                token="##OUTGOING_MAIL_SERVER##"
-                property="${ENV}.OUTGOING_MAIL_SERVER"/>
+                token="##db.user##"
+                property="${ENV}.DB.USER"/>
+            <replacefilter
+                token="##db.pwd##"
+                property="${ENV}.DB.PASSWORD"/>
         </replace>
--->
+
     </target>
 
     <target name="applet" depends="init">
@@ -135,8 +140,8 @@
     <target name="dbexport">
         <exec executable="mysqldump">
             <arg value="-u"/>
-            <arg value="${db.user}"/>
-            <arg value="-p${db.pwd}"/>
+            <arg value="${DEV.DB.USER}"/>
+            <arg value="-p${DEV.DB.PASSWORD}"/>
             <arg value="-B"/>
             <arg value="${dbname}"/>
             <arg value="-r"/>
@@ -150,8 +155,8 @@
         <exec executable="mysql" input="${dbfile}">
             <arg value="--default-character-set=utf8"/>
             <arg value="-u"/>
-            <arg value="${db.user}"/>
-            <arg value="-p${db.pwd}"/>
+            <arg value="${DEV.DB.USER}"/>
+            <arg value="-p${DEV.DB.PASSWORD}"/>
         </exec>
     </target>
 
