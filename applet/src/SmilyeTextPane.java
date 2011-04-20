@@ -15,7 +15,7 @@ import java.awt.event.MouseMotionListener;
 import java.util.StringTokenizer;
 import java.util.regex.Pattern;
 
-public class SmilyeTextPane extends JTextPane implements MouseMotionListener,MouseListener
+public class SmilyeTextPane extends JTextPane implements MouseMotionListener, MouseListener
 {
     private ActionListener clickOnWebLinkAction;
     private boolean antialiasing;
@@ -320,14 +320,4 @@ public class SmilyeTextPane extends JTextPane implements MouseMotionListener,Mou
         return clickOnWebLinkAction;
     }
 
-    public static void main(String[] args)
-    {
-        SmilyeTextPane st = new SmilyeTextPane( true );
-        JFrame fr = new JFrame();
-        fr.getContentPane().add( new JScrollPane( st ));
-        fr.pack();
-        st.append("asde d :) dnmawsida");
-        fr.setDefaultCloseOperation(3);
-        fr.setVisible( true );
-    }
 }
