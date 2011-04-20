@@ -18,11 +18,13 @@
     <property name="dbfile" value="${root}/db/securedshares.sql"/>
     <property name="applet" value="${name}.applet-1.0"/>
 
-    <propertyset id="project">
-        <propertyref prefix="${ENV}"/>
-        <mapper type="glob" from="${ENV}*" to="ENV*"/>
-    </propertyset>
-
+    <macrodef name="propertycopy">
+        <attribute name="name"/>
+        <attribute name="from"/>
+        <sequential>
+            <property name="@{name}" value="${@{from}}"/>
+        </sequential>
+    </macrodef>
 
     <path id="classpath">
         <pathelement path="${java.class.path}"/>
@@ -151,10 +153,12 @@
     <!-- ============================================================== -->
 
     <target name="dbexport">
+        <propertycopy name="ENV.DB.USER" from="${ENV}.DB.USER"/>
+        <propertycopy name="ENV.DB.PASSWORD" from="${ENV}.DB.PASSWORD"/>
         <exec executable="mysqldump">
             <arg value="-u"/>
-            <arg value="${DEV.DB.USER}"/>
-            <arg value="-p${DEV.DB.PASSWORD}"/>
+            <arg value="${ENV.DB.USER}"/>
+            <arg value="-p${ENV.DB.PASSWORD}"/>
             <arg value="-B"/>
             <arg value="${dbname}"/>
             <arg value="-r"/>
@@ -165,11 +169,13 @@
     </target>
 
     <target name="dbimport">
+        <propertycopy name="ENV.DB.USER" from="${ENV}.DB.USER"/>
+        <propertycopy name="ENV.DB.PASSWORD" from="${ENV}.DB.PASSWORD"/>
         <exec executable="mysql" input="${dbfile}">
             <arg value="--default-character-set=utf8"/>
             <arg value="-u"/>
-            <arg value="${DEV.DB.USER}"/>
-            <arg value="-p${DEV.DB.PASSWORD}"/>
+            <arg value="${ENV.DB.USER}"/>
+            <arg value="-p${ENV.DB.PASSWORD}"/>
         </exec>
     </target>
 
