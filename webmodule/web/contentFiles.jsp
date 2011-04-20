@@ -31,30 +31,6 @@
             </object>
             <!-- <![endif]-->
         </object>
-        <%--<noscript>A browser with JavaScript enabled is required for this page to operate properly.</noscript>
-        <script type="text/javascript">
-            // check if current JRE version is greater than 1.6.0
-            //alert("versioncheck " + deployJava.versionCheck('1.6.0_10+'));
-            if (deployJava.versionCheck('1.6.0_10+') == false) {
-                userInput = confirm("You need the latest Java(TM) Runtime Environment. Would you like to update now?");
-                if (userInput == true) {
-                    // Set deployJava.returnPage to make sure user comes back to
-                    // your web site after installing the JRE
-                    deployJava.returnPage = location.href;
-                    // install latest JRE or redirect user to another page to get JRE from.
-                    deployJava.installLatestJRE();
-                }
-            }
-            <!-- applet id can be used to get a reference to the applet object -->
-            var attributes = { id:'myApplet',
-                code:'ro.panzo.securedshares.Upload',
-                archive:'secured-shares.applet-1.0.jar',
-                width:400,
-                height:300 };
-            //var parameters = {jnlp_href: 'filebrowser.jnlp'};
-            var parameters = {};
-            deployJava.runApplet(attributes, parameters, '1.6');
-        </script>--%>
     </div>
 
     <br/>
@@ -62,19 +38,13 @@
     <h3 id="securefiles">Availability</h3>
 
     <div id="content" style="text-indent:0px;">
-        <INPUT type="radio" name="one-time" align="left"> Single download
-        <br/>
-        <INPUT type="radio" name="one-hour" align="left"> One Hour
-        <br/>
-        <INPUT type="radio" name="one-day" align="left"> One Day
-        <br/>
-        <INPUT type="radio" name="one-week" align="left"> One Week
-        <br/>
-        <INPUT type="radio" name="disabled" align="left"> Disable download
-        <br/>
+        <input type="radio" name="downloadtype" align="left" checked="checked"> Single download<br/>
+        <input type="radio" name="downloadtype" align="left"> One Hour<br/>
+        <input type="radio" name="downloadtype" align="left"> One Day<br/>
+        <input type="radio" name="downloadtype" align="left"> One Week<br/>
+        <input type="radio" name="downloadtype" align="left"> Disable download<br/>
     </div>
     <br/>
-</div>
 </div>
 <br/>
 <br/><br/><br/>
