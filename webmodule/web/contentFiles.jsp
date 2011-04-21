@@ -22,12 +22,14 @@
             <param name="id" value="myApplet"/>
             <param name="code" value="ro.panzo.securedshares.Upload"/>
             <param name="archive" value="secured-shares.applet-1.0.jar"/>
+            <param name="cache_option" value="No">
             <!--[if !IE]> -->
             <object width="400" height="300" type="application/x-java-applet">
                 <param name="codebase_lookup" value="false">
                 <param name="id" value="myApplet"/>
                 <param name="code" value="ro.panzo.securedshares.Upload"/>
                 <param name="archive" value="secured-shares.applet-1.0.jar"/>
+                <param name="cache_option" value="No">
             </object>
             <!-- <![endif]-->
         </object>
