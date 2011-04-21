@@ -74,7 +74,80 @@
     <favorites_list name="secure-shares" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="index.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webmodule/web/index.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="16" selection-start="975" selection-end="975" vertical-scroll-proportion="-5.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="basemod.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webmodule/web/css/basemod.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="44" column="0" selection-start="1634" selection-end="1634" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="remoteBrowser.jsp" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/webmodule/web/remoteBrowser.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="60" selection-start="238" selection-end="245" vertical-scroll-proportion="0.21472393">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="contentFiles.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webmodule/web/contentFiles.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="4" selection-start="48" selection-end="48" vertical-scroll-proportion="-1.875">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Upload.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/applet/src/ro/panzo/securedshares/Upload.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="188" column="84" selection-start="7048" selection-end="7065" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SFTPPutTask.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/applet/src/ro/panzo/securedshares/util/SFTPPutTask.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="20" selection-start="568" selection-end="568" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jqueryFileTree.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webmodule/web/jqueryFileTree.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webmodule/web/yaml/core/base.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="180" column="30" selection-start="5412" selection-end="5412" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -88,22 +161,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/javamodule/src/ro/panzo/securedshares/db/DBManager.java" />
-        <option value="$PROJECT_DIR$/javamodule/src/ro/panzo/securedshares/servlet/Action.java" />
-        <option value="$PROJECT_DIR$/webmodule/web/index.jsp" />
-        <option value="$PROJECT_DIR$/applet/src/SmilyeTextPane.java" />
         <option value="$PROJECT_DIR$/applet/src/ro/panzo/securedshares/SmilyeTextPane.java" />
         <option value="$PROJECT_DIR$/webmodule/web/contentUsers.jsp" />
         <option value="$PROJECT_DIR$/applet/src/ro/panzo/securedshares/util/MyProgressMonitor.java" />
         <option value="$PROJECT_DIR$/applet/src/ro/panzo/securedshares/util/UploadProgressMonitor.java" />
         <option value="$PROJECT_DIR$/applet/src/ro/panzo/securedshares/util/SFTPutil.java" />
         <option value="$PROJECT_DIR$/build.xml" />
-        <option value="$PROJECT_DIR$/webmodule/web/contentFiles.jsp" />
         <option value="$PROJECT_DIR$/applet/src/com/jcraft/jsch/Session.java" />
         <option value="$PROJECT_DIR$/applet/src/ro/panzo/securedshares/util/SFTPUtil.java" />
         <option value="$PROJECT_DIR$/applet/src/ro/panzo/securedshares/util/UploadUserInfo.java" />
         <option value="$PROJECT_DIR$/applet/src/ro/panzo/securedshares/Upload.java" />
         <option value="$PROJECT_DIR$/applet/src/ro/panzo/securedshares/util/SFTPPutTask.java" />
+        <option value="$PROJECT_DIR$/webmodule/web/contentFiles.jsp" />
+        <option value="$PROJECT_DIR$/webmodule/web/yaml/core/base.css" />
+        <option value="$PROJECT_DIR$/webmodule/web/css/basemod.css" />
+        <option value="$PROJECT_DIR$/webmodule/web/index.jsp" />
+        <option value="$PROJECT_DIR$/webmodule/web/remoteBrowser.jsp" />
       </list>
     </option>
   </component>
@@ -156,6 +229,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Favorites" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -299,74 +373,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="securedshares" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="servlet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="secure-shares" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="secure-shares" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javamodule" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="panzo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="securedshares" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="secure-shares" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="secure-shares" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javamodule" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="panzo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="securedshares" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -518,7 +524,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Favorites" />
       <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
@@ -538,9 +543,9 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -548,9 +553,9 @@
       <recent name="ro.panzo.securedshares" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/webmodule/web" />
       <recent name="$PROJECT_DIR$/webmodule/web/css" />
       <recent name="$PROJECT_DIR$/webmodule/web/js" />
-      <recent name="$PROJECT_DIR$/webmodule/web" />
     </key>
   </component>
   <component name="RunManager" selected="Applet.Upload">
@@ -663,17 +668,6 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
-      <JSDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSDebuggerConfigurationSettings>
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" />
       <module name="" />
@@ -697,6 +691,17 @@
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
         <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
@@ -773,22 +778,22 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="25" width="1280" height="974" extended-state="6" />
-    <editor active="false" />
+    <frame x="0" y="25" width="1366" height="718" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32810616" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24878049" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32809773" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24848025" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39927623" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32810616" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32809773" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32902735" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33252034" sideWeight="0.67189384" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33206686" sideWeight="0.67190224" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32810616" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -857,114 +862,99 @@
     </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/build.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="120" column="36" selection-start="4337" selection-end="4337" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/applet/src/sftp/SFTP.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="5" selection-start="308" selection-end="1429" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webmodule/web/contentFiles.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="54" selection-start="1524" selection-end="1524" vertical-scroll-proportion="-17.041666">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/applet/src/com/jcraft/jsch/UserAuthPublicKey.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="0" selection-start="1883" selection-end="1883" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/applet/src/com/jcraft/jsch/JSch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="298" column="0" selection-start="11080" selection-end="11080" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/applet/src/com/jcraft/jsch/UserAuth.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="25" selection-start="2226" selection-end="2226" vertical-scroll-proportion="0.7378277">
-          <folding />
-        </state>
+        <state line="45" column="25" selection-start="2226" selection-end="2226" vertical-scroll-proportion="0.7378277" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/applet/src/com/jcraft/jsch/UserAuthPassword.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="113" column="10" selection-start="3796" selection-end="3796" vertical-scroll-proportion="0.19600499">
-          <folding />
-        </state>
+        <state line="113" column="10" selection-start="3796" selection-end="3796" vertical-scroll-proportion="0.19600499" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/applet/src/com/jcraft/jsch/UIKeyboardInteractive.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="30" selection-start="1615" selection-end="1615" vertical-scroll-proportion="0.5992509">
-          <folding />
-        </state>
+        <state line="32" column="30" selection-start="1615" selection-end="1615" vertical-scroll-proportion="0.5992509" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/applet/src/com/jcraft/jsch/UserAuthKeyboardInteractive.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="21" selection-start="2857" selection-end="2857" vertical-scroll-proportion="0.32352942">
-          <folding />
-        </state>
+        <state line="71" column="21" selection-start="2857" selection-end="2857" vertical-scroll-proportion="0.32352942" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/applet/src/com/jcraft/jsch/Session.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="452" column="14" selection-start="13813" selection-end="13813" vertical-scroll-proportion="0.827957">
-          <folding />
-        </state>
+        <state line="452" column="14" selection-start="13813" selection-end="13813" vertical-scroll-proportion="0.827957" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/applet/src/com/jcraft/jsch/ChannelSftp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2307" column="14" selection-start="66856" selection-end="66856" vertical-scroll-proportion="0.33333334">
-          <folding />
-        </state>
+        <state line="2307" column="14" selection-start="66856" selection-end="66856" vertical-scroll-proportion="0.33333334" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/applet/src/sftp/MyUserInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="13" selection-start="29" selection-end="29" vertical-scroll-proportion="0.056179777">
+        <state line="3" column="13" selection-start="29" selection-end="29" vertical-scroll-proportion="0.056179777" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/applet/src/ro/panzo/securedshares/util/UploadUserInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="5" selection-start="885" selection-end="885" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webmodule/web/jqueryFileTree.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/applet/src/ro/panzo/securedshares/util/SFTPPutTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="20" selection-start="568" selection-end="568" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/applet/src/ro/panzo/securedshares/Upload.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="203" column="41" selection-start="7965" selection-end="7965" vertical-scroll-proportion="0.40962288">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="188" column="84" selection-start="7048" selection-end="7065" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/applet/src/ro/panzo/securedshares/util/UploadUserInfo.java">
+    <entry file="file://$PROJECT_DIR$/webmodule/web/contentFiles.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="5" selection-start="885" selection-end="885" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="3" column="4" selection-start="48" selection-end="48" vertical-scroll-proportion="-1.875">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/applet/src/ro/panzo/securedshares/util/SFTPPutTask.java">
+    <entry file="file://$PROJECT_DIR$/webmodule/web/yaml/core/base.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="717" selection-end="717" vertical-scroll-proportion="0.12223667">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="180" column="30" selection-start="5412" selection-end="5412" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webmodule/web/css/basemod.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="0" selection-start="1634" selection-end="1634" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webmodule/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="16" selection-start="975" selection-end="975" vertical-scroll-proportion="-5.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webmodule/web/remoteBrowser.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="60" selection-start="238" selection-end="245" vertical-scroll-proportion="0.21472393">
+          <folding />
         </state>
       </provider>
     </entry>
