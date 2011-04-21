@@ -74,95 +74,7 @@
     <favorites_list name="secure-shares" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="UploadUserInfo.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/applet/src/ro/panzo/securedshares/util/UploadUserInfo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="5" selection-start="885" selection-end="885" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SFTPPutTask.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/applet/src/ro/panzo/securedshares/util/SFTPPutTask.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="0" selection-start="717" selection-end="717" vertical-scroll-proportion="0.1">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Upload.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/applet/src/ro/panzo/securedshares/Upload.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="203" column="41" selection-start="7965" selection-end="7965" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserAuthKeyboardInteractive.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/applet/src/com/jcraft/jsch/UserAuthKeyboardInteractive.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="21" selection-start="2857" selection-end="2857" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Session.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/applet/src/com/jcraft/jsch/Session.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="452" column="14" selection-start="13813" selection-end="13813" vertical-scroll-proportion="-24.64">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MyUserInfo.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/applet/src/sftp/MyUserInfo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="13" selection-start="29" selection-end="29" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserAuthPassword.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/applet/src/com/jcraft/jsch/UserAuthPassword.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="113" column="10" selection-start="3796" selection-end="3796" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserAuth.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/applet/src/com/jcraft/jsch/UserAuth.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="25" selection-start="2226" selection-end="2226" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UIKeyboardInteractive.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/applet/src/com/jcraft/jsch/UIKeyboardInteractive.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="30" selection-start="1615" selection-end="1615" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -862,7 +774,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1280" height="974" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -876,7 +788,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33252034" sideWeight="0.67189384" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33252034" sideWeight="0.67189384" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32810616" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -982,35 +894,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/applet/src/com/jcraft/jsch/UserAuth.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="25" selection-start="2226" selection-end="2226" vertical-scroll-proportion="0.0">
+        <state line="45" column="25" selection-start="2226" selection-end="2226" vertical-scroll-proportion="0.7378277">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/applet/src/com/jcraft/jsch/UserAuthPassword.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="113" column="10" selection-start="3796" selection-end="3796" vertical-scroll-proportion="0.0">
+        <state line="113" column="10" selection-start="3796" selection-end="3796" vertical-scroll-proportion="0.19600499">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/applet/src/com/jcraft/jsch/UIKeyboardInteractive.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="30" selection-start="1615" selection-end="1615" vertical-scroll-proportion="0.0">
+        <state line="32" column="30" selection-start="1615" selection-end="1615" vertical-scroll-proportion="0.5992509">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/applet/src/com/jcraft/jsch/UserAuthKeyboardInteractive.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="21" selection-start="2857" selection-end="2857" vertical-scroll-proportion="0.0">
+        <state line="71" column="21" selection-start="2857" selection-end="2857" vertical-scroll-proportion="0.32352942">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/applet/src/com/jcraft/jsch/Session.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="452" column="14" selection-start="13813" selection-end="13813" vertical-scroll-proportion="-24.64">
+        <state line="452" column="14" selection-start="13813" selection-end="13813" vertical-scroll-proportion="0.827957">
           <folding />
         </state>
       </provider>
@@ -1024,14 +936,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/applet/src/sftp/MyUserInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="13" selection-start="29" selection-end="29" vertical-scroll-proportion="0.0">
+        <state line="3" column="13" selection-start="29" selection-end="29" vertical-scroll-proportion="0.056179777">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/applet/src/ro/panzo/securedshares/Upload.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="203" column="41" selection-start="7965" selection-end="7965" vertical-scroll-proportion="0.0">
+        <state line="203" column="41" selection-start="7965" selection-end="7965" vertical-scroll-proportion="0.40962288">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1049,7 +961,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/applet/src/ro/panzo/securedshares/util/SFTPPutTask.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="717" selection-end="717" vertical-scroll-proportion="0.1">
+        <state line="24" column="0" selection-start="717" selection-end="717" vertical-scroll-proportion="0.12223667">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

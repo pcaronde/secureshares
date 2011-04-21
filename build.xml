@@ -132,11 +132,11 @@
                 storepass="secretupload"
                 dname="CN=PCConsultants, OU=Cologne Division, O=PCConsultants.de, C=DE"
                 validity="3650"
-                keystore="${build}/uploadstore.ks"/>
+                keystore="${build}/applet/uploadstore.ks"/>
         <signjar jar="${dist}/applet/${applet}.jar"
                 alias="uploadapplet"
                 storepass="secretupload"
-                keystore="${build}/uploadstore.ks"/>
+                keystore="${build}/applet/uploadstore.ks"/>
         <copy todir="${web}">
             <fileset dir="${dist}/applet">
                 <include name="${applet}.jar"/>
