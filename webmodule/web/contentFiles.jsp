@@ -1,16 +1,6 @@
 <h2>Manage Files</h2>
 
 <div id="container">
-    <h3>Secure Files</h3>
-    <ul type="disc">
-        <li><b>-rw-r--r-- secure_user users 4.6K 2011-03-11 12:20 admin.wav</b></li>
-        <li><b>-rw-r--r-- secure_user users 5.6K 2011-03-14 12:06 my_movie.mpg</b></li>
-        <li><b>-rw-r--r-- secure_user users 4.7K 2011-03-14 12:02 help.zip</b></li>
-        <li><b>-rw-r--r-- secure_user users 5.6K 2011-03-14 12:01 pix.tar.gz</b></li>
-
-    </ul>
-    <br/>
-
     <h3 id="secureuploads">Secure Uploads</h3>
 
     <div id="upload" style="text-indent:0px;">

@@ -5,12 +5,28 @@
 <title>Secure Shares</title>
     <link rel="stylesheet" type="text/css" href="css/menu.css"  />
     <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.filetree.css">
     <link href="css/my_layout.css" rel="stylesheet" type="text/css" />
     <!--[if lte IE 7]>
     <link href="css/patch_my_layout.css" rel="stylesheet" type="text/css" />
     <![endif]-->
     <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery.filetree.js"></script>
     <script type="text/javascript" src="http://www.java.com/js/deployJava.js"></script>
+
+    <style type="text/css">
+    .panel {
+        width: 400px;
+        height: 400px;
+        border-top: solid 1px #BBB;
+        border-left: solid 1px #BBB;
+        border-bottom: solid 1px #FFF;
+        border-right: solid 1px #FFF;
+        background: #FFF;
+        overflow: scroll;
+        padding: 5px;
+    }
+</style>
 </head>
 <%
     if ("yes".equals(request.getParameter("logout"))) {
@@ -63,10 +79,13 @@
             </ul>
           </div>
         </div>
+        <div id="col2">
+          <div id="col2_content" class="clearfix">
+
+          </div>
+        </div>
         <div id="col3">
           <div id="col3_content" class="clearfix">
-            <!-- add your content here -->
-
 
           </div>
           <!-- IE Column Clearing -->
@@ -84,6 +103,7 @@
     gotoUsers=function(){
         $.get('contentUsers.jsp', function(data){
           $('#col3_content').html(data);
+          $('#col2_content').html("");
        });
     }
 
@@ -91,11 +111,15 @@
         $.get('contentFiles.jsp', function(data){
           $('#col3_content').html(data);
        });
+        $.get('remoteBrowser.jsp', function(data){
+          $('#col2_content').html(data);
+       });
     }
 
     gotoHome=function(){
         $.get('contentHome.jsp', function(data){
           $('#col3_content').html(data);
+          $('#col2_content').html("");
        });
     }
 
