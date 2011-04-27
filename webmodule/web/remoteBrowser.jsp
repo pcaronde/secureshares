@@ -8,7 +8,6 @@
 
     showTree=function(){
         $('#fileTreeRemote').fileTree({ root: '/home/guesftp/securedrepository', script: 'jqueryFileTree.jsp', multiFolder: false }, function(file) {
-        //$('#fileTreeRemote').fileTree({ root: '/home/cticu/securedrepository', script: 'jqueryFileTree.jsp', multiFolder: false }, function(file) {
             alert(file);
         });
     }
