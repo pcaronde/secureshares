@@ -29,5 +29,5 @@
            userNameCol="username"
            userRoleTable="roles"
            userTable="users"/>
-
+    <Environment name="REPOSITORY" type="java.lang.String" value="##REPOSITORY##" description="secureshares repository"/>
 </Context>

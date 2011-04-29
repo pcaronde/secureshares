@@ -1,13 +1,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="java.io.File,java.io.FilenameFilter,java.util.Arrays" %>
+<%@ page import="ro.panzo.secureshares.util.Util" %>
 <%
-    /**
-     * jQuery File Tree JSP Connector
-     * Version 1.0
-     * Copyright 2008 Joshua Gould
-     * 21 April 2008
-     */
-    String base = "/home/cticu";
+    String base = Util.getInstance().getEnviromentValue("REPOSITORY");
     String dir = request.getParameter("dir");
     if (dir == null) {
         return;
