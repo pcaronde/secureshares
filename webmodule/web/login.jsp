@@ -3,6 +3,7 @@
 
   <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
   <link rel="stylesheet" type="text/css" href="css/main.css" />
+  <script type="text/javascript" src="js/jquery.js"></script>
   <title>secure shares</title>
 
 </head>
@@ -32,7 +33,7 @@
     </tr>
     <tr>
         <td>Your email address:</td>
-        <td><input type="text" name="j_username" value="" size="20" maxlength="45"></td>
+        <td><input type="text" id="username" name="j_username" value="" size="20" maxlength="45"></td>
     </tr>
     <tr>
         <td>Your password:</td>
@@ -67,5 +68,9 @@
 <br/>or visit: <A href="http://www.pcconsultants.de">www.pcconsultants.de</A>
 </DIV>
 <br>
-
+<script type="text/javascript">
+    $(function(){
+        $('#username').focus();
+    });
+</script>
 </body></html>

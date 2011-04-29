@@ -109,6 +109,9 @@
             <replacefilter
                 token="##db.pwd##"
                 property="${ENV}.DB.PASSWORD"/>
+            <replacefilter
+                token="##REPOSITORY##"
+                property="${ENV}.REPOSITORY"/>
         </replace>
 
     </target>

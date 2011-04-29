@@ -75,10 +75,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="jqueryFileTree.jsp" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="jqueryFileTree.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webmodule/web/jqueryFileTree.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="67" selection-start="263" selection-end="263" vertical-scroll-proportion="0.10619469">
+            <state line="4" column="67" selection-start="263" selection-end="263" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webmodule/web/index.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="4" selection-start="509" selection-end="568" vertical-scroll-proportion="-3.25">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.jsp" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/webmodule/web/login.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="72" column="31" selection-start="2068" selection-end="2068" vertical-scroll-proportion="1.2809612">
               <folding />
             </state>
           </provider>
@@ -136,7 +154,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/applet/src/ro/panzo/secureshares/Upload.java" />
         <option value="$PROJECT_DIR$/webmodule/web/js/jquery.filetree.js" />
         <option value="$PROJECT_DIR$/webmodule/web/remoteBrowser.jsp" />
         <option value="$PROJECT_DIR$/webmodule/web/yaml/navigation/nav_shinybuttons.css" />
@@ -152,6 +169,7 @@
         <option value="$PROJECT_DIR$/build.xml" />
         <option value="$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/util/Util.java" />
         <option value="$PROJECT_DIR$/webmodule/web/jqueryFileTree.jsp" />
+        <option value="$PROJECT_DIR$/webmodule/web/login.jsp" />
       </list>
     </option>
   </component>
@@ -705,20 +723,6 @@
         <state line="11" column="0" selection-start="664" selection-end="664" vertical-scroll-proportion="0.19927536" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webmodule/web/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="8" selection-start="1276" selection-end="1276" vertical-scroll-proportion="0.40858895">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webmodule/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="46" selection-start="2775" selection-end="2775" vertical-scroll-proportion="0.2536232">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webmodule/web/META-INF/context.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="31" column="78" selection-start="1295" selection-end="1295" vertical-scroll-proportion="0.0">
@@ -751,7 +755,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/webmodule/web/jqueryFileTree.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="67" selection-start="263" selection-end="263" vertical-scroll-proportion="0.10619469">
+        <state line="4" column="67" selection-start="263" selection-end="263" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webmodule/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="4" selection-start="509" selection-end="568" vertical-scroll-proportion="-3.25">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webmodule/web/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="72" column="31" selection-start="2068" selection-end="2068" vertical-scroll-proportion="1.2809612">
           <folding />
         </state>
       </provider>
