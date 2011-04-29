@@ -7,6 +7,7 @@
      * Copyright 2008 Joshua Gould
      * 21 April 2008
      */
+    String base = "/home/cticu";
     String dir = request.getParameter("dir");
     if (dir == null) {
         return;
@@ -18,7 +19,7 @@
         dir += "/";
     }
 
-    dir = java.net.URLDecoder.decode(dir, "UTF-8");
+    dir = base + java.net.URLDecoder.decode(dir, "UTF-8");
 
     if (new File(dir).exists()) {
         String[] files = new File(dir).list(new FilenameFilter() {
@@ -31,7 +32,7 @@
         // All dirs
         for (String file : files) {
             if (new File(dir, file).isDirectory()) {
-                out.print("<li class=\"directory collapsed\"><a href=\"#\" rel=\"" + dir + file + "/\">"
+                out.print("<li class=\"directory collapsed\"><a href=\"#\" rel=\"" + dir.substring(base.length()) + file + "/\">"
                         + file + "</a></li>");
             }
         }
@@ -40,7 +41,7 @@
             if (!new File(dir, file).isDirectory()) {
                 int dotIndex = file.lastIndexOf('.');
                 String ext = dotIndex > 0 ? file.substring(dotIndex + 1) : "";
-                out.print("<li class=\"file ext_" + ext + "\"><a href=\"#\" rel=\"" + dir + file + "\">"
+                out.print("<li class=\"file ext_" + ext + "\"><a href=\"#\" rel=\"" + dir.substring(base.length()) + file + "\">"
                         + file + "</a></li>");
             }
         }
