@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 5.1.49, for debian-linux-gnu (i686)
 --
--- Host: localhost    Database: securedshares
+-- Host: localhost    Database: secureshares
 -- ------------------------------------------------------
 -- Server version	5.1.49-1ubuntu8.1
 
@@ -16,14 +16,14 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Current Database: `securedshares`
+-- Current Database: `secureshares`
 --
 
-/*!40000 DROP DATABASE IF EXISTS `securedshares`*/;
+/*!40000 DROP DATABASE IF EXISTS `secureshares`*/;
 
-CREATE DATABASE /*!32312 IF NOT EXISTS*/ `securedshares` /*!40100 DEFAULT CHARACTER SET latin1 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/ `secureshares` /*!40100 DEFAULT CHARACTER SET latin1 */;
 
-USE `securedshares`;
+USE `secureshares`;
 
 --
 -- Table structure for table `roles`
