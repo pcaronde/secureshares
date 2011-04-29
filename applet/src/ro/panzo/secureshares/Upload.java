@@ -187,7 +187,7 @@ public class Upload  extends JApplet implements ActionListener, Runnable, SftpPr
         try {
             String fileName = this.selectedFile.getName();
             task = new SFTPPutTask(host, port, username, password, this);
-            task.execute(this.selectedFile.getParent(), fileName, "securerepository");
+            task.execute(this.selectedFile.getParent(), fileName, "secureshares");
             this.setBusy(false);
             this.reset();
             this.refreshRemoteBrowser();
