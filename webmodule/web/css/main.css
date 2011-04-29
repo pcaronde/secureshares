@@ -7,7 +7,7 @@ div#content {
     width: 80%;
     font: 20px normal georgia, sans-serif;
     text-indent:20px;
-        padding:50px 0 0 0;
+    padding:50px 0 0 0;
 }
 
 div#h1 {
@@ -25,14 +25,6 @@ div#h2 {
 }
 
 .login table { width: auto; margin: 0;}
-
-/*table { width: 75%; text-align:center; margin: 80px; border-collapse: collapse; }
-
-td { padding: .3em; border: 1px #96c7ff solid; text-align: center; }
-
-th { padding: .3em; border: 1px #96c7ff solid; background: #bdd2e9;}
-
-thead { background: #bdd2e9; }*/
 
 p {
 margin-top : 0;
@@ -53,23 +45,6 @@ h3 {
     margin-bottom : 0;
     color : #7d775c;
 }
-
-/*a:link {
-    font-weight : bold;
-    text-decoration : none;
-    color : #b7a5df;
-}
-
-a:visited {
-    font-weight : bold;
-    text-decoration : none;
-    color : #d4cddc;
-}
-
-a:hover, a:active {
-    text-decoration : underline;
-    color : #9685ba;
-}*/
 
 #footer {
 text-align : center;

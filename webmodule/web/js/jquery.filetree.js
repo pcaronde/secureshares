@@ -10,13 +10,10 @@
 //
 // Usage: $('.fileTreeDemo').fileTree( options, callback )
 //
-// Options:  root           - root folder to display; default = /
-//           script         - location of the serverside AJAX file to use; default = jqueryFileTree.php
+// Options:  script         - location of the serverside AJAX file to use; default = jqueryFileTree.php
 //           folderEvent    - event to trigger expand/collapse; default = click
 //           expandSpeed    - default = 500 (ms); use -1 for no animation
 //           collapseSpeed  - default = 500 (ms); use -1 for no animation
-//           expandEasing   - easing function to use on expand (optional)
-//           collapseEasing - easing function to use on collapse (optional)
 //           multiFolder    - whether or not to limit the browser to one subfolder at a time
 //           loadMessage    - Message to display while initial tree loads (can be HTML)
 //
@@ -36,14 +33,10 @@ if (jQuery) (function($) {
         fileTree: function(o, h) {
             // Defaults
             if (!o) var o = {};
-            //if (o.root == undefined) o.root = '/';
-            //if (o.applet == undefined) o.applet = myApplet;
-            //if (o.script == undefined) o.script = 'jqueryFileTree.jsp';
+            if (o.root == undefined) o.root = '/';
             if (o.folderEvent == undefined) o.folderEvent = 'click';
             if (o.expandSpeed == undefined) o.expandSpeed = 500;
             if (o.collapseSpeed == undefined) o.collapseSpeed = 500;
-            if (o.expandEasing == undefined) o.expandEasing = null;
-            if (o.collapseEasing == undefined) o.collapseEasing = null;
             if (o.multiFolder == undefined) o.multiFolder = true;
             if (o.loadMessage == undefined) o.loadMessage = 'Loading...';
 
@@ -56,7 +49,7 @@ if (jQuery) (function($) {
                         $.post(o.script, { dir: t }, function(data) {
                             $(c).find('.start').html('');
                             $(c).removeClass('wait').append(data);
-                            if (o.root == t) $(c).find('UL:hidden').show(); else $(c).find('UL:hidden').slideDown({ duration: o.expandSpeed, easing: o.expandEasing });
+                            if (o.root == t) $(c).find('UL:hidden').show(); else $(c).find('UL:hidden').slideDown({ duration: o.expandSpeed });
                             bindTree(c);
                         });
                     }
@@ -64,7 +57,7 @@ if (jQuery) (function($) {
                         var data = o.applet.getDataNew(t);
                         $(c).find('.start').html('');
                         $(c).removeClass('wait').append(data);
-                        if (o.root == t) $(c).find('UL:hidden').show(); else $(c).find('UL:hidden').slideDown({ duration: o.expandSpeed, easing: o.expandEasing });
+                        if (o.root == t) $(c).find('UL:hidden').show(); else $(c).find('UL:hidden').slideDown({ duration: o.expandSpeed });
                         bindTree(c);
                     }
                 }
@@ -75,7 +68,7 @@ if (jQuery) (function($) {
                             if ($(this).parent().hasClass('collapsed')) {
                                 // Expand
                                 if (!o.multiFolder) {
-                                    $(this).parent().parent().find('UL').slideUp({ duration: o.collapseSpeed, easing: o.collapseEasing });
+                                    $(this).parent().parent().find('UL').slideUp({ duration: o.collapseSpeed });
                                     $(this).parent().parent().find('LI.directory').removeClass('expanded').addClass('collapsed');
                                 }
                                 $(this).parent().find('UL').remove(); // cleanup
@@ -83,7 +76,7 @@ if (jQuery) (function($) {
                                 $(this).parent().removeClass('collapsed').addClass('expanded');
                             } else {
                                 // Collapse
-                                $(this).parent().find('UL').slideUp({ duration: o.collapseSpeed, easing: o.collapseEasing });
+                                $(this).parent().find('UL').slideUp({ duration: o.collapseSpeed });
                                 $(this).parent().removeClass('expanded').addClass('collapsed');
                             }
                         } else {

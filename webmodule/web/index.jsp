@@ -4,13 +4,8 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <title>Secure Shares</title>
-    <link rel="stylesheet" type="text/css" href="css/menu.css"  />
-    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/layout.css" />
     <link rel="stylesheet" type="text/css" href="css/jquery.filetree.css">
-    <link href="css/my_layout.css" rel="stylesheet" type="text/css" />
-    <!--[if lte IE 7]>
-    <link href="css/patch_my_layout.css" rel="stylesheet" type="text/css" />
-    <![endif]-->
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/jquery.filetree.js"></script>
     <script type="text/javascript" src="http://www.java.com/js/deployJava.js"></script>
@@ -43,21 +38,12 @@
 <div class="page_margins">
     <div class="page">
       <div id="header">
-        <div id="topnav">
-          <!-- start: skip link navigation -->
-          <a class="skip" title="skip link" href="#navigation">Skip to the navigation</a><span class="hideme">.</span>
-          <a class="skip" title="skip link" href="#content">Skip to the content</a><span class="hideme">.</span>
-          <!-- end: skip link navigation -->
-        </div>
         <center>
         <IMG src="images/title2-sm.png" alt="secure shares" width="450" height="100" vspace="10">
 	    </center>
       </div>
       <div id="nav">
-        <!-- skiplink anchor: navigation -->
-        <a id="navigation" name="navigation"></a>
         <div class="hlist">
-          <!-- main navigation: horizontal list -->
           <ul>
             <li class="active"><strong>Home</strong></li>
             <li><a href="#">Products</a></li>

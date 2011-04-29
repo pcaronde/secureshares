@@ -1,4 +1,4 @@
-<h3 id="securefiles">Secure Users</h3>
+<h3>Secure Users</h3>
 
 <div id="content" style="text-indent:0px;">
     <input type="radio" name="user" align="left" checked="checked"> Administrator<br/>
