@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project name="secured-shares" default="build" basedir=".">
+<project name="secure-shares" default="build" basedir=".">
 
     <property file="../build.properties"/>
     <property file="conf/project.properties"/>
@@ -12,10 +12,10 @@
     <property name="dist" value="${root}/dist"/>
     <property name="build" value="${root}/build"/>
     <property name="tomcat" value="${appserver.home}"/>
-    <property name="name" value="secured-shares"/>
+    <property name="name" value="secure-shares"/>
     <property name="web" value="${tomcat}/webapps/${name}"/>
-    <property name="dbname" value="securedshares"/>
-    <property name="dbfile" value="${root}/db/securedshares.sql"/>
+    <property name="dbname" value="secureshares"/>
+    <property name="dbfile" value="${root}/db/secureshares.sql"/>
     <property name="applet" value="${name}.applet-1.0"/>
 
     <macrodef name="propertycopy">

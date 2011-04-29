@@ -81,7 +81,7 @@
       </div>
       <!-- begin: #footer -->
       <div id="footer">
-        <h5>PCConsultants Ltd &amp; Co KG</h5>Layout based on <a href="http://www.yaml.de/">YAML</a>
+        <h5>PCConsultants Ltd &amp; Co KG</h5>
       </div>
     </div>
   </div>
