@@ -156,7 +156,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -369,6 +368,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="Favorites" />
     </panes>
@@ -388,9 +388,9 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -405,27 +405,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Applet.Upload">
-    <configuration default="false" name="F2Upload" type="Applet" factoryName="Applet" temporary="true">
-      <module name="applet" />
-      <option name="MAIN_CLASS_NAME" value="F2Upload" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="50881" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Debug" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
     <configuration default="false" name="Upload" type="Applet" factoryName="Applet" temporary="true">
       <module name="applet" />
       <option name="MAIN_CLASS_NAME" value="ro.panzo.secureshares.Upload" />
@@ -514,17 +493,6 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
-      <JSDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSDebuggerConfigurationSettings>
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" />
       <module name="" />
@@ -548,6 +516,17 @@
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
         <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
@@ -587,11 +566,10 @@
         </option>
       </method>
     </configuration>
-    <list size="4">
-      <item index="0" class="java.lang.String" itemvalue="Applet.F2Upload" />
-      <item index="1" class="java.lang.String" itemvalue="Applet.Upload" />
-      <item index="2" class="java.lang.String" itemvalue="Application.SmilyeTextPane" />
-      <item index="3" class="java.lang.String" itemvalue="Tomcat Server.Tomcat 6" />
+    <list size="3">
+      <item index="0" class="java.lang.String" itemvalue="Applet.Upload" />
+      <item index="1" class="java.lang.String" itemvalue="Application.SmilyeTextPane" />
+      <item index="2" class="java.lang.String" itemvalue="Tomcat Server.Tomcat 6" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -624,27 +602,27 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="1025" extended-state="6" />
+    <frame x="0" y="25" width="1366" height="718" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32613635" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24796748" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39927623" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32613635" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32902735" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33170733" sideWeight="0.67386365" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.331307" sideWeight="0.67386365" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32810616" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32613635" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="IntelliJad Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3292978" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32613635" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -728,11 +706,6 @@
         <state line="9" column="8" selection-start="266" selection-end="266" vertical-scroll-proportion="0.16687268" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webmodule/web/css/layout.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="130" column="0" selection-start="2692" selection-end="2692" vertical-scroll-proportion="0.45422536" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webmodule/web/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="1" selection-start="74" selection-end="213" vertical-scroll-proportion="0.17605634" />
@@ -745,67 +718,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/webmodule/web/META-INF/context.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="78" selection-start="1295" selection-end="1295" vertical-scroll-proportion="0.54577464">
-          <folding />
-        </state>
+        <state line="31" column="78" selection-start="1295" selection-end="1295" vertical-scroll-proportion="0.54577464" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/build.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="22" selection-start="3737" selection-end="3737" vertical-scroll-proportion="0.19366197">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/util/Util.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="54" selection-start="297" selection-end="297" vertical-scroll-proportion="0.17605634">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+        <state line="101" column="22" selection-start="3737" selection-end="3737" vertical-scroll-proportion="0.19366197" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/webmodule/web/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="4" selection-start="509" selection-end="568" vertical-scroll-proportion="-3.25">
-          <folding />
-        </state>
+        <state line="8" column="4" selection-start="509" selection-end="568" vertical-scroll-proportion="-3.25" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/webmodule/web/login.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="31" selection-start="2068" selection-end="2068" vertical-scroll-proportion="-28.875">
-          <folding />
-        </state>
+        <state line="72" column="31" selection-start="2068" selection-end="2068" vertical-scroll-proportion="-28.875" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/webmodule/web/jqueryFileTree.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="67" selection-start="263" selection-end="263" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/applet/src/ro/panzo/secureshares/util/SFTPPutTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="18" selection-start="565" selection-end="565" vertical-scroll-proportion="0.19366197">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/applet/src/ro/panzo/secureshares/Upload.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="228" column="0" selection-start="8635" selection-end="8635" vertical-scroll-proportion="0.9165673">
-          <folding />
-        </state>
+        <state line="4" column="67" selection-start="263" selection-end="263" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/conf/project.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="41" selection-start="165" selection-end="165" vertical-scroll-proportion="0.08802817">
-          <folding />
-        </state>
+        <state line="5" column="41" selection-start="165" selection-end="165" vertical-scroll-proportion="0.08802817" />
       </provider>
     </entry>
   </component>
