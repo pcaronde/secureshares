@@ -1,5 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="/WEB-INF/security.tld" prefix="s" %>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
@@ -59,7 +60,9 @@
           <div id="col1_content" class="clearfix">
             <!-- add your content here -->
             <ul TYPE="circle">
-              <li><a href="#" onclick="goToUsers();">User Administration</a></li>
+              <s:check role="admin">
+                <li><a href="#" onclick="goToUsers();">User Administration</a></li>
+              </s:check>
               <li><a href="#" onclick="goToFiles();">Files Management</a></li>
               <li>Reporting</li>
               <li>Preferences</li>

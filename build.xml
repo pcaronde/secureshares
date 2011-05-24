@@ -83,6 +83,7 @@
         <copy todir="${web}">
             <fileset dir="${root}/webmodule/web">
                 <include name="WEB-INF/web.xml"/>
+                <include name="WEB-INF/*.tld"/>
             </fileset>
         </copy>
         <copy todir="${web}/WEB-INF/classes">

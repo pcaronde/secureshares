@@ -8,4 +8,6 @@ public interface Service {
     public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException;
 
     public String getName();
+
+    public String getRole();
 }

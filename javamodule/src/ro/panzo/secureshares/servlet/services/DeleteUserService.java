@@ -33,6 +33,10 @@ public class DeleteUserService implements Service {
     }
 
     public String getName() {
-        return "Insert User";
+        return "Delete User";
+    }
+
+    public String getRole() {
+        return "admin";
     }
 }

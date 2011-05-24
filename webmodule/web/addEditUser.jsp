@@ -1,5 +1,7 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <script type="text/javascript" src="js/secureshares.js"></script>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="/WEB-INF/security.tld" prefix="s" %>
+<s:check role="admin">
 <h3>Secure Users</h3>
 <c:if test="${!empty param.id}">
     <jsp:useBean id="invoker" class="ro.panzo.secureshares.util.Invoker"/>
@@ -71,3 +73,4 @@
 <br/>
 <br/>
 <br/><br/><br/>
+</s:check>

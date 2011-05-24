@@ -32,8 +32,13 @@ public class ActionFactory {
         if(key != null && key.length() > 0){
             Service service = services.get(key);
             if(service != null){
-                log.debug("Execute Service: " + service.getName() + "(" + key + ")");
-                service.execute(request, response);
+                if(request.isUserInRole(service.getRole())){
+                    log.debug("Execute Service: " + service.getName() + "(" + key + ")");
+                    service.execute(request, response);
+                } else {
+                    log.debug("Unauthorized Service Execution: " + service.getName() + "(" + key + ")");
+                    response.sendError(HttpServletResponse.SC_UNAUTHORIZED);
+                }
             } else {
                 log.debug("Unregistered Service: " + key);
                 response.sendError(HttpServletResponse.SC_NOT_FOUND);
