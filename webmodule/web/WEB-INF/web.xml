@@ -34,7 +34,7 @@
     </security-constraint>
 
     <login-config>
-        <auth-method>FORM</auth-method>
+        <auth-methodName>FORM</auth-methodName>
         <realm-name>SecureShares Authentication</realm-name>
         <form-login-config>
             <form-login-page>/login.jsp</form-login-page>
@@ -57,6 +57,16 @@
     <session-config>
         <session-timeout>15</session-timeout>
     </session-config>
+
+    <servlet>
+        <servlet-name>service</servlet-name>
+        <servlet-class>ro.panzo.secureshares.servlet.Action</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>service</servlet-name>
+        <url-pattern>/service</url-pattern>
+    </servlet-mapping>
 
     <listener>
         <description>sessionListener</description>
