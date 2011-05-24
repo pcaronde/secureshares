@@ -45,6 +45,10 @@ public class UpdateUserService implements Service {
     }
 
     public String getName() {
-        return "Insert User";
+        return "Update User";
+    }
+    
+    public String getRole() {
+        return "admin";
     }
 }

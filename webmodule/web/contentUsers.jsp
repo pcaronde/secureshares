@@ -1,4 +1,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="/WEB-INF/security.tld" prefix="s" %>
+<s:check role="admin">
 <h3>Secure Users</h3>
 <div id="content" style="text-indent:0px;">
     <span style="color:red;" id="error"></span>
@@ -58,3 +60,4 @@
 <br/>
 <br/>
 <br/><br/><br/>
+</s:check>

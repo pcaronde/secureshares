@@ -55,4 +55,8 @@ public class InsertUserService implements Service {
     public String getName() {
         return "Insert User";
     }
+
+    public String getRole() {
+        return "admin";
+    }
 }
