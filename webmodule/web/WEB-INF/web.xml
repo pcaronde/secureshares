@@ -22,7 +22,8 @@
             <url-pattern>*.jsp</url-pattern>
         </web-resource-collection>
         <auth-constraint>
-            <role-name>login</role-name>
+            <role-name>user</role-name>
+            <role-name>admin</role-name>
         </auth-constraint>
 
         <!--<user-data-constraint>
@@ -42,7 +43,10 @@
     </login-config>
 
     <security-role>
-        <role-name>login</role-name>
+        <role-name>user</role-name>
+    </security-role>
+    <security-role>
+        <role-name>admin</role-name>
     </security-role>
 
     <error-page>
@@ -53,4 +57,11 @@
     <session-config>
         <session-timeout>15</session-timeout>
     </session-config>
+
+    <listener>
+        <description>sessionListener</description>
+        <listener-class>
+            ro.panzo.secureshares.util.SessionListener
+        </listener-class>
+    </listener>
 </web-app>
