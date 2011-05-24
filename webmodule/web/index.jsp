@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="css/jquery.filetree.css">
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/jquery.filetree.js"></script>
+    <script type="text/javascript" src="js/secureshares.js"></script>
     <script type="text/javascript" src="http://www.java.com/js/deployJava.js"></script>
 
     <style type="text/css">
@@ -58,8 +59,8 @@
           <div id="col1_content" class="clearfix">
             <!-- add your content here -->
             <ul TYPE="circle">
-              <li><a href="#" onclick="gotoUsers();">User Administration</a></li>
-              <li><a href="#" onclick="gotoFiles();">Files Management</a></li>
+              <li><a href="#" onclick="goToUsers();">User Administration</a></li>
+              <li><a href="#" onclick="goToFiles();">Files Management</a></li>
               <li>Reporting</li>
               <li>Preferences</li>
               <li>Help</li>
@@ -86,32 +87,8 @@
     </div>
   </div>
 <script type="text/javascript">
-
-    gotoUsers=function(){
-        $.get('contentUsers.jsp', function(data){
-          $('#col3_content').html(data);
-          $('#col2_content').html("");
-       });
-    }
-
-    gotoFiles=function(){
-        $.get('contentFiles.jsp', function(data){
-          $('#col3_content').html(data);
-       });
-        $.get('remoteBrowser.jsp', function(data){
-          $('#col2_content').html(data);
-       });
-    }
-
-    gotoHome=function(){
-        $.get('contentHome.jsp', function(data){
-          $('#col3_content').html(data);
-          $('#col2_content').html("");
-       });
-    }
-
     $(function(){
-       gotoHome();
+       goToHome();
     });
 </script>
 </body>

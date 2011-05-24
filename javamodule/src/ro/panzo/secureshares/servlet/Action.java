@@ -16,6 +16,11 @@ public class Action extends HttpServlet {
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
         response.setContentType("text/html; charset=utf-8");
-        String action = request.getParameter("a");
+        if(request.getUserPrincipal() != null){
+            ActionFactory.getInstance().executeService(request, response);
+        } else {
+            log.debug("No user logged in, unauthorized access denied");
+            response.sendError(HttpServletResponse.SC_UNAUTHORIZED);
+        }
     }
 }
