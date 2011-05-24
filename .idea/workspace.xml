@@ -74,115 +74,7 @@
     <favorites_list name="secure-shares" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="contentUsers.jsp" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/webmodule/web/contentUsers.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="65" selection-end="65" vertical-scroll-proportion="0.029880479">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="addEditUser.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webmodule/web/addEditUser.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="71" selection-start="848" selection-end="891" vertical-scroll-proportion="-4.375">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ActionFactory.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/servlet/ActionFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="5" selection-start="796" selection-end="796" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Invoker.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/util/Invoker.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="22" selection-start="92" selection-end="92" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="secureshares.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webmodule/web/js/secureshares.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="16" selection-start="524" selection-end="540" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InsertUserService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/servlet/services/InsertUserService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="17" selection-start="1328" selection-end="1328" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DBManager.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/db/DBManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="192" column="9" selection-start="6362" selection-end="6362" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <marker date="1306231717000" expanded="true" signature="2274:2334" placeholder="select * fro..users..." />
-                <marker date="1306231717000" expanded="true" signature="2274:2334" placeholder="select * fro..users..." />
-                <marker date="1306231717000" expanded="true" signature="2274:2334" placeholder="select * fro..users..." />
-                <marker date="1306231717000" expanded="true" signature="2907:2980" placeholder="select * fro..users..." />
-                <marker date="1306231717000" expanded="true" signature="3666:3708" placeholder="insert into users..." />
-                <marker date="1306231717000" expanded="true" signature="3921:3958" placeholder="insert into roles..." />
-                <marker date="1306231717000" expanded="true" signature="3921:3958" placeholder="insert into roles..." />
-                <marker date="1306231717000" expanded="true" signature="4904:4951" placeholder="update users..." />
-                <marker date="1306231717000" expanded="true" signature="5509:5591" placeholder="delete from roles..." />
-                <marker date="1306231717000" expanded="true" signature="5545:5590" placeholder="select u.use..users..." />
-                <marker date="1306231717000" expanded="true" signature="5752:5782" placeholder="delete from users..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DeleteUserService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/servlet/services/DeleteUserService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="13" selection-start="943" selection-end="943" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UpdateUserService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/servlet/services/UpdateUserService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="41" selection-start="1914" selection-end="1914" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ServiceUtil.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/util/ServiceUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="0" selection-start="759" selection-end="759" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -196,22 +88,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/util/SessionListener.java" />
-        <option value="$PROJECT_DIR$/webmodule/web/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/servlet/Action.java" />
-        <option value="$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/servlet/Service.java" />
-        <option value="$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/util/Validator.java" />
-        <option value="$PROJECT_DIR$/webmodule/web/index.jsp" />
         <option value="$PROJECT_DIR$/webmodule/web/js/secureshares.js" />
-        <option value="$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/servlet/services/InsertUserService.java" />
         <option value="$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/util/Invoker.java" />
-        <option value="$PROJECT_DIR$/webmodule/web/addEditUser.jsp" />
         <option value="$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/util/ServiceUtil.java" />
-        <option value="$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/servlet/services/UpdateUserService.java" />
-        <option value="$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/servlet/services/DeleteUserService.java" />
         <option value="$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/db/DBManager.java" />
-        <option value="$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/servlet/ActionFactory.java" />
+        <option value="$PROJECT_DIR$/webmodule/web/WEB-INF/security.tld" />
+        <option value="$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/servlet/tag/SecurityTag.java" />
         <option value="$PROJECT_DIR$/webmodule/web/contentUsers.jsp" />
+        <option value="$PROJECT_DIR$/webmodule/web/addEditUser.jsp" />
+        <option value="$PROJECT_DIR$/webmodule/web/index.jsp" />
+        <option value="$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/servlet/Service.java" />
+        <option value="$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/servlet/services/DeleteUserService.java" />
+        <option value="$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/servlet/services/UpdateUserService.java" />
+        <option value="$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/servlet/services/InsertUserService.java" />
+        <option value="$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/servlet/ActionFactory.java" />
+        <option value="$PROJECT_DIR$/build.xml" />
+        <option value="$PROJECT_DIR$/webmodule/web/WEB-INF/web.xml" />
       </list>
     </option>
   </component>
@@ -474,6 +366,44 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="servlet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="secure-shares" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="secure-shares" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javamodule" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ro" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="panzo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="secureshares" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="servlet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tag" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -848,26 +778,26 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="25" width="1368" height="721" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32460734" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24732825" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="IntelliJad Console" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32809773" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39927623" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32460734" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32902735" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977098" sideWeight="0.67386365" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977098" sideWeight="0.67386365" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32810616" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="IntelliJad Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3292978" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -931,96 +861,9 @@
     </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/util/SessionListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="36" selection-start="686" selection-end="686" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/pojo/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="25" selection-start="304" selection-end="304" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/servlet/Action.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="71" selection-start="837" selection-end="837" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webmodule/web/WEB-INF/web.xml">
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="29" selection-start="2109" selection-end="2109" vertical-scroll-proportion="-20.47619">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webmodule/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="10" selection-start="2939" selection-end="2939" vertical-scroll-proportion="-13.416667">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webmodule/web/js/secureshares.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="16" selection-start="524" selection-end="540" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/servlet/Service.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="17" selection-start="179" selection-end="179" vertical-scroll-proportion="0.17110266">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/servlet/services/InsertUserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="17" selection-start="1328" selection-end="1328" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/util/Invoker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="22" selection-start="92" selection-end="92" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/util/ServiceUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="30" column="0" selection-start="759" selection-end="759" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/servlet/services/UpdateUserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="41" selection-start="1914" selection-end="1914" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1045,34 +888,117 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/servlet/services/DeleteUserService.java">
+    <entry file="file://$PROJECT_DIR$/webmodule/web/WEB-INF/security.tld">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="13" selection-start="943" selection-end="943" vertical-scroll-proportion="0.0">
+        <state line="8" column="17" selection-start="358" selection-end="358" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/servlet/ActionFactory.java">
+    <entry file="jar:///opt/tomcat6/lib/jsp-api.jar!/javax/servlet/jsp/tagext/TagSupport.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="5" selection-start="796" selection-end="796" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="5" column="13" selection-start="162" selection-end="162" vertical-scroll-proportion="0.14258555">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webmodule/web/addEditUser.jsp">
+    <entry file="file://$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/servlet/tag/SecurityTag.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="71" selection-start="848" selection-end="891" vertical-scroll-proportion="-4.375">
+        <state line="2" column="38" selection-start="82" selection-end="82" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/webmodule/web/contentUsers.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="65" selection-end="65" vertical-scroll-proportion="0.029880479">
+        <state line="2" column="22" selection-start="65" selection-end="140" vertical-scroll-proportion="-1.25">
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webmodule/web/addEditUser.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="22" selection-start="131" selection-end="206" vertical-scroll-proportion="0.08637236">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webmodule/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="83" selection-start="2297" selection-end="2297" vertical-scroll-proportion="0.5182342">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/servlet/Service.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="28" selection-start="350" selection-end="350" vertical-scroll-proportion="0.3027523">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/servlet/services/DeleteUserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="5" selection-start="1269" selection-end="1324" vertical-scroll-proportion="0.79816514">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/servlet/services/UpdateUserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="4" selection-start="2000" selection-end="2000" vertical-scroll-proportion="0.7724771">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/servlet/services/InsertUserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="5" selection-start="2434" selection-end="2434" vertical-scroll-proportion="0.85504586">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/servlet/ActionFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="74" selection-start="1729" selection-end="1729" vertical-scroll-proportion="0.5522936">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="118" column="0" selection-start="4259" selection-end="4259" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webmodule/web/META-INF/context.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webmodule/web/WEB-INF/web.xml">
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="356" selection-end="356" vertical-scroll-proportion="0.22900763">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
+        <state />
       </provider>
     </entry>
   </component>

@@ -150,7 +150,7 @@
 
     <target name="build" depends="web"/>
 
-    <target name="deploy" depends="tomcat-app-stop, clean,deleteContext,web,tomcat-app-start"/>
+    <target name="deploy" depends="tomcat-app-stop, clean, deleteContext, web, tomcat-app-start"/>
 
     <!-- ============================================================== -->
     <!-- DB Import/Export -->
