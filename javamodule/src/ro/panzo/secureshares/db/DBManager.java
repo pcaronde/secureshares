@@ -1,15 +1,16 @@
 package ro.panzo.secureshares.db;
 
 import org.apache.log4j.Logger;
+import ro.panzo.secureshares.pojo.User;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import javax.xml.transform.Result;
+import java.sql.*;
+import java.util.LinkedList;
+import java.util.List;
 
 public class DBManager {
     private static DBManager ourInstance = new DBManager();
@@ -51,5 +52,23 @@ public class DBManager {
         } catch(Exception exception2) {
             log.error(exception2.getMessage(), exception2);
         }
+    }
+
+    public List<User> getUsers() throws NamingException, SQLException {
+        List<User> result = new LinkedList<User>();
+        Connection c = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        try{
+            c = this.getConnection();
+            ps = c.prepareStatement("select * from users u, roles r where u.username = r.username");
+            rs = ps.executeQuery();
+            while(rs.next()){
+                result.add(new User(rs.getLong("u.id"), rs.getString("u.username"), rs.getString("r.rolename")));
+            }
+        } finally {
+            close(c, ps, rs);
+        }
+        return result;
     }
 }
