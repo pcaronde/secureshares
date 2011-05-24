@@ -34,7 +34,7 @@
     </security-constraint>
 
     <login-config>
-        <auth-methodName>FORM</auth-methodName>
+        <auth-method>FORM</auth-method>
         <realm-name>SecureShares Authentication</realm-name>
         <form-login-config>
             <form-login-page>/login.jsp</form-login-page>
