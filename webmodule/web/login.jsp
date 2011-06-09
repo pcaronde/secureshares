@@ -4,9 +4,10 @@
 
   <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
   <link rel="stylesheet" type="text/css" href="css/main.css">
-  <script type="text/javascript" src="js/jquery.js"></script><title>secure shares</title></head><body>&lt;%
+  <script type="text/javascript" src="js/jquery.js"></script><title>secure shares</title></head><body>
+<%
     String error = request.getParameter("error");
-%&gt;
+%>
 
 <br>
 <br>
@@ -26,7 +27,7 @@
 <center>
 <table class="login" border="0" cellpadding="0" cellspacing="0">
     <tbody><tr>
-        <td colspan="2" align="center">&nbsp;&lt;%=error != null &amp;&amp; error.length() &gt; 0 ? "<span style="">Login failed !!</span>" : ""%&gt;</td>
+        <td colspan="2" align="center">&nbsp;<%=error != null && error.length() > 0 ? "<span>Login failed !!</span>" : ""%></td>
     </tr>
     <tr>
         <td>Login <br>
