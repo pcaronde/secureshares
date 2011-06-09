@@ -48,7 +48,7 @@
         <div class="hlist">
           <ul>
             <li class="active"><strong>Home</strong></li>
-            <li><a href="#">Products</a></li>
+            <li><a href="#">How it Works</a></li>
             <li><a href="#">Support</a></li>
             <li><a href="#">Shares</a></li>
             <li><a href="index.jsp?logout=yes">Logout</a></li>
@@ -64,9 +64,9 @@
                 <li><a href="#" onclick="goToUsers();">User Administration</a></li>
               </s:check>
               <li><a href="#" onclick="goToFiles();">Files Management</a></li>
-              <li>Reporting</li>
+              <!--li>Reporting</li>
               <li>Preferences</li>
-              <li>Help</li>
+              <li>Help</li-->
             </ul>
           </div>
         </div>

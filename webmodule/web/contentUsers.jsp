@@ -1,7 +1,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="/WEB-INF/security.tld" prefix="s" %>
 <s:check role="admin">
-<h3>Secure Users</h3>
+<h3>Manage Secure Shares Users</h3>
+<P>Here you can define the premissions for users internal and external</P>
 <div id="content" style="text-indent:0px;">
     <span style="color:red;" id="error"></span>
     <table border="0" cellpadding="5" cellspacing="0">
