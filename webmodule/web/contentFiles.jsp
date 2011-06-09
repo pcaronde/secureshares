@@ -1,8 +1,8 @@
-<h2>Manage Files</h2>
+<h2>Manage Files and Shares</h2>
 
 <div id="container">
     <h3>Secure Uploads</h3>
-
+		<P>Choose files from your local computer and securely upload to the server</P>
     <div id="upload" style="text-indent:0px;">
         <object
                 width="400"
@@ -28,7 +28,7 @@
     <br/>
 
     <h3 id="securefiles">Availability</h3>
-
+		<P>Set the time your file(s) will be available to external users</P>
     <div id="content" style="text-indent:0px;">
         <input type="radio" name="downloadtype" align="left" checked="checked"> Single download<br/>
         <input type="radio" name="downloadtype" align="left"> One Hour<br/>
