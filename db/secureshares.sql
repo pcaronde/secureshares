@@ -26,6 +26,67 @@ CREATE DATABASE /*!32312 IF NOT EXISTS*/ `secureshares` /*!40100 DEFAULT CHARACT
 USE `secureshares`;
 
 --
+-- Table structure for table `downloadtype`
+--
+
+DROP TABLE IF EXISTS `downloadtype`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `downloadtype` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(45) NOT NULL,
+  `count` int(11) NOT NULL,
+  `validity` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id_UNIQUE` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `downloadtype`
+--
+
+LOCK TABLES `downloadtype` WRITE;
+/*!40000 ALTER TABLE `downloadtype` DISABLE KEYS */;
+INSERT INTO `downloadtype` VALUES (1,'Single Download',1,-1),(2,'One Hour',-1,1),(3,'One Day',-1,24),(4,'One Week',-1,168),(5,'Disable Download',-1,-1);
+/*!40000 ALTER TABLE `downloadtype` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `files`
+--
+
+DROP TABLE IF EXISTS `files`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `files` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `userId` int(10) unsigned NOT NULL,
+  `downloadTypeId` int(10) unsigned NOT NULL,
+  `filename` varchar(250) NOT NULL,
+  `savedname` varchar(50) NOT NULL,
+  `contentType` varchar(100) NOT NULL,
+  `date` datetime NOT NULL,
+  `downloadCount` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id_UNIQUE` (`id`),
+  KEY `fk_to_users` (`userId`),
+  KEY `fk_downloadtype` (`downloadTypeId`),
+  CONSTRAINT `fk_downloadtype` FOREIGN KEY (`downloadTypeId`) REFERENCES `downloadtype` (`id`),
+  CONSTRAINT `fk_to_users` FOREIGN KEY (`userId`) REFERENCES `users` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `files`
+--
+
+LOCK TABLES `files` WRITE;
+/*!40000 ALTER TABLE `files` DISABLE KEYS */;
+/*!40000 ALTER TABLE `files` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `roles`
 --
 
@@ -86,4 +147,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-05-24 14:31:11
+-- Dump completed on 2011-06-09 10:21:08
