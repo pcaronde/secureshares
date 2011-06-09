@@ -41,7 +41,7 @@
     <div class="page">
       <div id="header">
         <center>
-        <IMG src="images/title2-sm.png" alt="secure shares" width="450" height="100" vspace="10">
+        <IMG src="images/title3-sm.png" alt="secure shares" width="1400" height="100" vspace="10">
 	    </center>
       </div>
       <div id="nav">
@@ -50,7 +50,7 @@
             <li class="active"><strong>Home</strong></li>
             <li><a href="#">How it Works</a></li>
             <li><a href="#">Support</a></li>
-            <li><a href="#">Shares</a></li>
+            <!-- li><a href="#">Shares</a></li-->
             <li><a href="index.jsp?logout=yes">Logout</a></li>
           </ul>
         </div>
@@ -63,7 +63,7 @@
               <s:check role="admin">
                 <li><a href="#" onclick="goToUsers();">User Administration</a></li>
               </s:check>
-              <li><a href="#" onclick="goToFiles();">Files Management</a></li>
+              <li><a href="#" onclick="goToFiles();">File Share Management</a></li>
               <!--li>Reporting</li>
               <li>Preferences</li>
               <li>Help</li-->
