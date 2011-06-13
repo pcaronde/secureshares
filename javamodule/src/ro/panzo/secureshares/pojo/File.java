@@ -2,7 +2,7 @@ package ro.panzo.secureshares.pojo;
 
 import java.util.Calendar;
 
-public class Download {
+public class File {
     private long id;
     private User user;
     private DownloadType downloadType;
@@ -11,7 +11,7 @@ public class Download {
     private String contentType;
     private Calendar date;
 
-    public Download(long id, User user, DownloadType downloadType, String filename, String savedname, String contentType, Calendar date) {
+    public File(long id, User user, DownloadType downloadType, String filename, String savedname, String contentType, Calendar date) {
         this.id = id;
         this.user = user;
         this.downloadType = downloadType;

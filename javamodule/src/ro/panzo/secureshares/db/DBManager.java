@@ -1,6 +1,7 @@
 package ro.panzo.secureshares.db;
 
 import org.apache.log4j.Logger;
+import ro.panzo.secureshares.pojo.DownloadType;
 import ro.panzo.secureshares.pojo.User;
 
 import javax.naming.Context;
@@ -190,6 +191,24 @@ public class DBManager {
         } finally {
             close(null, psRoles);
             close(c, psUsers);
+        }
+        return result;
+    }
+
+    public List<DownloadType> getDownloadTypes() throws NamingException, SQLException {
+        List<DownloadType> result = new LinkedList<DownloadType>();
+        Connection c = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        try{
+            c = this.getConnection();
+            ps = c.prepareStatement("select * from downloadTypes order by id");
+            rs = ps.executeQuery();
+            while(rs.next()){
+                result.add(new DownloadType(rs.getLong("id"), rs.getString("name"), rs.getInt("count"), rs.getInt("validity")));
+            }
+        } finally {
+            close(c, ps, rs);
         }
         return result;
     }
