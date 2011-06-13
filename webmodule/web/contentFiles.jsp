@@ -1,5 +1,5 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <h2>Manage Files and Shares</h2>
-
 <div id="container">
     <h3>Secure Uploads</h3>
 		<P>Choose files from your local computer and securely upload to the server</P>
@@ -29,12 +29,10 @@
 
     <h3 id="securefiles">Availability</h3>
 		<P>Set the time your file(s) will be available to external users</P>
-    <div id="content" style="text-indent:0px;">
-        <input type="radio" name="downloadtype" align="left" checked="checked"> Single download<br/>
-        <input type="radio" name="downloadtype" align="left"> One Hour<br/>
-        <input type="radio" name="downloadtype" align="left"> One Day<br/>
-        <input type="radio" name="downloadtype" align="left"> One Week<br/>
-        <input type="radio" name="downloadtype" align="left"> Disable download<br/>
+    <div style="text-indent:0px;">
+        <c:forEach var="downloadType" items="${dbManager.downloadTypes}" varStatus="status">
+            <input type="radio" name="downloadtype" align="left" value="${downloadType.id}" <c:if test="${status.first}">checked="checked"</c:if>/>${downloadType.name}<br/>
+        </c:forEach>
     </div>
     <br/>
 </div>

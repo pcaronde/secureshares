@@ -26,13 +26,13 @@ CREATE DATABASE /*!32312 IF NOT EXISTS*/ `secureshares` /*!40100 DEFAULT CHARACT
 USE `secureshares`;
 
 --
--- Table structure for table `downloadtype`
+-- Table structure for table `downloadTypes`
 --
 
-DROP TABLE IF EXISTS `downloadtype`;
+DROP TABLE IF EXISTS `downloadTypes`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `downloadtype` (
+CREATE TABLE `downloadTypes` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(45) NOT NULL,
   `count` int(11) NOT NULL,
@@ -43,13 +43,13 @@ CREATE TABLE `downloadtype` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `downloadtype`
+-- Dumping data for table `downloadTypes`
 --
 
-LOCK TABLES `downloadtype` WRITE;
-/*!40000 ALTER TABLE `downloadtype` DISABLE KEYS */;
-INSERT INTO `downloadtype` VALUES (1,'Single Download',1,-1),(2,'One Hour',-1,1),(3,'One Day',-1,24),(4,'One Week',-1,168),(5,'Disable Download',-1,-1);
-/*!40000 ALTER TABLE `downloadtype` ENABLE KEYS */;
+LOCK TABLES `downloadTypes` WRITE;
+/*!40000 ALTER TABLE `downloadTypes` DISABLE KEYS */;
+INSERT INTO `downloadTypes` VALUES (1,'Single Download',1,-1),(2,'One Hour',-1,1),(3,'One Day',-1,24),(4,'One Week',-1,168),(5,'Disable Download',-1,-1);
+/*!40000 ALTER TABLE `downloadTypes` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -72,7 +72,7 @@ CREATE TABLE `files` (
   UNIQUE KEY `id_UNIQUE` (`id`),
   KEY `fk_to_users` (`userId`),
   KEY `fk_downloadtype` (`downloadTypeId`),
-  CONSTRAINT `fk_downloadtype` FOREIGN KEY (`downloadTypeId`) REFERENCES `downloadtype` (`id`),
+  CONSTRAINT `fk_downloadtype` FOREIGN KEY (`downloadTypeId`) REFERENCES `downloadTypes` (`id`),
   CONSTRAINT `fk_to_users` FOREIGN KEY (`userId`) REFERENCES `users` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -147,4 +147,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-06-09 10:21:08
+-- Dump completed on 2011-06-13 13:11:17
