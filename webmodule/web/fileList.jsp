@@ -3,7 +3,7 @@
 <div id="container">
     <h3>Secure Files</h3>
     <div id="filelist" class="filepanel">
-        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <table border="1" cellpadding="0" cellspacing="0" width="100%">
             <tr>
                 <th>Name</th>
                 <th>Download Type</th>

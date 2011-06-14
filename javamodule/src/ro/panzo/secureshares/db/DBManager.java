@@ -251,14 +251,14 @@ public class DBManager {
         return result;
     }
 
-    public boolean insertFile(long userId, long downloadTypeId, String filename, String savedname, String contentType) throws NamingException, SQLException {
+    public boolean insertFile(String username, long downloadTypeId, String filename, String savedname, String contentType) throws NamingException, SQLException {
         boolean result = false;
         Connection c = null;
         PreparedStatement ps = null;
         try{
             c = this.getConnection();
-            ps = c.prepareStatement("insert into files values (null, ?, ?, ?, ?, ?, now(), 0)");
-            ps.setLong(1, userId);
+            ps = c.prepareStatement("insert into files values (null, (select u.id from users u where u.username = ?), ?, ?, ?, ?, now(), 0)");
+            ps.setString(1, username);
             ps.setLong(2, downloadTypeId);
             ps.setString(3, filename);
             ps.setString(4, savedname);
