@@ -242,8 +242,7 @@ public class DBManager {
             ps = c.prepareStatement("select f.*, u.*, dt.*, r.* from files f, users u, downloadTypes dt, roles r where f.userId = u.id and f.downloadTypeId = dt.id and u.username = r.username order by f.date desc");
             rs = ps.executeQuery();
             while(rs.next()){
-                result.add(new File(rs.getLong("id"), this.getUserFromResultSet(rs), this.getDownloadTypeFromResultSet(rs),
-                        rs.getString("filename"), rs.getString("savedname"), rs.getString("contentType"), this.convertToCalendar(rs.getTimestamp("date")), rs.getInt("downloadCount")));
+                result.add(getFileFromResultSet(rs));
             }
         } finally {
             close(c, ps, rs);
@@ -251,22 +250,63 @@ public class DBManager {
         return result;
     }
 
-    public boolean insertFile(String username, long downloadTypeId, String filename, String savedname, String contentType) throws NamingException, SQLException {
+    public boolean insertFile(String username, long downloadTypeId, String filename) throws NamingException, SQLException {
         boolean result = false;
         Connection c = null;
         PreparedStatement ps = null;
         try{
             c = this.getConnection();
-            ps = c.prepareStatement("insert into files values (null, (select u.id from users u where u.username = ?), ?, ?, ?, ?, now(), 0)");
+            ps = c.prepareStatement("insert into files values (null, (select u.id from users u where u.username = ?), ?, ?, now(), 0)");
             ps.setString(1, username);
             ps.setLong(2, downloadTypeId);
             ps.setString(3, filename);
-            ps.setString(4, savedname);
-            ps.setString(5, contentType);
             result = ps.executeUpdate() == 1;
         } finally {
             close(c, ps);
         }
         return result;
+    }
+
+    public boolean updateFile(String username, long downloadTypeId, String filename) throws NamingException, SQLException {
+        boolean result = false;
+        Connection c = null;
+        PreparedStatement ps = null;
+        try{
+            c = this.getConnection();
+            ps = c.prepareStatement("update files set userId = (select u.id from users u where u.username = ?), " +
+                    "downloadTypeId = ?, date = now(), downloadCount = 0 where filename = ?");
+            ps.setString(1, username);
+            ps.setLong(2, downloadTypeId);
+            ps.setString(3, filename);
+            result = ps.executeUpdate() == 1;
+        } finally {
+            close(c, ps);
+        }
+        return result;
+    }
+
+    public File getFileByName(String filename) throws NamingException, SQLException {
+        File result = null;
+        Connection c = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        try{
+            c = this.getConnection();
+            ps = c.prepareStatement("select f.*, u.*, dt.*, r.* from files f, users u, downloadTypes dt, roles r " +
+                    "where f.userId = u.id and f.downloadTypeId = dt.id and u.username = r.username and f.filename = ?");
+            ps.setString(1, filename);
+            rs = ps.executeQuery();
+            if(rs.next()){
+                result = getFileFromResultSet(rs);
+            }
+        } finally {
+            close(c, ps, rs);
+        }
+        return result;
+    }
+
+    private File getFileFromResultSet(ResultSet rs) throws SQLException {
+        return new File(rs.getLong("id"), this.getUserFromResultSet(rs), this.getDownloadTypeFromResultSet(rs),
+                rs.getString("filename"), this.convertToCalendar(rs.getTimestamp("date")), rs.getInt("downloadCount"));
     }
 }

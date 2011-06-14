@@ -30,4 +30,7 @@
            userRoleTable="roles"
            userTable="users"/>
     <Environment name="REPOSITORY" type="java.lang.String" value="##REPOSITORY##" description="secureshares repository"/>
+    <Environment name="OUTGOING_MAIL_SERVER" type="java.lang.String" value="##OUTGOING_MAIL_SERVER##" description="mail server ip"/>
+    <Environment name="OUTGOING_MAIL_FROM" type="java.lang.String" value="##OUTGOING_MAIL_FROM##" description="email address from where the email is sent"/>
+    <Environment name="OUTGOING_MAIL_PASSWORD" type="java.lang.String" value="##OUTGOING_MAIL_PASSWORD##" description="email password"/>
 </Context>
