@@ -11,20 +11,6 @@
     <script type="text/javascript" src="js/jquery.filetree.js"></script>
     <script type="text/javascript" src="js/secureshares.js"></script>
     <script type="text/javascript" src="http://www.java.com/js/deployJava.js"></script>
-
-    <style type="text/css">
-    .panel {
-        width: 400px;
-        height: 400px;
-        border-top: solid 1px #BBB;
-        border-left: solid 1px #BBB;
-        border-bottom: solid 1px #FFF;
-        border-right: solid 1px #FFF;
-        background: #FFF;
-        overflow: scroll;
-        padding: 5px;
-    }
-</style>
 </head>
 <%
     if ("yes".equals(request.getParameter("logout"))) {

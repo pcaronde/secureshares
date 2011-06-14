@@ -190,7 +190,7 @@ public class Upload  extends JApplet implements ActionListener, Runnable, SftpPr
             task.execute(this.selectedFile.getParent(), fileName, "secureshares");
             this.setBusy(false);
             this.reset();
-            this.refreshRemoteBrowser();
+            this.saveFileTransaction(fileName);
         } catch (final Exception e) {
             if(!this.uploadCanceled){
                 SwingUtilities.invokeLater( new Runnable() {
@@ -214,10 +214,11 @@ public class Upload  extends JApplet implements ActionListener, Runnable, SftpPr
         }
     }
 
-    private void refreshRemoteBrowser() {
+    private void saveFileTransaction(String fileName) {
         try{
             JSObject window = JSObject.getWindow(this);
-            window.eval("showTree()");
+            //window.eval("showTree()");
+            window.eval("saveFileTransaction('" + fileName + "')");
         } catch(Exception ex){
             ex.printStackTrace();
         }
