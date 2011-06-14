@@ -2,6 +2,7 @@ package ro.panzo.secureshares.db;
 
 import org.apache.log4j.Logger;
 import ro.panzo.secureshares.pojo.DownloadType;
+import ro.panzo.secureshares.pojo.File;
 import ro.panzo.secureshares.pojo.User;
 
 import javax.naming.Context;
@@ -9,6 +10,7 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
 import java.sql.*;
+import java.util.Calendar;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -73,15 +75,19 @@ public class DBManager {
         ResultSet rs = null;
         try{
             c = this.getConnection();
-            ps = c.prepareStatement("select * from users u, roles r where u.username = r.username");
+            ps = c.prepareStatement("select u.*, r.* from users u, roles r where u.username = r.username");
             rs = ps.executeQuery();
             while(rs.next()){
-                result.add(new User(rs.getLong("u.id"), rs.getString("u.username"), rs.getString("r.rolename")));
+                result.add(getUserFromResultSet(rs));
             }
         } finally {
             close(c, ps, rs);
         }
         return result;
+    }
+
+    private User getUserFromResultSet(ResultSet rs) throws SQLException {
+        return new User(rs.getLong("u.id"), rs.getString("u.username"), rs.getString("r.rolename"));
     }
 
     public User getUserById(Long id) throws NamingException, SQLException {
@@ -91,11 +97,11 @@ public class DBManager {
         ResultSet rs = null;
         try{
             c = this.getConnection();
-            ps = c.prepareStatement("select * from users u, roles r where u.username = r.username and u.id = ?");
+            ps = c.prepareStatement("select u.*, r.* from users u, roles r where u.username = r.username and u.id = ?");
             ps.setLong(1, id);
             rs = ps.executeQuery();
             if(rs.next()){
-                user = new User(rs.getLong("u.id"), rs.getString("u.username"), rs.getString("r.rolename"));
+                user = getUserFromResultSet(rs);
             }
         } finally {
             close(c, ps, rs);
@@ -202,10 +208,10 @@ public class DBManager {
         ResultSet rs = null;
         try{
             c = this.getConnection();
-            ps = c.prepareStatement("select * from downloadTypes order by id");
+            ps = c.prepareStatement("select dt.* from downloadTypes dt order by dt.id");
             rs = ps.executeQuery();
             while(rs.next()){
-                result.add(new DownloadType(rs.getLong("id"), rs.getString("name"), rs.getInt("count"), rs.getInt("validity")));
+                result.add(getDownloadTypeFromResultSet(rs));
             }
         } finally {
             close(c, ps, rs);
@@ -213,4 +219,54 @@ public class DBManager {
         return result;
     }
 
+    private DownloadType getDownloadTypeFromResultSet(ResultSet rs) throws SQLException {
+        return new DownloadType(rs.getLong("dt.id"), rs.getString("dt.name"), rs.getInt("dt.count"), rs.getInt("dt.validity"));
+    }
+
+    private Calendar convertToCalendar(Timestamp t){
+        if(t == null){
+            return null;
+        }
+        Calendar cal = Calendar.getInstance();
+        cal.setTimeInMillis(t.getTime());
+        return cal;
+    }
+
+    public List<File> getFiles() throws NamingException, SQLException {
+        List<File> result = new LinkedList<File>();
+        Connection c = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        try{
+            c = this.getConnection();
+            ps = c.prepareStatement("select f.*, u.*, dt.*, r.* from files f, users u, downloadTypes dt, roles r where f.userId = u.id and f.downloadTypeId = dt.id and u.username = r.username order by f.date desc");
+            rs = ps.executeQuery();
+            while(rs.next()){
+                result.add(new File(rs.getLong("id"), this.getUserFromResultSet(rs), this.getDownloadTypeFromResultSet(rs),
+                        rs.getString("filename"), rs.getString("savedname"), rs.getString("contentType"), this.convertToCalendar(rs.getTimestamp("date")), rs.getInt("downloadCount")));
+            }
+        } finally {
+            close(c, ps, rs);
+        }
+        return result;
+    }
+
+    public boolean insertFile(long userId, long downloadTypeId, String filename, String savedname, String contentType) throws NamingException, SQLException {
+        boolean result = false;
+        Connection c = null;
+        PreparedStatement ps = null;
+        try{
+            c = this.getConnection();
+            ps = c.prepareStatement("insert into files values (null, ?, ?, ?, ?, ?, now(), 0)");
+            ps.setLong(1, userId);
+            ps.setLong(2, downloadTypeId);
+            ps.setString(3, filename);
+            ps.setString(4, savedname);
+            ps.setString(5, contentType);
+            result = ps.executeUpdate() == 1;
+        } finally {
+            close(c, ps);
+        }
+        return result;
+    }
 }

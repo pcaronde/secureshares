@@ -2,6 +2,7 @@ package ro.panzo.secureshares.servlet;
 
 import org.apache.log4j.Logger;
 import ro.panzo.secureshares.servlet.services.DeleteUserService;
+import ro.panzo.secureshares.servlet.services.InsertFileService;
 import ro.panzo.secureshares.servlet.services.InsertUserService;
 import ro.panzo.secureshares.servlet.services.UpdateUserService;
 
@@ -25,6 +26,7 @@ public class ActionFactory {
         this.registerService("1", new InsertUserService());
         this.registerService("2", new UpdateUserService());
         this.registerService("3", new DeleteUserService());
+        this.registerService("4", new InsertFileService());
     }
 
     public void executeService(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -32,7 +34,7 @@ public class ActionFactory {
         if(key != null && key.length() > 0){
             Service service = services.get(key);
             if(service != null){
-                if(request.isUserInRole(service.getRole())){
+                if(isUserAuthorized(request, service)){
                     log.debug("Execute Service: " + service.getName() + "(" + key + ")");
                     service.execute(request, response);
                 } else {
@@ -47,6 +49,18 @@ public class ActionFactory {
             response.sendError(HttpServletResponse.SC_BAD_REQUEST);
             log.debug("Invalid Service: " + (key != null ? key : "null"));
         }
+    }
+
+    private boolean isUserAuthorized(HttpServletRequest request, Service service) {
+        String[] roles = service.getRole().split("\\|\\|");
+        boolean result = false;
+        for(String role : roles){
+            result = request.isUserInRole(role);
+            if(result){
+                break;
+            }
+        }
+        return result;
     }
 
     public void registerService(String key, Service service){

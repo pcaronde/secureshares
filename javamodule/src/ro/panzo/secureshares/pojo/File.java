@@ -10,8 +10,9 @@ public class File {
     private String savedname;
     private String contentType;
     private Calendar date;
+    private int downloadCount;
 
-    public File(long id, User user, DownloadType downloadType, String filename, String savedname, String contentType, Calendar date) {
+    public File(long id, User user, DownloadType downloadType, String filename, String savedname, String contentType, Calendar date, int downloadCount) {
         this.id = id;
         this.user = user;
         this.downloadType = downloadType;
@@ -19,6 +20,7 @@ public class File {
         this.savedname = savedname;
         this.contentType = contentType;
         this.date = date;
+        this.downloadCount = downloadCount;
     }
 
     public long getId() {
@@ -47,5 +49,9 @@ public class File {
 
     public Calendar getDate() {
         return date;
+    }
+
+    public int getDownloadCount() {
+        return downloadCount;
     }
 }

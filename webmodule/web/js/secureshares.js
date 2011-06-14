@@ -9,7 +9,13 @@ goToFiles=function(){
     $.get('contentFiles.jsp', function(data){
       $('#col3_content').html(data);
    });
-    $.get('remoteBrowser.jsp', function(data){
+    $.get('fileList.jsp', function(data){
+      $('#col2_content').html(data);
+   });
+}
+
+reloadFileList=function(){
+    $.get('fileList.jsp', function(data){
       $('#col2_content').html(data);
    });
 }
