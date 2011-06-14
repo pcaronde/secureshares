@@ -113,6 +113,15 @@
             <replacefilter
                 token="##REPOSITORY##"
                 property="${ENV}.REPOSITORY"/>
+            <replacefilter
+                token="##OUTGOING_MAIL_SERVER##"
+                property="${ENV}.OUTGOING_MAIL_SERVER"/>
+            <replacefilter
+                token="##OUTGOING_MAIL_FROM##"
+                property="${ENV}.OUTGOING_MAIL_FROM"/>
+            <replacefilter
+                token="##OUTGOING_MAIL_PASSWORD##"
+                property="${ENV}.OUTGOING_MAIL_PASSWORD"/>
         </replace>
 
     </target>
