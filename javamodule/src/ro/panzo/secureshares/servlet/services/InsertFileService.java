@@ -24,14 +24,9 @@ public class InsertFileService implements Service {
         String savedname = filename;
         String contentType = "test";
         try{
-            result = DBManager.getInstance().insertFile(1, 1, filename, savedname, contentType);
+            result = DBManager.getInstance().insertFile(request.getUserPrincipal().getName(), Long.parseLong(downloadTypeId), filename, savedname, contentType);
         } catch (Exception ex){
             log.debug(ex.getMessage(), ex);
-            /*if(ex.getMessage() != null && ex.getMessage().contains("uq_username")){
-                messages.add("Username already exist!!!");
-            } else {
-                messages.add("Internal error!!!");
-            }*/
         }
         String responseData = su.getJSON(result, messages);
         log.debug("Response: " + responseData);
