@@ -33,7 +33,7 @@ public class Util {
         return rez;
     }
 
-    public void sendDownloadLinkViaMail(final String toEmailAddress, final String subject, final String text){
+    public void sendDownloadLinkViaMail(final String[] toEmailAddress, final String subject, final String text){
         Thread t = new Thread(new Runnable() {
             @Override
             public void run() {
@@ -41,7 +41,7 @@ public class Util {
                 String mailBoxUser = Util.getInstance().getEnviromentValue("OUTGOING_MAIL_FROM");
                 String mailBoxPassword = Util.getInstance().getEnviromentValue("OUTGOING_MAIL_PASSWORD");
                 String from = Util.getInstance().getEnviromentValue("OUTGOING_MAIL_FROM");
-                Util.getInstance().sendMail(mailServer, mailBoxUser, mailBoxPassword, subject, from, new String[]{toEmailAddress}, text, "text/html; charset=utf-8");
+                Util.getInstance().sendMail(mailServer, mailBoxUser, mailBoxPassword, subject, from, toEmailAddress, text, "text/html; charset=utf-8");
             }
         });
         t.start();

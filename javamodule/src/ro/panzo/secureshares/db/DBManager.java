@@ -86,6 +86,25 @@ public class DBManager {
         return result;
     }
 
+    public List<User> getUsersByRole(String rolename) throws NamingException, SQLException {
+        List<User> result = new LinkedList<User>();
+        Connection c = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        try{
+            c = this.getConnection();
+            ps = c.prepareStatement("select u.*, r.* from users u, roles r where u.username = r.username and r.rolename = ?");
+            ps.setString(1, rolename);
+            rs = ps.executeQuery();
+            while(rs.next()){
+                result.add(getUserFromResultSet(rs));
+            }
+        } finally {
+            close(c, ps, rs);
+        }
+        return result;
+    }
+
     private User getUserFromResultSet(ResultSet rs) throws SQLException {
         return new User(rs.getLong("u.id"), rs.getString("u.username"), rs.getString("r.rolename"));
     }
