@@ -68,6 +68,16 @@
         <url-pattern>/service</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>download</servlet-name>
+        <servlet-class>ro.panzo.secureshares.servlet.Download</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>download</servlet-name>
+        <url-pattern>/download</url-pattern>
+    </servlet-mapping>
+
     <listener>
         <description>sessionListener</description>
         <listener-class>

@@ -219,6 +219,25 @@ public class DBManager {
         return result;
     }
 
+    public DownloadType getDownloadTypeById(long id) throws NamingException, SQLException {
+        DownloadType result = null;
+        Connection c = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        try{
+            c = this.getConnection();
+            ps = c.prepareStatement("select dt.* from downloadTypes dt where dt.id = ?");
+            ps.setLong(1, id);
+            rs = ps.executeQuery();
+            if(rs.next()){
+                result = getDownloadTypeFromResultSet(rs);
+            }
+        } finally {
+            close(c, ps, rs);
+        }
+        return result;
+    }
+
     private DownloadType getDownloadTypeFromResultSet(ResultSet rs) throws SQLException {
         return new DownloadType(rs.getLong("dt.id"), rs.getString("dt.name"), rs.getInt("dt.count"), rs.getInt("dt.validity"));
     }
@@ -250,21 +269,28 @@ public class DBManager {
         return result;
     }
 
-    public boolean insertFile(String username, long downloadTypeId, String filename) throws NamingException, SQLException {
-        boolean result = false;
+    public long insertFile(String username, long downloadTypeId, String filename) throws NamingException, SQLException {
+        long fileId = -1;
         Connection c = null;
         PreparedStatement ps = null;
+        ResultSet generatedKeys = null;
         try{
             c = this.getConnection();
-            ps = c.prepareStatement("insert into files values (null, (select u.id from users u where u.username = ?), ?, ?, now(), 0)");
+            ps = c.prepareStatement("insert into files values (null, (select u.id from users u where u.username = ?), ?, ?, now(), 0)", PreparedStatement.RETURN_GENERATED_KEYS);
             ps.setString(1, username);
             ps.setLong(2, downloadTypeId);
             ps.setString(3, filename);
-            result = ps.executeUpdate() == 1;
+            boolean result = ps.executeUpdate() == 1;
+            if(result){
+                generatedKeys = ps.getGeneratedKeys();
+                if(generatedKeys.next()){
+                    fileId = generatedKeys.getLong(1);
+                }
+            }
         } finally {
             close(c, ps);
         }
-        return result;
+        return fileId;
     }
 
     public boolean updateFile(String username, long downloadTypeId, String filename) throws NamingException, SQLException {
@@ -285,6 +311,22 @@ public class DBManager {
         return result;
     }
 
+    public boolean updateFileDownloadCount(long id, int downloadCount) throws NamingException, SQLException {
+        boolean result = false;
+        Connection c = null;
+        PreparedStatement ps = null;
+        try{
+            c = this.getConnection();
+            ps = c.prepareStatement("update files set downloadCount = ? where id = ?");
+            ps.setInt(1, downloadCount);
+            ps.setLong(2, id);
+            result = ps.executeUpdate() == 1;
+        } finally {
+            close(c, ps);
+        }
+        return result;
+    }
+
     public File getFileByName(String filename) throws NamingException, SQLException {
         File result = null;
         Connection c = null;
@@ -295,6 +337,26 @@ public class DBManager {
             ps = c.prepareStatement("select f.*, u.*, dt.*, r.* from files f, users u, downloadTypes dt, roles r " +
                     "where f.userId = u.id and f.downloadTypeId = dt.id and u.username = r.username and f.filename = ?");
             ps.setString(1, filename);
+            rs = ps.executeQuery();
+            if(rs.next()){
+                result = getFileFromResultSet(rs);
+            }
+        } finally {
+            close(c, ps, rs);
+        }
+        return result;
+    }
+
+    public File getFileById(long id) throws NamingException, SQLException {
+        File result = null;
+        Connection c = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        try{
+            c = this.getConnection();
+            ps = c.prepareStatement("select f.*, u.*, dt.*, r.* from files f, users u, downloadTypes dt, roles r " +
+                    "where f.userId = u.id and f.downloadTypeId = dt.id and u.username = r.username and f.id = ?");
+            ps.setLong(1, id);
             rs = ps.executeQuery();
             if(rs.next()){
                 result = getFileFromResultSet(rs);
