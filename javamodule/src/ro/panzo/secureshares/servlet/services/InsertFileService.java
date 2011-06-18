@@ -4,6 +4,7 @@ import org.apache.log4j.Logger;
 import ro.panzo.secureshares.db.DBManager;
 import ro.panzo.secureshares.pojo.File;
 import ro.panzo.secureshares.servlet.Service;
+import ro.panzo.secureshares.util.EncryptionUtil;
 import ro.panzo.secureshares.util.ServiceUtil;
 import ro.panzo.secureshares.util.Util;
 
@@ -34,6 +35,8 @@ public class InsertFileService implements Service {
             }
             //in case of success upload send the email with the link and download type is not disabled
             if(result && lDownloadTypeId != 5){
+                String url =  request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + request.getContextPath();
+                String path = "/activation?t=" + EncryptionUtil.getInstance().encryptDES(username + "^" + System.currentTimeMillis());
                 String subject = "Secure-Shares Upload Notify";
                 StringBuffer text = new StringBuffer();
                 text.append("<html>");
