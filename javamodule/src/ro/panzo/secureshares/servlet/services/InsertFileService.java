@@ -4,14 +4,17 @@ import org.apache.log4j.Logger;
 import ro.panzo.secureshares.db.DBManager;
 import ro.panzo.secureshares.pojo.DownloadType;
 import ro.panzo.secureshares.pojo.File;
+import ro.panzo.secureshares.pojo.User;
 import ro.panzo.secureshares.servlet.Service;
 import ro.panzo.secureshares.util.EncryptionUtil;
 import ro.panzo.secureshares.util.ServiceUtil;
 import ro.panzo.secureshares.util.Util;
 
+import javax.naming.NamingException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -52,7 +55,8 @@ public class InsertFileService implements Service {
                 text.append("<p>").append("Have a nice day.<br/> Secure-Shares Team").append("</p>");
                 text.append("</body>");
                 text.append("</html>");
-                Util.getInstance().sendDownloadLinkViaMail(request.getUserPrincipal().getName(), subject, text.toString());
+
+                Util.getInstance().sendDownloadLinkViaMail(getAdminsEmailAddresses(), subject, text.toString());
             }
         } catch (Exception ex){
             log.debug(ex.getMessage(), ex);
@@ -60,6 +64,16 @@ public class InsertFileService implements Service {
         String responseData = su.getJSON(result, messages);
         log.debug("Response: " + responseData);
         response.getWriter().write(responseData);
+    }
+
+    private String[] getAdminsEmailAddresses() throws NamingException, SQLException {
+        List<User> admins = DBManager.getInstance().getUsersByRole("admin");
+        String[] emailAddresses = new String[admins.size()];
+        int index = 0;
+        for(User admin : admins){
+            emailAddresses[index++] = admin.getUsername();
+        }
+        return emailAddresses;
     }
 
     public String getName() {
