@@ -5,11 +5,11 @@
         float: left;
         display: inline;
         position: relative;
-        background: #c0c0c0 url("layout/background.png") repeat-x center right;
+        background: #103954 url("layout/background.png") repeat-x center right;
         border-top: 1px #333 solid;
         border-bottom: 1px #333 solid;
         line-height: 0;
-        font: Helvetica, Arial, sans-serif;
+        font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
     }
 
     .hlist ul {

@@ -35,3 +35,4 @@ showErrorMessage=function(bt, field, messages){
         ul.append("<li>" + current.message + "</li>");
     });
 }
+
