@@ -85,12 +85,12 @@
         position: relative;
         padding: 20px 2em 1em 20px;
         color: #000;
-        background: #fff;
+        background: #e5e5e5;
     }
 
     #main {
         margin: 10px 0;
-        background: #fff;
+        background: #e5e5e5;
     }
 
     #footer {
