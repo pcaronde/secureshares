@@ -27,7 +27,7 @@
     <div class="page">
       <div id="header">
         <center>
-        <IMG src="images/title3-sm.png" alt="secure shares" width="1400" height="100" vspace="10">
+        <IMG src="images/title6-sm.png" alt="secure shares" width="966" height="266" vspace="10">
 	    </center>
       </div>
       <div id="nav">
