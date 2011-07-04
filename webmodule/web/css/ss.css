@@ -1,0 +1,68 @@
+body {
+    background-color: #e5e5e5;
+    font-family: Arial,sans-serif;
+    text-align:center; 
+}
+
+#page {
+    width: 960px;
+    margin:0 auto;
+}
+
+#header{
+    background-image: url("../images/header.png");
+    width: 960px;
+    height: 258px;
+}
+
+#content{
+    width: 960px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#bottomBar{
+    text-align: left;
+    width: 960px;
+    height: 24px;
+    background-image: url("../images/bottomBar.png");
+    color: #0e4272;
+    font-size: 0.75em
+}
+
+#bottomBar span{
+    vertical-align: middle;
+    height: 24px;
+    margin-left: 20px;
+}
+
+#footer{
+    text-align: center;
+    font-size: 0.6em;
+    color: #676767;
+    width: 960px;
+    height: 100px;
+}
+
+/* login page*/
+
+#loginTop{
+    width: 960px;
+    height: 10px;
+    background-image: url("../images/loginTop.png");
+}
+
+#loginMiddle{
+    color: #ffffff;
+    padding-left: 60px;
+    width: 900px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #113952;
+}
+
+#loginBottom{
+    background-image: url("../images/loginBottom.png");
+    width: 960px;
+    height: 10px;
+}
