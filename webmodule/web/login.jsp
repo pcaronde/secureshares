@@ -2,61 +2,49 @@
 <html><head>
 
   <meta content="text/html; charset=UTF-8" http-equiv="content-type">
-  <link rel="stylesheet" type="text/css" href="css/main.css"></link>
-  <link rel="stylesheet" type="text/css" href="css/mod_layout.css"></link>
+  <link rel="stylesheet" type="text/css" href="css/ss.css"/>
   <script type="text/javascript" src="js/jquery.js"></script>
-  <title>Secure Shares</title></head><body>
+  <title>Secure Shares</title></head>
+<body>
 <%
     String error = request.getParameter("error");
 %>
 
-<div align="center">
-	<img src="images/title6-sm.png" alt="secure shares" height="266" width="966" vspace="10" width="750" style="width: 1004px">
-
-<div id="maincontainer">
-
-<div id="contentwrapper">
-<div id="contentcolumn">
-
-
-<form method="post" action="j_security_check" name="login">
-
-<table class="login" border="0" cellpadding="0" cellspacing="0">
-    <tbody><tr>
-        <td colspan="2" align="center">&nbsp;<%=error != null && error.length() > 0 ? "<span>Login failed !!</span>" : ""%></td>
-    </tr>
-    <tr>
-        <td>Login: 
-</td>
-        <td><input id="username" name="j_username" value="" size="20" maxlength="45" type="text"></td>
-    </tr>
-    <tr>
-        <td>Password:</td>
-        <td><input name="j_password" size="20" maxlength="20" type="password"></td>
-    </tr>
-    <tr>
-        <td colspan="2" align="right"><input name="login" value="Login" align="right" type="submit"></td>
-    </tr>
-</tbody></table>
-
-</form>
+<div id="page">
+    <div id="header"></div>
+    <div id="content">
+        <div id="loginTop"></div>
+        <div id="loginMiddle">
+            <form method="post" action="j_security_check" name="login" id="frmlogin">
+                <table class="login" border="0" cellpadding="3" cellspacing="0">
+                    <tbody>
+                        <tr>
+                            <td colspan="3" align="center" style="color: #ebb84b">&nbsp;<%=error != null && error.length() > 0 ? "<span>Login failed !!</span>" : ""%></td>
+                        </tr>
+                        <tr>
+                            <td align="right">Login</td>
+                            <td align="left"><input id="username" name="j_username" value="" size="20" maxlength="45" type="text"></td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td align="right">Password</td>
+                            <td align="left"><input name="j_password" size="20" maxlength="20" type="password"></td>
+                            <td align="center"><input type="image" src="images/btLogin.png" alt="Login" /></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+        <div id="loginBottom"></div>
+    </div>
+    <div id="bottomBar"><span>imprint | agb</span></div>
+    <div id="footer">
+        <br>A product of <b>PCConsultants Ltd &amp; Co KG</b> in cooperation with <b>E Majuscule S.A.R.L.</b>
+        <br>For more information, please contact us at <i>secure(at)pcconsultants.de</i>
+        <br>or visit: <a href="http://www.pcconsultants.de">www.pcconsultants.de</a><br/>
+        <img src="images/pcconsultants-logo.png" alt="www.pcconsultants.de" height="53" width="88">&nbsp;&nbsp;&nbsp;
+        <img src="images/emajuscule-logo.png" alt="www.e-majuscule.fr" height="53" width="51">
+    </div>
 </div>
-</div>
-
-
-<div id="footer">
-
-	<br>A product of <b>PCConsultants Ltd &amp; Co KG</b> in cooperation with <b>E Majuscule S.A.R.L.</b>
-	<br>For more information, please contact us at <i>secure(at)pcconsultants.de</i>
-	<br>or visit: <a href="http://www.pcconsultants.de">www.pcconsultants.de</a><br/>
-		<img src="images/PCFinal_200x113.jpg" alt="www.pcconsultants.de" height="113" width="200">
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<img src="images/logo-emaj.png" alt="www.e-majuscule.fr" height="109" width="105">
-
-</div>
-</div>
-
-</div>
-<br>
-
-</body></html>
+</body>
+</html>
