@@ -34,6 +34,7 @@ body {
     vertical-align: middle;
     height: 24px;
     margin-left: 20px;
+    line-height: 24px;
 }
 
 #footer{
@@ -65,4 +66,75 @@ body {
     background-image: url("../images/loginBottom.png");
     width: 960px;
     height: 10px;
+}
+
+/* index page */
+
+#indexTop{
+    width: 960px;
+    height: 34px;
+    background-image: url("../images/indexTop.png");
+}
+
+#indexMiddle{
+    width: 960px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: #ffffff;
+    background-image: url("../images/ss-logo.png");
+    background-position: 95% 100%;
+    background-repeat: no-repeat;
+}
+
+#indexBottom{
+    background-image: url("../images/indexBottom.png");
+    width: 960px;
+    height: 10px;
+}
+
+/* index nav */
+
+#indexNavStart{
+    width: 280px;
+    height: 34px;
+    background-image: url("../images/indexNavStart.png");
+    background-position: right;
+    background-repeat: no-repeat;
+    float: left;
+}
+
+#indexNav{
+    margin-left: 280px;
+    background-color: #103954;
+    height: 34px;
+    text-align: left;
+    width: 400px;
+    overflow: hidden;
+}
+
+#indexNav ul{
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+#indexNav ul li{
+    display: inline;
+    line-height: 34px;
+    margin: 0 10px 0 10px;
+    padding: 0;
+    font-family: arial,sans-serif;
+    color: #ffffff;
+}
+
+#indexNav ul li.active a{
+    color: #ecb800;
+    text-decoration: none;
+    font-family: arial,sans-serif;
+}
+
+#indexNav ul li a{
+    text-decoration: none;
+    color: #ffffff;
+    font-family: arial,sans-serif;
 }
