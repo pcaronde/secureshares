@@ -11,7 +11,6 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
-  <component name="CoverageDataManager" choice="3" />
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
     <option name="REVERSE_PATCH" value="false" />
@@ -75,19 +74,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="login.jsp" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="login.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webmodule/web/login.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="80" selection-start="836" selection-end="836" vertical-scroll-proportion="0.8035714">
+            <state line="47" column="6" selection-start="1699" selection-end="2337" vertical-scroll-proportion="-18.125">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ss.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webmodule/web/index.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="57" selection-start="1275" selection-end="1275" vertical-scroll-proportion="-7.4166665">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ss.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/webmodule/web/css/ss.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="50" selection-start="207" selection-end="207" vertical-scroll-proportion="0.0">
+            <state line="132" column="34" selection-start="2278" selection-end="2278" vertical-scroll-proportion="1.0552486">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="layout.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webmodule/web/css/layout.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="25" selection-start="55" selection-end="72" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -111,7 +128,6 @@
         <option value="$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/servlet/tag/SecurityTag.java" />
         <option value="$PROJECT_DIR$/webmodule/web/contentUsers.jsp" />
         <option value="$PROJECT_DIR$/webmodule/web/addEditUser.jsp" />
-        <option value="$PROJECT_DIR$/webmodule/web/index.jsp" />
         <option value="$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/servlet/Service.java" />
         <option value="$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/servlet/services/DeleteUserService.java" />
         <option value="$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/servlet/services/UpdateUserService.java" />
@@ -121,8 +137,9 @@
         <option value="$PROJECT_DIR$/webmodule/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/pojo/DownloadType.java" />
         <option value="$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/pojo/Download.java" />
-        <option value="$PROJECT_DIR$/webmodule/web/css/ss.css" />
         <option value="$PROJECT_DIR$/webmodule/web/login.jsp" />
+        <option value="$PROJECT_DIR$/webmodule/web/index.jsp" />
+        <option value="$PROJECT_DIR$/webmodule/web/css/ss.css" />
       </list>
     </option>
   </component>
@@ -372,6 +389,7 @@
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
         <option name="Maven.BeforeRunTask" enabled="false" />
+        <option name="PhingTarget" enabled="false" />
       </method>
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
@@ -390,6 +408,7 @@
         <option name="BuildArtifacts" enabled="false" />
         <option name="Make" enabled="true" />
         <option name="Maven.BeforeRunTask" enabled="false" />
+        <option name="PhingTarget" enabled="false" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -410,6 +429,7 @@
         <option name="BuildArtifacts" enabled="false" />
         <option name="Make" enabled="true" />
         <option name="Maven.BeforeRunTask" enabled="false" />
+        <option name="PhingTarget" enabled="false" />
       </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -436,6 +456,7 @@
         <option name="BuildArtifacts" enabled="false" />
         <option name="Make" enabled="true" />
         <option name="Maven.BeforeRunTask" enabled="false" />
+        <option name="PhingTarget" enabled="false" />
       </method>
     </configuration>
     <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
@@ -447,6 +468,7 @@
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
         <option name="Maven.BeforeRunTask" enabled="false" />
+        <option name="PhingTarget" enabled="false" />
       </method>
     </configuration>
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local">
@@ -462,6 +484,7 @@
         <option name="BuildArtifacts" enabled="false" />
         <option name="Make" enabled="true" />
         <option name="Maven.BeforeRunTask" enabled="false" />
+        <option name="PhingTarget" enabled="false" />
       </method>
     </configuration>
     <configuration default="false" name="Tomcat 6" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 6">
@@ -499,6 +522,8 @@
   <component name="SvnConfiguration" maxAnnotateRevisions="500">
     <option name="USER" value="" />
     <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
     <option name="LAST_MERGED_REVISION" />
     <option name="MERGE_DRY_RUN" value="false" />
     <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
@@ -525,11 +550,12 @@
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Phing Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24656488" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39927623" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32286212" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32173914" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -549,6 +575,15 @@
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="CHECK_NEW_TODO" value="true" />
+    <option name="myTodoPanelSettings">
+      <value>
+        <are-packages-shown value="false" />
+        <are-modules-shown value="false" />
+        <flatten-packages value="false" />
+        <is-autoscroll-to-source value="false" />
+      </value>
+    </option>
     <option name="PERFORM_UPDATE_IN_BACKGROUND" value="true" />
     <option name="PERFORM_COMMIT_IN_BACKGROUND" value="true" />
     <option name="PERFORM_EDIT_IN_BACKGROUND" value="true" />
@@ -560,6 +595,7 @@
     <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
     <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
+    <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="LAST_COMMIT_MESSAGE" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
@@ -602,19 +638,10 @@
       <treeView value="true" />
       <verbose value="true" />
       <viewClosedWhenNoErrors value="false" />
+      <expanded value="true" />
     </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/servlet/services/DeleteUserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="5" selection-start="1269" selection-end="1324" vertical-scroll-proportion="0.79816514" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/servlet/services/UpdateUserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="4" selection-start="2000" selection-end="2000" vertical-scroll-proportion="0.7724771" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/servlet/services/InsertUserService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="60" column="5" selection-start="2434" selection-end="2434" vertical-scroll-proportion="0.85504586" />
@@ -636,17 +663,17 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/webmodule/web/WEB-INF/web.xml">
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
         <state />
       </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="0" selection-start="356" selection-end="356" vertical-scroll-proportion="0.22900763" />
-      </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/secureshares.sql">
@@ -679,16 +706,35 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webmodule/web/css/ss.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="50" selection-start="207" selection-end="207" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/webmodule/web/images/indexTop.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/webmodule/web/login.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="80" selection-start="836" selection-end="836" vertical-scroll-proportion="0.8035714">
+        <state line="47" column="6" selection-start="1699" selection-end="2337" vertical-scroll-proportion="-18.125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webmodule/web/css/layout.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="25" selection-start="55" selection-end="72" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webmodule/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="57" selection-start="1275" selection-end="1275" vertical-scroll-proportion="-7.4166665">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webmodule/web/css/ss.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="132" column="34" selection-start="2278" selection-end="2278" vertical-scroll-proportion="1.0552486">
           <folding />
         </state>
       </provider>
