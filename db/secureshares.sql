@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.1.49, for debian-linux-gnu (i686)
+-- MySQL dump 10.11
 --
 -- Host: localhost    Database: secureshares
 -- ------------------------------------------------------
--- Server version	5.1.49-1ubuntu8.1
+-- Server version	5.0.67
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -30,17 +30,17 @@ USE `secureshares`;
 --
 
 DROP TABLE IF EXISTS `downloadTypes`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `downloadTypes` (
-  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `id` int(11) unsigned NOT NULL auto_increment,
   `name` varchar(45) NOT NULL,
   `count` int(11) NOT NULL,
   `validity` int(11) NOT NULL,
-  PRIMARY KEY (`id`),
+  PRIMARY KEY  (`id`),
   UNIQUE KEY `id_UNIQUE` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `downloadTypes`
@@ -57,24 +57,20 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `files`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `files` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `id` int(10) unsigned NOT NULL auto_increment,
   `userId` int(10) unsigned NOT NULL,
-  `downloadTypeId` int(10) unsigned NOT NULL,
   `filename` varchar(250) NOT NULL,
   `date` datetime NOT NULL,
-  `downloadCount` int(10) unsigned NOT NULL,
-  PRIMARY KEY (`id`),
+  PRIMARY KEY  (`id`),
   UNIQUE KEY `id_UNIQUE` (`id`),
   UNIQUE KEY `UQ_filename` (`filename`),
   KEY `fk_to_users` (`userId`),
-  KEY `fk_downloadtype` (`downloadTypeId`),
-  CONSTRAINT `fk_downloadtype` FOREIGN KEY (`downloadTypeId`) REFERENCES `downloadTypes` (`id`),
   CONSTRAINT `fk_to_users` FOREIGN KEY (`userId`) REFERENCES `users` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `files`
@@ -82,6 +78,7 @@ CREATE TABLE `files` (
 
 LOCK TABLES `files` WRITE;
 /*!40000 ALTER TABLE `files` DISABLE KEYS */;
+INSERT INTO `files` VALUES (11,1,'WorldPay.pdf','2011-06-18 12:06:10'),(12,2,'4PZHRA.pdf','2011-06-18 19:51:24'),(13,2,'README-LINUX.TXT','2011-06-19 12:32:12'),(14,2,'Sutopia-Fotos-07072011.zip','2011-07-07 22:25:35');
 /*!40000 ALTER TABLE `files` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -90,16 +87,16 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `roles`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `roles` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `id` int(10) unsigned NOT NULL auto_increment,
   `username` varchar(100) NOT NULL,
   `rolename` varchar(50) NOT NULL,
-  PRIMARY KEY (`id`),
+  PRIMARY KEY  (`id`),
   UNIQUE KEY `uq_username` (`username`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `roles`
@@ -107,7 +104,7 @@ CREATE TABLE `roles` (
 
 LOCK TABLES `roles` WRITE;
 /*!40000 ALTER TABLE `roles` DISABLE KEYS */;
-INSERT INTO `roles` VALUES (1,'ciprianticu@gmail.com','admin'),(2,'pcaron@pcconsultants.de','admin'),(6,'ciprianticu@yahoo.com','user');
+INSERT INTO `roles` VALUES (1,'ciprianticu@gmail.com','admin'),(2,'pcaron@pcconsultants.de','admin'),(6,'ciprianticu@yahoo.com','user'),(7,'simone@schroederdesign.com','user'),(8,'etournes@e-majuscule.fr','user'),(9,'nzjacic@pcconsultants.de','user');
 /*!40000 ALTER TABLE `roles` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -116,16 +113,16 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `users`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `users` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `id` int(10) unsigned NOT NULL auto_increment,
   `username` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
-  PRIMARY KEY (`id`),
+  PRIMARY KEY  (`id`),
   UNIQUE KEY `uq_username` (`username`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `users`
@@ -133,7 +130,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'ciprianticu@gmail.com','bdbe366733db79f0f4bfcac2c7c637f9'),(2,'pcaron@pcconsultants.de','f4c3f1bf6bc755fdfde3aec9cc3c2a71'),(9,'ciprianticu@yahoo.com','bdbe366733db79f0f4bfcac2c7c637f9');
+INSERT INTO `users` VALUES (1,'ciprianticu@gmail.com','bdbe366733db79f0f4bfcac2c7c637f9'),(2,'pcaron@pcconsultants.de','febe7831563d14687d257df737f6fd03'),(9,'ciprianticu@yahoo.com','bdbe366733db79f0f4bfcac2c7c637f9'),(10,'simone@schroederdesign.com','3207c8392b9793c26fddf7956388269e'),(11,'etournes@e-majuscule.fr','3207c8392b9793c26fddf7956388269e'),(12,'nzjacic@pcconsultants.de','3207c8392b9793c26fddf7956388269e');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -146,4 +143,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-06-18 10:30:26
+-- Dump completed on 2011-07-08 11:43:55
