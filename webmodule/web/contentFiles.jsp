@@ -1,40 +1,16 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<h2>Manage Files and Shares</h2>
-<div id="container">
-    <h3>Secure Uploads</h3>
-		<P>Choose files from your local computer and securely upload to the server</P>
-    <div id="upload" style="text-indent:0px;">
-        <object
-                width="400"
-                height="300" classid="clsid:8AD9C840-044E-11D1-B3E9-00805F499D93"
-                codebase="http://java.sun.com/products/plugin/autodl/jinstall-1_4-windows-i586.cab#Version=1,4,0,0">
-            <param name="codebase_lookup" value="false">
-            <param name="id" value="myApplet"/>
-            <param name="code" value="ro.panzo.secureshares.Upload"/>
-            <param name="archive" value="secure-shares.applet-1.0.jar"/>
-            <param name="cache_option" value="No">
-            <!--[if !IE]> -->
-            <object width="400" height="300" type="application/x-java-applet">
-                <param name="codebase_lookup" value="false">
-                <param name="id" value="myApplet"/>
-                <param name="code" value="ro.panzo.secureshares.Upload"/>
-                <param name="archive" value="secure-shares.applet-1.0.jar"/>
-                <param name="cache_option" value="No">
-            </object>
-            <!-- <![endif]-->
-        </object>
-    </div>
-
-    <br/>
-
-    <h3 id="securefiles">Availability</h3>
-		<P>Set the time your file(s) will be available to external users</P>
-    <div style="text-indent:0px;">
-        <c:forEach var="downloadType" items="${dbManager.downloadTypes}" varStatus="status">
-            <input type="radio" name="downloadtype" align="left" value="${downloadType.id}" <c:if test="${status.first}">checked="checked"</c:if>/>${downloadType.name}<br/>
-        </c:forEach>
-    </div>
-    <br/>
-</div>
-<br/>
-<br/><br/><br/>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<h3>Secure Files</h3>
+<table border="0" cellpadding="0" cellspacing="0" style="border: 1px solid black; border-collapse: collapse; width: 400px">
+    <tr>
+        <th>Name</th>
+        <th>Date</th>
+    </tr>
+    <c:forEach var="file" items="${dbManager.files}" varStatus="status">
+        <tr>
+            <td>${file.filename}</td>
+            <td><fmt:formatDate pattern="yyyy-MM-dd" value="${file.date.time}" /></td>
+        </tr>
+    </c:forEach>
+</table>

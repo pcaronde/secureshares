@@ -17,15 +17,10 @@
         </table>
     </div>
 </div>
-<script type="text/javascript">
-    saveFileTransaction=function(fileName){
-        $.post("service", {a: 4, tdid: $("input[@name=downloadtype]:checked").val(), fn: fileName}, function(data){
-                var response = $.parseJSON(data);
-                if("OK" == response.status){
-                    reloadFileList()
-                } else {
-                    //showErrorMessage($('#ok'), $('#error'), response.messages);
-                }
-            });
-    }
-</script>
+<h3 id="securefiles">Availability</h3>
+		<P>Set the time your file(s) will be available to external users</P>
+    <div style="text-indent:0px;">
+        <c:forEach var="downloadType" items="${dbManager.downloadTypes}" varStatus="status">
+            <input type="radio" name="downloadtype" align="left" value="${downloadType.id}" <c:if test="${status.first}">checked="checked"</c:if>/>${downloadType.name}<br/>
+        </c:forEach>
+    </div>

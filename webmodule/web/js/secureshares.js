@@ -17,12 +17,12 @@ goToUpload=function(){
     }
 
 goToFiles=function(){
-    /*$.get('contentFiles.jsp', function(data){
-      $('#col3_content').html(data);
-   });
-    $.get('fileList.jsp', function(data){
-      $('#col2_content').html(data);
-   });*/
+    $.get('contentFiles.jsp', function(data){
+            $('#indexContainer').html(data);
+            $('#lnkfiles').parent().addClass("active");
+            $('#lnkupload').parent().removeClass("active");
+            $('#lnkusers').parent().removeClass("active");
+       });
 }
 
 goToHome=function(){
