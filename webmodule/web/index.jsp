@@ -28,7 +28,7 @@
             <div id="indexNavStart"></div>
             <div id="indexNav">
                 <ul>
-                    <li class="active"><a href="#">Home</a></li>
+                    <li class="active"><a href="#" id="lnkhome">Home</a></li>
                     <li><a href="#">How it Works?</a></li>
                     <li><a href="#">Support</a></li>
                     <li><a href="index.jsp?logout=yes">Logout</a></li>
@@ -36,7 +36,15 @@
             </div>
         </div>
         <div id="indexMiddle">
-
+            <div id="indexLeftMenu">
+                <ul>
+                    <li><a href="#" id="lnkusers">user management</a></li>
+                    <li><a href="#" id="lnkfiles">file share management</a></li>
+                    <li><a href="#" id="lnkupload">upload files</a></li>
+                </ul>
+            </div>
+            <div id="indexContainer"></div>
+            <div id="indexClear"></div>
         </div>
         <div id="indexBottom"></div>
     </div>
@@ -49,6 +57,25 @@
         <img src="images/emajuscule-logo.png" alt="www.e-majuscule.fr" height="53" width="51">
     </div>
 </div>
+<script type="text/javascript">
+    $(function(){
+       goToHome();
+    });
+    $('#lnkusers').bind('click', function(){
+       goToUsers();
+       $('#lnkusers').parent().addClass("active");
+       $('#lnkfiles').parent().removeClass("active");
+       $('#lnkupload').parent().removeClass("active");
+    });
+
+    $('#lnkhome').bind('click', function(){
+       goToHome();
+       $('#lnkusers').parent().removeClass("active");
+       $('#lnkfiles').parent().removeClass("active");
+       $('#lnkupload').parent().removeClass("active");
+       $('#lnkhome').parent().addClass("active");
+    });
+</script>
 </body>
 </html>
 <!--
