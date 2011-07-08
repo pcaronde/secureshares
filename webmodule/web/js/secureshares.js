@@ -1,6 +1,18 @@
 goToUsers=function(){
         $.get('contentUsers.jsp', function(data){
-          $('#indexContainer').html(data);
+            $('#indexContainer').html(data);
+            $('#lnkusers').parent().addClass("active");
+            $('#lnkfiles').parent().removeClass("active");
+            $('#lnkupload').parent().removeClass("active");
+       });
+    }
+
+goToUpload=function(){
+        $.get('contentUpload.jsp', function(data){
+            $('#indexContainer').html(data);
+            $('#lnkupload').parent().addClass("active");
+            $('#lnkfiles').parent().removeClass("active");
+            $('#lnkusers').parent().removeClass("active");
        });
     }
 
@@ -13,15 +25,13 @@ goToFiles=function(){
    });*/
 }
 
-reloadFileList=function(){
-    /*$.get('fileList.jsp', function(data){
-      $('#col2_content').html(data);
-   });*/
-}
-
 goToHome=function(){
     $.get('contentHome.jsp', function(data){
-      $('#indexContainer').html(data);
+       $('#indexContainer').html(data);
+       $('#lnkusers').parent().removeClass("active");
+       $('#lnkfiles').parent().removeClass("active");
+       $('#lnkupload').parent().removeClass("active");
+       $('#lnkhome').parent().addClass("active");
    });
 }
 
@@ -34,3 +44,13 @@ showErrorMessage=function(bt, field, messages){
     });
 }
 
+saveFileTransaction=function(fileName){
+    $.post("service", {a: 4, fn: fileName}, function(data){
+            var response = $.parseJSON(data);
+            if("OK" == response.status){
+                //reloadFileList();
+            } else {
+                //showErrorMessage($('#ok'), $('#error'), response.messages);
+            }
+        });
+}

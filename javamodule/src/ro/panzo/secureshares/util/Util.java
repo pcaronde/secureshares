@@ -33,7 +33,7 @@ public class Util {
         return rez;
     }
 
-    public void sendDownloadLinkViaMail(final String[] toEmailAddress, final String subject, final String text){
+    public void sendUploadNotifyMail(final String[] toEmailAddress, final String subject, final String text){
         Thread t = new Thread(new Runnable() {
             @Override
             public void run() {

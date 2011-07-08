@@ -63,17 +63,13 @@
     });
     $('#lnkusers').bind('click', function(){
        goToUsers();
-       $('#lnkusers').parent().addClass("active");
-       $('#lnkfiles').parent().removeClass("active");
-       $('#lnkupload').parent().removeClass("active");
     });
-
+    $('#lnkupload').bind('click', function(){
+       goToUpload();
+    });
     $('#lnkhome').bind('click', function(){
        goToHome();
-       $('#lnkusers').parent().removeClass("active");
-       $('#lnkfiles').parent().removeClass("active");
-       $('#lnkupload').parent().removeClass("active");
-       $('#lnkhome').parent().addClass("active");
+
     });
 </script>
 </body>

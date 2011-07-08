@@ -277,7 +277,7 @@ public class DBManager {
         ResultSet rs = null;
         try{
             c = this.getConnection();
-            ps = c.prepareStatement("select f.*, u.*, dt.*, r.* from files f, users u, downloadTypes dt, roles r where f.userId = u.id and f.downloadTypeId = dt.id and u.username = r.username order by f.date desc");
+            ps = c.prepareStatement("select f.*, u.*, r.* from files f, users u, roles r where f.userId = u.id and u.username = r.username order by f.date desc");
             rs = ps.executeQuery();
             while(rs.next()){
                 result.add(getFileFromResultSet(rs));
@@ -288,17 +288,16 @@ public class DBManager {
         return result;
     }
 
-    public long insertFile(String username, long downloadTypeId, String filename) throws NamingException, SQLException {
+    public long insertFile(String username, String filename) throws NamingException, SQLException {
         long fileId = -1;
         Connection c = null;
         PreparedStatement ps = null;
         ResultSet generatedKeys = null;
         try{
             c = this.getConnection();
-            ps = c.prepareStatement("insert into files values (null, (select u.id from users u where u.username = ?), ?, ?, now(), 0)", PreparedStatement.RETURN_GENERATED_KEYS);
+            ps = c.prepareStatement("insert into files values (null, (select u.id from users u where u.username = ?), ?, now())", PreparedStatement.RETURN_GENERATED_KEYS);
             ps.setString(1, username);
-            ps.setLong(2, downloadTypeId);
-            ps.setString(3, filename);
+            ps.setString(2, filename);
             boolean result = ps.executeUpdate() == 1;
             if(result){
                 generatedKeys = ps.getGeneratedKeys();
@@ -312,17 +311,16 @@ public class DBManager {
         return fileId;
     }
 
-    public boolean updateFile(String username, long downloadTypeId, String filename) throws NamingException, SQLException {
+    public boolean updateFile(String username, String filename) throws NamingException, SQLException {
         boolean result = false;
         Connection c = null;
         PreparedStatement ps = null;
         try{
             c = this.getConnection();
             ps = c.prepareStatement("update files set userId = (select u.id from users u where u.username = ?), " +
-                    "downloadTypeId = ?, date = now(), downloadCount = 0 where filename = ?");
+                    "date = now() where filename = ?");
             ps.setString(1, username);
-            ps.setLong(2, downloadTypeId);
-            ps.setString(3, filename);
+            ps.setString(2, filename);
             result = ps.executeUpdate() == 1;
         } finally {
             close(c, ps);
@@ -330,7 +328,7 @@ public class DBManager {
         return result;
     }
 
-    public boolean updateFileDownloadCount(long id, int downloadCount) throws NamingException, SQLException {
+    /*public boolean updateFileDownloadCount(long id, int downloadCount) throws NamingException, SQLException {
         boolean result = false;
         Connection c = null;
         PreparedStatement ps = null;
@@ -344,7 +342,7 @@ public class DBManager {
             close(c, ps);
         }
         return result;
-    }
+    }*/
 
     public File getFileByName(String filename) throws NamingException, SQLException {
         File result = null;
@@ -353,8 +351,8 @@ public class DBManager {
         ResultSet rs = null;
         try{
             c = this.getConnection();
-            ps = c.prepareStatement("select f.*, u.*, dt.*, r.* from files f, users u, downloadTypes dt, roles r " +
-                    "where f.userId = u.id and f.downloadTypeId = dt.id and u.username = r.username and f.filename = ?");
+            ps = c.prepareStatement("select f.*, u.*, r.* from files f, users u, roles r " +
+                    "where f.userId = u.id and u.username = r.username and f.filename = ?");
             ps.setString(1, filename);
             rs = ps.executeQuery();
             if(rs.next()){
@@ -373,8 +371,8 @@ public class DBManager {
         ResultSet rs = null;
         try{
             c = this.getConnection();
-            ps = c.prepareStatement("select f.*, u.*, dt.*, r.* from files f, users u, downloadTypes dt, roles r " +
-                    "where f.userId = u.id and f.downloadTypeId = dt.id and u.username = r.username and f.id = ?");
+            ps = c.prepareStatement("select f.*, u.*, r.* from files f, users u, roles r " +
+                    "where f.userId = u.id and u.username = r.username and f.id = ?");
             ps.setLong(1, id);
             rs = ps.executeQuery();
             if(rs.next()){
@@ -387,7 +385,6 @@ public class DBManager {
     }
 
     private File getFileFromResultSet(ResultSet rs) throws SQLException {
-        return new File(rs.getLong("id"), this.getUserFromResultSet(rs), this.getDownloadTypeFromResultSet(rs),
-                rs.getString("filename"), this.convertToCalendar(rs.getTimestamp("date")), rs.getInt("downloadCount"));
+        return new File(rs.getLong("id"), this.getUserFromResultSet(rs), rs.getString("filename"), this.convertToCalendar(rs.getTimestamp("date")));
     }
 }
