@@ -13,7 +13,7 @@
     <input type="hidden" id="id" value="${user.id}"/>
 </c:if>
 
-<div id="content" style="text-indent:0px;">
+<div id="addEditUser" style="text-indent:0px;">
     <table border="0" cellpadding="5" cellspacing="0">
         <tr>
             <td colspan="2"><span style="color:red;" id="error"></span></td>
