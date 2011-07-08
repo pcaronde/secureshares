@@ -78,8 +78,8 @@ body {
 
 #indexMiddle{
     width: 960px;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 20px;
+    padding-bottom: 10px;
     background-color: #ffffff;
     background-image: url("../images/ss-logo.png");
     background-position: 95% 100%;
@@ -95,7 +95,7 @@ body {
 /* index nav */
 
 #indexNavStart{
-    width: 280px;
+    width: 250px;
     height: 34px;
     background-image: url("../images/indexNavStart.png");
     background-position: right;
@@ -104,7 +104,7 @@ body {
 }
 
 #indexNav{
-    margin-left: 280px;
+    margin-left: 250px;
     background-color: #103954;
     height: 34px;
     text-align: left;
@@ -137,4 +137,56 @@ body {
     text-decoration: none;
     color: #ffffff;
     font-family: arial,sans-serif;
+}
+
+#indexLeftMenu {
+    width: 200px;
+    float: left;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: right;
+}
+
+#indexLeftMenu ul{
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+#indexLeftMenu ul li{
+    display: block;
+    padding: 0 10px 0 0;
+    margin: 0 0 10px 0;
+    height: 35px;
+    line-height: 35px;
+    background-color: #edb200;
+    background-image: url("../images/indexLeftMenuEnd.png");
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+#indexLeftMenu ul li.active a{
+    text-decoration: none;
+    font-family: arial,sans-serif;
+    font-size: 0.95em;
+    color: #103954;
+}
+
+#indexLeftMenu ul li a{
+    font-size: 0.95em;
+    text-decoration: none;
+    color: #877834;
+    font-family: arial,sans-serif;
+}
+
+#indexContainer{
+    width: 600px;
+    float: left;
+    margin-left: 40px;
+    margin-right: 10px;
+}
+
+#indexClear{
+    clear: both;
 }

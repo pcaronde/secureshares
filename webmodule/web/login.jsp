@@ -46,5 +46,8 @@
         <img src="images/emajuscule-logo.png" alt="www.e-majuscule.fr" height="53" width="51">
     </div>
 </div>
+<script type="text/javascript">
+    $('#username').focus();
+</script>
 </body>
 </html>
