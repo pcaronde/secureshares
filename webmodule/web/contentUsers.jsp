@@ -3,7 +3,7 @@
 <s:check role="admin">
 <h3>Manage Secure Shares Users</h3>
 <P>Here you can define the premissions for users internal and external</P>
-<div id="content" style="text-indent:0px;">
+<div id="users" style="text-indent:0px;">
     <span style="color:red;" id="error"></span>
     <table border="0" cellpadding="5" cellspacing="0">
         <tr>
@@ -31,15 +31,13 @@
     $('#add').bind('click', function(){
        $('#add').attr("disabled", "true");
        $.get('addEditUser.jsp', function(data){
-          $('#col3_content').html(data);
-          $('#col2_content').html("");
+          $('#indexContainer').html(data);
        });
     });
     $('#edit').bind('click', function(){
        $('#edit').attr("disabled", "true");
        $.get('addEditUser.jsp', {id: $("input[@name=user]:checked").val()}, function(data){
-          $('#col3_content').html(data);
-          $('#col2_content').html("");
+          $('#indexContainer').html(data);
        });
     });
     $('#delete').bind('click', function(){
