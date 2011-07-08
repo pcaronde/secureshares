@@ -67,6 +67,9 @@
     $('#lnkupload').bind('click', function(){
        goToUpload();
     });
+    $('#lnkfiles').bind('click', function(){
+       goToFiles();
+    });
     $('#lnkhome').bind('click', function(){
        goToHome();
 
