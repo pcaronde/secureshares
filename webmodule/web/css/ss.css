@@ -139,6 +139,7 @@ body {
     font-family: arial,sans-serif;
 }
 
+/** menu along left side */
 #indexLeftMenu {
     width: 200px;
     float: left;
@@ -160,7 +161,7 @@ body {
     margin: 0 0 10px 0;
     height: 35px;
     line-height: 35px;
-    background-color: #edb200;
+    background-color: #103954;
     background-image: url("../images/indexLeftMenuEnd.png");
     background-position: right;
     background-repeat: no-repeat;
@@ -170,13 +171,13 @@ body {
     text-decoration: none;
     font-family: arial,sans-serif;
     font-size: 0.95em;
-    color: #103954;
+    color: #edb200;
 }
 
 #indexLeftMenu ul li a{
     font-size: 0.95em;
     text-decoration: none;
-    color: #877834;
+    color: #dbd9d9;
     font-family: arial,sans-serif;
 }
 
