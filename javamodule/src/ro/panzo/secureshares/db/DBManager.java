@@ -328,6 +328,21 @@ public class DBManager {
         return result;
     }
 
+    public boolean deleteFile(long id) throws NamingException, SQLException {
+        boolean result = false;
+        Connection c = null;
+        PreparedStatement ps = null;
+        try{
+            c = this.getConnection();
+            ps = c.prepareStatement("delete from files where id = ?");
+            ps.setLong(1, id);
+            result = ps.executeUpdate() == 1;
+        } finally {
+            close(c, ps);
+        }
+        return result;
+    }
+
     /*public boolean updateFileDownloadCount(long id, int downloadCount) throws NamingException, SQLException {
         boolean result = false;
         Connection c = null;

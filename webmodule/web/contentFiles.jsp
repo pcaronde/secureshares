@@ -18,9 +18,26 @@
         </c:forEach>
         <tr>
             <td colspan="3" align="right">
-                <input type="button" id="add" value="Send Download Link"/>
+                <input type="button" id="send" value="Send Download Link"/>
                 <input type="button" id="delete" value="Delete File"/>
             </td>
         </tr>
     </table>
 </div>
+<script type="text/javascript">
+    $('#delete').bind('click', function(){
+       $('#delete').attr("disabled", "true");
+       if(confirm("Are you sure you want to delete the selected file?")){
+           $.post("service", {a: 5, id: $("input[@name=file]:checked").val()}, function(data){
+                var response = $.parseJSON(data);
+                if("OK" == response.status){
+                    goToFiles();
+                } else {
+                    showErrorMessage($('#ok'), $('#error'), response.messages);
+                }
+            });
+       } else {
+           $('#delete').removeAttr("disabled");
+       }
+    });
+</script>

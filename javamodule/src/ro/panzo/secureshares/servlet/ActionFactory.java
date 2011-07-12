@@ -1,10 +1,7 @@
 package ro.panzo.secureshares.servlet;
 
 import org.apache.log4j.Logger;
-import ro.panzo.secureshares.servlet.services.DeleteUserService;
-import ro.panzo.secureshares.servlet.services.InsertFileService;
-import ro.panzo.secureshares.servlet.services.InsertUserService;
-import ro.panzo.secureshares.servlet.services.UpdateUserService;
+import ro.panzo.secureshares.servlet.services.*;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -27,6 +24,7 @@ public class ActionFactory {
         this.registerService("2", new UpdateUserService());
         this.registerService("3", new DeleteUserService());
         this.registerService("4", new InsertFileService());
+        this.registerService("5", new DeleteFileService());
     }
 
     public void executeService(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
