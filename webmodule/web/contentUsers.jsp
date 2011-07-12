@@ -3,9 +3,9 @@
 <s:check role="admin">
 <h3>Manage Secure Shares Users</h3>
 <P>Here you can define the premissions for users internal and external</P>
-<div id="users" style="text-indent:0px;">
+<div id="contentList">
     <span style="color:red;" id="error"></span>
-    <table border="0" cellpadding="5" cellspacing="0">
+    <table border="0" cellpadding="0" cellspacing="0">
         <tr>
             <th>&nbsp;</th>
             <th>Username</th>
@@ -13,9 +13,9 @@
         </tr>
         <c:forEach var="user" items="${dbManager.users}" varStatus="status">
             <tr>
-                <td><input type="radio" name="user" value="${user.id}" align="left" <c:if test="${status.first}">checked="checked"</c:if>/></td>
-                <td>${user.username}</td>
-                <td>${user.role}</td>
+                <td <c:if test="${status.count % 2 == 0}">class="highlighted"</c:if>><input type="radio" name="user" value="${user.id}" align="left" <c:if test="${status.first}">checked="checked"</c:if>/></td>
+                <td <c:if test="${status.count % 2 == 0}">class="highlighted"</c:if>>${user.username}</td>
+                <td <c:if test="${status.count % 2 == 0}">class="highlighted"</c:if>>${user.role}</td>
             </tr>
         </c:forEach>
         <tr>
