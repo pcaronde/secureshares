@@ -191,3 +191,35 @@ body {
 #indexClear{
     clear: both;
 }
+
+#contentList {
+    text-align: left;
+    font-family: arial, sans-serif;
+    text-decoration: none;
+    font-weight: 100;
+    font-size: 0.85em;
+}
+
+#contentList table{
+    border-collapse: collapse;
+    width: 550px;
+}
+
+#contentList table tr th{
+    color: #ffffff;
+    background-color: #638aab;
+    border: 1px solid #acc3d5;
+    padding: 3px;
+}
+
+#contentList table tr td{
+    color: #638aab;
+    background-color: #ffffff;
+    border: 1px solid #acc3d5;
+    padding: 3px;
+}
+
+#contentList table tr td.highlighted{
+    background-color: #ebf0f3;
+    padding: 3px;
+}
