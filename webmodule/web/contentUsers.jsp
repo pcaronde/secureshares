@@ -13,7 +13,7 @@
         </tr>
         <c:forEach var="user" items="${dbManager.users}" varStatus="status">
             <tr>
-                <td <c:if test="${status.count % 2 == 0}">class="highlighted"</c:if>><input type="radio" name="user" value="${user.id}" align="left" <c:if test="${status.first}">checked="checked"</c:if>/></td>
+                <td align="center" <c:if test="${status.count % 2 == 0}">class="highlighted"</c:if>><input type="radio" name="user" value="${user.id}" align="left" <c:if test="${status.first}">checked="checked"</c:if>/></td>
                 <td <c:if test="${status.count % 2 == 0}">class="highlighted"</c:if>>${user.username}</td>
                 <td <c:if test="${status.count % 2 == 0}">class="highlighted"</c:if>>${user.role}</td>
             </tr>
