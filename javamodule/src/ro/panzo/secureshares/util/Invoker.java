@@ -2,7 +2,9 @@ package ro.panzo.secureshares.util;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Invoker {
     private Object target;
@@ -10,9 +12,20 @@ public class Invoker {
     private List<String> paramClasses;
     private List<Object> paramObjects;
 
+    private Map<String,Class> builtInMap = new HashMap<String,Class>();
+
     public Invoker() {
         this.paramClasses = new ArrayList<String>();
         this.paramObjects = new ArrayList<Object>();
+        builtInMap.put("int", Integer.TYPE );
+        builtInMap.put("long", Long.TYPE );
+        builtInMap.put("double", Double.TYPE );
+        builtInMap.put("float", Float.TYPE );
+        builtInMap.put("bool", Boolean.TYPE );
+        builtInMap.put("char", Character.TYPE );
+        builtInMap.put("byte", Byte.TYPE );
+        builtInMap.put("void", Void.TYPE );
+        builtInMap.put("short", Short.TYPE );
     }
 
     public void setTarget(Object target) {
@@ -45,7 +58,7 @@ public class Invoker {
     private Class<?>[] getClassParameters() throws ClassNotFoundException {
         Class<?>[] classes = new Class<?>[paramClasses.size()];
         for(int i = 0; i < paramClasses.size(); i++){
-            classes[i] = Class.forName(paramClasses.get(i));
+            classes[i] = builtInMap.containsKey(paramClasses.get(i)) ? builtInMap.get(paramClasses.get(i)) : Class.forName(paramClasses.get(i));
         }
         return classes;
     }

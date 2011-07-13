@@ -70,7 +70,4 @@
        goToUsers();
     });
 </script>
-<br/>
-<br/>
-<br/><br/><br/>
 </s:check>

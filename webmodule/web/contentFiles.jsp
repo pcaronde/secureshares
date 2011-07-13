@@ -45,4 +45,10 @@
            $('#delete').removeAttr("disabled");
        }
     });
+    $('#send').bind('click', function(){
+        $('#send').attr("disabled", "true");
+           $.get('sendDownloadLink.jsp', {id: $("input[@name=file]:checked").val()}, function(data){
+              $('#indexContainer').html(data);
+           });
+    });
 </script>
