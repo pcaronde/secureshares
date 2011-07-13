@@ -25,6 +25,7 @@ public class Download extends HttpServlet {
             String dec = EncryptionUtil.getInstance().decryptDES(enc);
             long fileId = Long.parseLong(dec.split("\\^")[0]);
             File file = DBManager.getInstance().getFileById(fileId);
+            /*
             if(file != null && ((file.getDownloadType().getId() == 1 && file.getDownloadCount() == 0) ||
                     (file.getDownloadType().getId() >= 2 && file.getDownloadType().getId() <= 4 &&
                             (System.currentTimeMillis() - file.getDate().getTimeInMillis()) < file.getDownloadType().getValidity() * 60 * 60 * 1000))){
@@ -50,6 +51,7 @@ public class Download extends HttpServlet {
             } else {
                 response.sendError(HttpServletResponse.SC_NOT_FOUND);
             }
+            */
         } catch (Exception ex){
             log.debug(ex.getMessage(), ex);
             response.sendError(HttpServletResponse.SC_BAD_REQUEST);
