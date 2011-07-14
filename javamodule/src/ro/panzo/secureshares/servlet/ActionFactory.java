@@ -25,6 +25,7 @@ public class ActionFactory {
         this.registerService("3", new DeleteUserService());
         this.registerService("4", new InsertFileService());
         this.registerService("5", new DeleteFileService());
+        this.registerService("6", new SendDownloadLinkService());
     }
 
     public void executeService(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

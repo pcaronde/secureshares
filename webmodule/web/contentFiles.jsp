@@ -2,6 +2,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+<%@ taglib uri="/WEB-INF/security.tld" prefix="s" %>
+<s:check role="admin">
 <h3>Secure Files</h3>
 <div id="contentList">
     <table border="0" cellpadding="0" cellspacing="0" class="files">
@@ -52,3 +54,4 @@
            });
     });
 </script>
+</s:check>

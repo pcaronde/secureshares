@@ -229,6 +229,23 @@ body {
     padding-left: 20px;
 }
 
+.files a.deleteRecipientBt{
+    margin: 0 4px;
+    padding: 0 8px;
+    background-image:url('../images/delete-icon.png');
+    background-repeat:no-repeat;
+    background-position: center;
+    text-decoration: none;
+}
+
+.files a:hover.deleteRecipientBt{
+    margin: 0 4px;
+    padding: 0 8px;
+    background-image:url('../images/delete-icon-hover.png');
+    background-repeat:no-repeat;
+    text-decoration: none;
+}
+
 /* File Extensions*/
 .files span.ext_3gp { background: url(filetree/film.png) left top no-repeat; }
 .files span.ext_afp { background: url(filetree/code.png) left top no-repeat; }
@@ -288,3 +305,21 @@ body {
 .files span.ext_xls { background: url(filetree/xls.png) left top no-repeat; }
 .files span.ext_xml { background: url(filetree/code.png) left top no-repeat; }
 .files span.ext_zip { background: url(filetree/zip.png) left top no-repeat; }
+
+#recipientsList{
+    width: 270px;
+    padding-left: 20px;
+    font-family: arial, sans-serif;
+    font-size: 0.8em;
+}
+
+#recipientsList .recipientRow{
+    border: 1px solid #adc3d1;
+    padding: 0 2px 0 2px;
+    margin: 2px 0 2px 0;
+}
+
+#recipientsList .recipientRow div{
+    float: left;
+    width: 235px;
+}
