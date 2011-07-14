@@ -70,7 +70,7 @@
 
     <servlet>
         <servlet-name>download</servlet-name>
-        <servlet-class>ro.panzo.secureshares.servlet.Download</servlet-class>
+        <servlet-class>ro.panzo.secureshares.servlet.DownloadServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>

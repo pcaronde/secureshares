@@ -2,6 +2,7 @@ package ro.panzo.secureshares.servlet;
 
 import org.apache.log4j.Logger;
 import ro.panzo.secureshares.db.DBManager;
+import ro.panzo.secureshares.pojo.Download;
 import ro.panzo.secureshares.pojo.File;
 import ro.panzo.secureshares.util.EncryptionUtil;
 import ro.panzo.secureshares.util.Util;
@@ -14,7 +15,7 @@ import java.io.BufferedInputStream;
 import java.io.FileInputStream;
 import java.io.IOException;
 
-public class Download extends HttpServlet {
+public class DownloadServlet extends HttpServlet {
 
     private final Logger log = Logger.getLogger(Action.class);
 
@@ -23,24 +24,24 @@ public class Download extends HttpServlet {
         try{
             String enc = request.getParameter("t");
             String dec = EncryptionUtil.getInstance().decryptDES(enc);
-            long fileId = Long.parseLong(dec.split("\\^")[0]);
-            File file = DBManager.getInstance().getFileById(fileId);
-            /*
-            if(file != null && ((file.getDownloadType().getId() == 1 && file.getDownloadCount() == 0) ||
-                    (file.getDownloadType().getId() >= 2 && file.getDownloadType().getId() <= 4 &&
-                            (System.currentTimeMillis() - file.getDate().getTimeInMillis()) < file.getDownloadType().getValidity() * 60 * 60 * 1000))){
+            long downloadId = Long.parseLong(dec.split("\\^")[0]);
+            Download download = DBManager.getInstance().getDownloadById(downloadId);
+            //@todo check if there is an ongoing download if download type is 1 = single download
+            if(download != null && ((download.getDownloadType().getId() == 1 && download.getCount() == 0) ||
+                    (download.getDownloadType().getId() >= 2 && download.getDownloadType().getId() <= 4 &&
+                            (System.currentTimeMillis() - download.getDate().getTimeInMillis()) < download.getDownloadType().getValidity() * 60 * 60 * 1000))){
                 response.setContentType("application/x-unknown");
-                response.setHeader("Content-Disposition", "attachment; filename=" + file.getFilename());
+                response.setHeader("Content-Disposition", "attachment; filename=" + download.getFile().getFilename());
                 String repository = Util.getInstance().getEnviromentValue("REPOSITORY");
                 BufferedInputStream bin = null;
                 try {
-                    bin = new BufferedInputStream(new FileInputStream(repository + "/" + file.getFilename()));
+                    bin = new BufferedInputStream(new FileInputStream(repository + "/" + download.getFile().getFilename()));
                     byte[] buffer = new byte[1024];
                     int read;
                     while((read = bin.read(buffer)) != -1){
                         response.getOutputStream().write(buffer, 0, read);
                     }
-                    DBManager.getInstance().updateFileDownloadCount(file.getId(), file.getDownloadCount() + 1);
+                    DBManager.getInstance().updateDownloadCount(download.getId(), download.getCount() + 1);
                 } catch (IOException ioex){
                     log.debug(ioex.getMessage(), ioex);
                 } finally {
@@ -51,7 +52,6 @@ public class Download extends HttpServlet {
             } else {
                 response.sendError(HttpServletResponse.SC_NOT_FOUND);
             }
-            */
         } catch (Exception ex){
             log.debug(ex.getMessage(), ex);
             response.sendError(HttpServletResponse.SC_BAD_REQUEST);

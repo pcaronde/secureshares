@@ -1,6 +1,7 @@
 package ro.panzo.secureshares.db;
 
 import org.apache.log4j.Logger;
+import ro.panzo.secureshares.pojo.Download;
 import ro.panzo.secureshares.pojo.DownloadType;
 import ro.panzo.secureshares.pojo.File;
 import ro.panzo.secureshares.pojo.User;
@@ -343,21 +344,6 @@ public class DBManager {
         return result;
     }
 
-    /*public boolean updateFileDownloadCount(long id, int downloadCount) throws NamingException, SQLException {
-        boolean result = false;
-        Connection c = null;
-        PreparedStatement ps = null;
-        try{
-            c = this.getConnection();
-            ps = c.prepareStatement("update files set downloadCount = ? where id = ?");
-            ps.setInt(1, downloadCount);
-            ps.setLong(2, id);
-            result = ps.executeUpdate() == 1;
-        } finally {
-            close(c, ps);
-        }
-        return result;
-    }*/
 
     public File getFileByName(String filename) throws NamingException, SQLException {
         File result = null;
@@ -402,4 +388,68 @@ public class DBManager {
     private File getFileFromResultSet(ResultSet rs) throws SQLException {
         return new File(rs.getLong("id"), this.getUserFromResultSet(rs), rs.getString("filename"), this.convertToCalendar(rs.getTimestamp("date")));
     }
+
+    private Download getDownloadFromResultSet(ResultSet rs) throws SQLException {
+        return new Download(rs.getLong("d.id"), this.getFileFromResultSet(rs), this.getDownloadTypeFromResultSet(rs), this.convertToCalendar(rs.getTimestamp("d.date")), rs.getInt("d.count"));
+    }
+
+    public long insertDownload(long fileId, long downloadTypeId) throws NamingException, SQLException {
+        long downloadId = -1;
+        Connection c = null;
+        PreparedStatement ps = null;
+        ResultSet generatedKeys = null;
+        try{
+            c = this.getConnection();
+            ps = c.prepareStatement("insert into downloads values (null, ?, ?, now(), 0)", PreparedStatement.RETURN_GENERATED_KEYS);
+            ps.setLong(1, fileId);
+            ps.setLong(2, downloadTypeId);
+            boolean result = ps.executeUpdate() == 1;
+            if(result){
+                generatedKeys = ps.getGeneratedKeys();
+                if(generatedKeys.next()){
+                    downloadId = generatedKeys.getLong(1);
+                }
+            }
+        } finally {
+            close(c, ps);
+        }
+        return downloadId;
+    }
+
+    public Download getDownloadById(long id) throws NamingException, SQLException {
+        Download result = null;
+        Connection c = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        try{
+            c = this.getConnection();
+            ps = c.prepareStatement("select f.*, u.*, r.*, d.*, dt.* from files f, users u, roles r, downloads d, downloadTypes dt " +
+                    "where f.userId = u.id and u.username = r.username and f.id = d.fileId and dt.id = d.downLoadTypeId and d.id = ?");
+            ps.setLong(1, id);
+            rs = ps.executeQuery();
+            if(rs.next()){
+                result = getDownloadFromResultSet(rs);
+            }
+        } finally {
+            close(c, ps, rs);
+        }
+        return result;
+    }
+
+    public boolean updateDownloadCount(long id, int count) throws NamingException, SQLException {
+        boolean result = false;
+        Connection c = null;
+        PreparedStatement ps = null;
+        try{
+            c = this.getConnection();
+            ps = c.prepareStatement("update downloads set count = ? where id = ?");
+            ps.setInt(1, count);
+            ps.setLong(2, id);
+            result = ps.executeUpdate() == 1;
+        } finally {
+            close(c, ps);
+        }
+        return result;
+    }
+
 }

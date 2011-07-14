@@ -38,8 +38,10 @@
         <div id="indexMiddle">
             <div id="indexLeftMenu">
                 <ul>
-                    <li><a href="#" id="lnkusers">user management</a></li>
-                    <li><a href="#" id="lnkfiles">file share management</a></li>
+                    <s:check role="admin">
+                        <li><a href="#" id="lnkusers">user management</a></li>
+                        <li><a href="#" id="lnkfiles">file share management</a></li>
+                    </s:check>
                     <li><a href="#" id="lnkupload">upload files</a></li>
                 </ul>
             </div>
