@@ -1,15 +1,13 @@
 <script type="text/javascript" src="js/secureshares.js"></script>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="/WEB-INF/security.tld" prefix="s" %>
+<%@ taglib uri="/WEB-INF/invoker.tld" prefix="invk" %>
 <s:check role="admin">
 <h3>Secure Users</h3>
 <c:if test="${!empty param.id}">
-    <jsp:useBean id="invoker" class="ro.panzo.secureshares.util.Invoker"/>
-    <jsp:setProperty name="invoker" property="target" value="${dbManager}"/>
-    <jsp:setProperty name="invoker" property="methodName" value="getUserById"/>
-    <jsp:setProperty name="invoker" property="addParamClasses" value="java.lang.Long"/>
-    <jsp:setProperty name="invoker" property="addParamObjects" value="${0 + param.id}"/>
-    <c:set var="user" value="${invoker.invoke}"/>
+    <invk:execute var="user" target="dbManager" method="getUserById">
+        <invk:param type="java.lang.Long" value="${0 + param.id}"/>
+    </invk:execute>
     <input type="hidden" id="id" value="${user.id}"/>
 </c:if>
 
