@@ -2,18 +2,18 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%@ taglib uri="/WEB-INF/security.tld" prefix="s" %>
+<%@ taglib uri="/WEB-INF/invoker.tld" prefix="invk" %>
 <s:check role="admin">
 <h3>Send Download Link</h3>
 <c:if test="${!empty param.id}">
     <script type="text/javascript">
         var recipients = [];
     </script>
-    <jsp:useBean id="invoker" class="ro.panzo.secureshares.util.Invoker"/>
-    <jsp:setProperty name="invoker" property="target" value="${dbManager}"/>
-    <jsp:setProperty name="invoker" property="methodName" value="getFileById"/>
-    <jsp:setProperty name="invoker" property="addParamClasses" value="long"/>
-    <jsp:setProperty name="invoker" property="addParamObjects" value="${0 + param.id}"/>
-    <c:set var="file" value="${invoker.invoke}"/>
+
+    <invk:execute var="file" target="dbManager" method="getFileById">
+        <invk:param type="long" value="${0 + param.id}"/>
+    </invk:execute>
+
     <input type="hidden" id="fileid" value="${file.id}"/>
     
     <div style="text-align: left">

@@ -12,7 +12,7 @@ public class Invoker {
     private List<String> paramClasses;
     private List<Object> paramObjects;
 
-    private Map<String,Class> builtInMap = new HashMap<String,Class>();
+    private Map<String, Class> builtInMap = new HashMap<String, Class>();
 
     public Invoker() {
         this.paramClasses = new ArrayList<String>();
