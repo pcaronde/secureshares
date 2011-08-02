@@ -45,9 +45,9 @@ public class InsertFileService implements Service {
                 StringBuffer text = new StringBuffer();
                 text.append("<html>");
                 text.append("<body>");
-                text.append("<p>").append("A new file was uploaded").append("<p>");
+                text.append("<p>").append("Dear Secure Shares User, ").append("</p><p>").append(" this is an automated message from secure-shares. A new file has been uploaded.").append("<p>");
                 text.append("<p><b>").append(filename).append("</b><p>");
-                text.append("<p>").append("Have a nice day.<br/> Secure-Shares Team").append("</p>");
+                text.append("<p>").append("Thank you for using SecureShares.<br/> Secure-Shares Team").append("</p>");
                 text.append("</body>");
                 text.append("</html>");
 

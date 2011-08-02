@@ -44,7 +44,7 @@ public class InsertUserService implements Service {
             if(ex.getMessage() != null && ex.getMessage().contains("uq_username")){
                 messages.add("Username already exist!!!");
             } else {
-                messages.add("Internal error!!!");
+                messages.add("Internal error!!! Did you add a valid user email? ");
             }
         }
         String responseData = su.getJSON(result, messages);
