@@ -46,13 +46,16 @@ public class SendDownloadLinkService implements Service {
                         StringBuilder text = new StringBuilder();
                         text.append("<html>");
                         text.append("<body>");
-                        text.append("<p>").append("This is a download notify. You can download the file using the link below").append("<p>");
+                        text.append("<p>").append("Dear Secure Shares User, ").append("</p><p>").append(" This is a download notification. " +
+                        		"You have been send a secure shares file and can download the file using the link below. " +
+                        		.append("<br/>").append("Though secure-shares makes every effort to assure the integrity and files please make sure to check all downloaded" +
+                        				"file with an up-to-date anti-virus program to insure the security of your workstation.").append("<p>");
                         text.append("<p><a href='").append(url).append(path).append("' target=\"_blank\"><b>").append(f.getFilename()).append("</b></a><p>");
                         text.append("<p>The link is available for: ").append(downloadType.getName()).append("</p>");
-                        text.append("<p>").append("Have a nice day.<br/> Secure-Shares Team").append("</p>");
+                        text.append("<p>").append("Thank you for using secure-shares.<br/> Your Secure-Shares Team").append("</p>");
                         text.append("</body>");
                         text.append("</html>");
-                        log.debug("Link: " + url + path);
+                        log.debug("You can download your file via this link: " + url + path);
                         Util.getInstance().sendUploadNotifyMail(recipients.split(","), subject, text.toString());
                         result = true;
                     } else {
