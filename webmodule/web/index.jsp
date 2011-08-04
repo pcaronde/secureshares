@@ -29,8 +29,8 @@
             <div id="indexNav">
                 <ul>
                     <li class="active"><a href="#" id="lnkhome">Home</a></li>
-                    <li><a href="contentHowItWorks.jsp">How it Works?</a></li>
-                    <li><a href="contentSupport.jsp">Support</a></li>
+                    <li><a href="#" id="lnkhow">How it Works?</a></li>
+                    <li><a href="#" id="lnksupport">Support</a></li>
                     <li><a href="index.jsp?logout=yes">Logout</a></li>
                 </ul>
             </div>
