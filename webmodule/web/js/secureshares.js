@@ -35,6 +35,26 @@ goToHome=function(){
    });
 }
 
+goToSupport=function(){
+    $.get('contentSupport.jsp', function(data){
+       $('#indexContainer').html(data);
+       $('#lnkusers').parent().removeClass("active");
+       $('#lnkfiles').parent().removeClass("active");
+       $('#lnkupload').parent().removeClass("active");
+       $('#lnksupport').parent().addClass("active");
+   });
+}
+
+goToHowTo=function(){
+    $.get('contentHowItWorks.jsp', function(data){
+       $('#indexContainer').html(data);
+       $('#lnkusers').parent().removeClass("active");
+       $('#lnkfiles').parent().removeClass("active");
+       $('#lnkupload').parent().removeClass("active");
+       $('#lnkhow').parent().addClass("active");
+   });
+}
+
 showErrorMessage=function(bt, field, messages){
     bt.removeAttr("disabled");
     field.html("");
