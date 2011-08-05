@@ -49,8 +49,9 @@
     });
     $('#send').bind('click', function(){
         $('#send').attr("disabled", "true");
+        var fileId = $("input[@name=file]:checked").val();
         showLoading();
-        $.get('sendDownloadLink.jsp', {id: $("input[@name=file]:checked").val()}, function(data){
+        $.get('sendDownloadLink.jsp', {id: fileId}, function(data){
            $('#indexContainer').html(data);
         });
     });
