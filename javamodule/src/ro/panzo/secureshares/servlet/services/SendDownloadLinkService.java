@@ -46,10 +46,10 @@ public class SendDownloadLinkService implements Service {
                         StringBuilder text = new StringBuilder();
                         text.append("<html>");
                         text.append("<body>");
-                        text.append("<p>").append("Dear Secure Shares User, ").append("</p><p>").append(" This is a download notification. " +
-                        		"You have been send a secure shares file and can download the file using the link below. " +
-                        		.append("<br/>").append("Though secure-shares makes every effort to assure the integrity and files please make sure to check all downloaded" +
-                        				"file with an up-to-date anti-virus program to insure the security of your workstation.").append("<p>");
+                        text.append("<p>").append("Dear Secure Shares User, ").append("</p><p>").append(" This is a download notification. ")
+                                .append("You have been send a secure shares file and can download the file using the link below. ")
+                                .append("<br/>").append("Though secure-shares makes every effort to assure the integrity and files please make sure to check all downloaded")
+                                .append("file with an up-to-date anti-virus program to insure the security of your workstation.").append("<p>");
                         text.append("<p><a href='").append(url).append(path).append("' target=\"_blank\"><b>").append(f.getFilename()).append("</b></a><p>");
                         text.append("<p>The link is available for: ").append(downloadType.getName()).append("</p>");
                         text.append("<p>").append("Thank you for using secure-shares.<br/> Your Secure-Shares Team").append("</p>");

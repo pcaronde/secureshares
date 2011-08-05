@@ -74,7 +74,12 @@
     });
     $('#lnkhome').bind('click', function(){
        goToHome();
-
+    });
+    $('#lnkhow').bind('click', function(){
+       goToHowTo();
+    });
+    $('#lnksupport').bind('click', function(){
+       goToSupport();
     });
 </script>
 </body>
