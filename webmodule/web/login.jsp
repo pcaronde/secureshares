@@ -15,6 +15,8 @@
     <div id="content">
         <div id="loginTop"></div>
         <div id="loginMiddle">
+            <img alt="plusbelleavie logo" src="images/plusbellelavie.png">            <br/><br/>
+
             <form method="post" action="j_security_check" name="login" id="frmlogin">
                 <table class="login" border="0" cellpadding="3" cellspacing="0">
                     <tbody>
@@ -25,16 +27,20 @@
                             <td align="right">Login</td>
                             <td align="left"><input id="username" name="j_username" value="" size="20" maxlength="45" type="text"></td>
                             <td>&nbsp;</td>
+                            
                         </tr>
                         <tr>
                             <td align="right">Password</td>
                             <td align="left"><input name="j_password" size="20" maxlength="20" type="password"></td>
                             <td align="center"><input type="image" src="images/btLogin.png" alt="Login" /></td>
+                            
                         </tr>
                     </tbody>
                 </table>
             </form>
+
         </div>
+        
         <div id="loginBottom"></div>
     </div>
     <div id="bottomBar"><span>imprint | agb</span></div>
