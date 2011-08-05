@@ -49,9 +49,10 @@
     });
     $('#send').bind('click', function(){
         $('#send').attr("disabled", "true");
-           $.get('sendDownloadLink.jsp', {id: $("input[@name=file]:checked").val()}, function(data){
-              $('#indexContainer').html(data);
-           });
+        showLoading();
+        $.get('sendDownloadLink.jsp', {id: $("input[@name=file]:checked").val()}, function(data){
+           $('#indexContainer').html(data);
+        });
     });
 </script>
 </s:check>
