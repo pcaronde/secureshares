@@ -29,6 +29,7 @@ public class SendDownloadLinkService implements Service {
         String fileId = request.getParameter("fid");
         String downloadTypeId = request.getParameter("dtid");
         String recipients = request.getParameter("r");
+        String message = request.getParameter("msg");
         log.debug("FileId: " + fileId);
         log.debug("DownloadTypeId: " + downloadTypeId);
         log.debug("Recipients: " + recipients);
@@ -52,6 +53,7 @@ public class SendDownloadLinkService implements Service {
                                 .append("file with an up-to-date anti-virus program to insure the security of your workstation.").append("<p>");
                         text.append("<p><a href='").append(url).append(path).append("' target=\"_blank\"><b>").append(f.getFilename()).append("</b></a><p>");
                         text.append("<p>The link is available for: ").append(downloadType.getName()).append("</p>");
+                        text.append("<p>").append(message).append("</p>");
                         text.append("<p>").append("Thank you for using secure-shares.<br/> Your Secure-Shares Team").append("</p>");
                         text.append("</body>");
                         text.append("</html>");

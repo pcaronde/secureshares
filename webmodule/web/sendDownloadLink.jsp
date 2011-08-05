@@ -22,7 +22,7 @@
                 <td colspan="2"><p style="color:red;" id="error"></p></td>
             </tr>
             <tr>
-                <td>Recipeints:</td>
+                <td>Recipients:</td>
                 <td><input type="text" id="recipient" value=""/><input type="button" id="btadd" value="Add"/></td>
             </tr>
             <tr>
@@ -36,6 +36,10 @@
                 <td><span class="ext_${fn:toLowerCase(fn:substringAfter(file.filename, "."))}">${file.filename}</span></td>
             </tr>
             <tr>
+                <td valign="top"><label for="message">Message:</label></td>
+                <td><textarea rows="4" cols="30" id="message" style="border: #103954 1px solid;resize: none;"></textarea></td>
+            </tr>
+            <tr>
                 <td valign="top">Availability:</td>
                 <td>
                     <c:forEach var="downloadType" items="${dbManager.downloadTypes}" varStatus="status">
@@ -45,7 +49,7 @@
             </tr>
             <tr>
                 <td colspan="2" align="right">
-                    <input type="button" id="send" value="Send"/>
+                    <input type="button" id="send" value="Send" disabled="disabled"/>
                     <input type="button" id="cancel" value="Cancel"/>
                 </td>
             </tr>
@@ -67,12 +71,14 @@
             }
         }
         recipients = recipientsTmp;
+        if(recipients.length == 0){
+            $('#send').attr("disabled", "disabled");
+        }
     }
-{
-    };
+
     $('#send').bind('click', function(){
         $('#send').attr("disabled", "true");
-        $.post("service", {a: 6, fid: $("#fileid").val(), dtid: $("input[@name=downloadtype]:checked").val(), r: '' + recipients}, function(data){
+        $.post("service", {a: 6, fid: $("#fileid").val(), dtid: $("input[@name=downloadtype]:checked").val(), msg:  $("#message").val(), r: '' + recipients}, function(data){
                     var response = $.parseJSON(data);
                     if("OK" == response.status){
                         goToFiles();
@@ -96,7 +102,7 @@
                 $('#recipientsList').append("<div class='recipientRow' id='" + index + "'><div>" + recipient + "</div><a href='#' class='deleteRecipientBt' title='delete' onclick='deleteRecipient(" + index+ ")'>&nbsp;</a></div>")
                 $("#recipient").val("");
                 $('#btadd').removeAttr("disabled");
-
+                $('#send').removeAttr("disabled");
             } else {
                 alert('Invalid recipient address (eg: my_name@email.com)');
             }
