@@ -1,36 +1,39 @@
 goToUsers=function(){
         $.get('contentUsers.jsp', function(data){
             $('#indexContainer').html(data);
+            $('.active').each(function(index, item){
+               $(item).removeClass("active");
+            });
             $('#lnkusers').parent().addClass("active");
-            $('#lnkfiles').parent().removeClass("active");
-            $('#lnkupload').parent().removeClass("active");
        });
     }
 
 goToUpload=function(){
         $.get('contentUpload.jsp', function(data){
             $('#indexContainer').html(data);
+            $('.active').each(function(index, item){
+               $(item).removeClass("active");
+            });
             $('#lnkupload').parent().addClass("active");
-            $('#lnkfiles').parent().removeClass("active");
-            $('#lnkusers').parent().removeClass("active");
        });
     }
 
 goToFiles=function(){
     $.get('contentFiles.jsp', function(data){
             $('#indexContainer').html(data);
+            $('.active').each(function(index, item){
+               $(item).removeClass("active");
+            });
             $('#lnkfiles').parent().addClass("active");
-            $('#lnkupload').parent().removeClass("active");
-            $('#lnkusers').parent().removeClass("active");
        });
 }
 
 goToHome=function(){
     $.get('contentHome.jsp', function(data){
        $('#indexContainer').html(data);
-       $('#lnkusers').parent().removeClass("active");
-       $('#lnkfiles').parent().removeClass("active");
-       $('#lnkupload').parent().removeClass("active");
+       $('.active').each(function(index, item){
+          $(item).removeClass("active");
+       });
        $('#lnkhome').parent().addClass("active");
    });
 }
@@ -38,9 +41,9 @@ goToHome=function(){
 goToSupport=function(){
     $.get('contentSupport.jsp', function(data){
        $('#indexContainer').html(data);
-       $('#lnkusers').parent().removeClass("active");
-       $('#lnkfiles').parent().removeClass("active");
-       $('#lnkupload').parent().removeClass("active");
+       $('.active').each(function(index, item){
+          $(item).removeClass("active");
+       });
        $('#lnksupport').parent().addClass("active");
    });
 }
@@ -48,9 +51,9 @@ goToSupport=function(){
 goToHowTo=function(){
     $.get('contentHowItWorks.jsp', function(data){
        $('#indexContainer').html(data);
-       $('#lnkusers').parent().removeClass("active");
-       $('#lnkfiles').parent().removeClass("active");
-       $('#lnkupload').parent().removeClass("active");
+       $('.active').each(function(index, item){
+          $(item).removeClass("active");
+       });
        $('#lnkhow').parent().addClass("active");
    });
 }
