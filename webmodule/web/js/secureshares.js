@@ -74,7 +74,7 @@ showErrorMessage=function(bt, field, messages){
 }
 
 showLoading=function(){
-    $('#indexContainer').html("<img src='images/content-loader.gif' alt='loading' style='margin-top: 50px'/><br/><p>processing your request ...</p>");
+    $('#indexContainer').html("<img src='images/content-loader.gif' alt='loading' style='margin-top: 50px'/><br/><p>loading. please be patient ...</p>");
 }
 
 saveFileTransaction=function(fileName){

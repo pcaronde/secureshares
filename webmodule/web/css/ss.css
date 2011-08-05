@@ -56,11 +56,13 @@ body {
 #loginMiddle{
     color: #ffffff;
     padding-left: 60px;
-    width: 900px;
+    width: 960px;
     padding-top: 60px;
     padding-bottom: 60px;
     background-color: #113952;
+    background: url("../images/plusbellelavie-bg.png") no-repeat;
 }
+
 
 #loginBottom{
     background-image: url("../images/loginBottom.png");
