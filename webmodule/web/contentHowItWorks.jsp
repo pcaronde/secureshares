@@ -5,9 +5,6 @@
 <%@ taglib uri="/WEB-INF/security.tld" prefix="s" %>
 <div style="text-align: left">
 <h3>How SecureShares Works</h3>
-<p><b>SecureShares</b> is a secure file sharing service from PCConsultants Ltd &amp; Co KG and Panzo Consulting SRL for
-    individuals as well as small and mid-sized companies who need to share files securely.
-</p>
 
 <br/>
 <img src="images/process_flow-575x167-white.png" alt="process flow" height="167" width="575">
