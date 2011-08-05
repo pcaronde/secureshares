@@ -30,12 +30,14 @@
 <script type="text/javascript">
     $('#add').bind('click', function(){
        $('#add').attr("disabled", "true");
+       showLoading();
        $.get('addEditUser.jsp', function(data){
           $('#indexContainer').html(data);
        });
     });
     $('#edit').bind('click', function(){
        $('#edit').attr("disabled", "true");
+       showLoading();
        $.get('addEditUser.jsp', {id: $("input[@name=user]:checked").val()}, function(data){
           $('#indexContainer').html(data);
        });

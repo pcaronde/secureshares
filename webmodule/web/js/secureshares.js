@@ -1,4 +1,5 @@
 goToUsers=function(){
+        showLoading();
         $.get('contentUsers.jsp', function(data){
             $('#indexContainer').html(data);
             $('.active').each(function(index, item){
@@ -9,6 +10,7 @@ goToUsers=function(){
     }
 
 goToUpload=function(){
+        showLoading();
         $.get('contentUpload.jsp', function(data){
             $('#indexContainer').html(data);
             $('.active').each(function(index, item){
@@ -19,6 +21,7 @@ goToUpload=function(){
     }
 
 goToFiles=function(){
+    showLoading();
     $.get('contentFiles.jsp', function(data){
             $('#indexContainer').html(data);
             $('.active').each(function(index, item){
@@ -29,6 +32,7 @@ goToFiles=function(){
 }
 
 goToHome=function(){
+    showLoading();
     $.get('contentHome.jsp', function(data){
        $('#indexContainer').html(data);
        $('.active').each(function(index, item){
@@ -39,6 +43,7 @@ goToHome=function(){
 }
 
 goToSupport=function(){
+    showLoading();
     $.get('contentSupport.jsp', function(data){
        $('#indexContainer').html(data);
        $('.active').each(function(index, item){
@@ -49,6 +54,7 @@ goToSupport=function(){
 }
 
 goToHowTo=function(){
+   showLoading();
     $.get('contentHowItWorks.jsp', function(data){
        $('#indexContainer').html(data);
        $('.active').each(function(index, item){
@@ -65,6 +71,10 @@ showErrorMessage=function(bt, field, messages){
     $.each(messages, function(i, current){
         ul.append("<li>" + current.message + "</li>");
     });
+}
+
+showLoading=function(){
+    $('#indexContainer').html("<img src='images/content-loader.gif' alt='loading' style='margin-top: 50px'/><br/><p>processing your request ...</p>");
 }
 
 saveFileTransaction=function(fileName){
