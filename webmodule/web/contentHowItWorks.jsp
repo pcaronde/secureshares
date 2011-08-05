@@ -5,12 +5,22 @@
 <%@ taglib uri="/WEB-INF/security.tld" prefix="s" %>
 <div style="text-align: left">
 <h3>How SecureShares Works</h3>
-<p>SecureShares</b> is a secure file sharing service from PCConsultants Ltd &amp; Co KG for
+<p><b>SecureShares</b> is a secure file sharing service from PCConsultants Ltd &amp; Co KG and Panzo Consulting SRL for
     individuals as well as small and mid-sized companies who need to share files securely.
 </p>
 
-<p>With <b>SecureShares</b> you are assured of secure storage and transmission of your files and once downloaded in the case you choose the single download option or after the time you allot to keep it available. After that, it is removed from the server forever.<br><br>[INSERT IMAGE HERE]
+<br/>
+<img src="images/process_flow-575x167-white.png" alt="process flow" height="167" width="575">
 </p>
+<h4>Four easy steps to secure file sharing</h4>
+<ol>
+<li>An authorized and authenticated user uploads a file via a secure connection using https.</li>
+<li>The file is stored securely on the server for a defined period (e.g. one download, one day, one week)</li>
+<li>An email is sent to the intended recipient(s) which includes a secure link (again using https) to the file</li>
+<li>The recipient then downloads the file safely to her computer</li>
+</ol> 
+<br />
+<p>With <b>SecureShares</b> you are assured of secure storage and transmission of your files and once downloaded in the case you choose the single download option or after the time you allot to keep it available. 
+After that, it is removed from the server forever.
 
-<p>A similar process works in reverse. ....<br></p>
 </div>
