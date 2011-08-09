@@ -29,6 +29,7 @@ public class Upload  extends JApplet implements ActionListener, Runnable, SftpPr
     private boolean uploadCanceled;
 
     private String host = "mobile3.pcconsultants.de";
+    //private String host = "188.138.97.183";
     private int port = 22;
     private String username = "guesftp";
     private String password = "GuesFTP123!";
