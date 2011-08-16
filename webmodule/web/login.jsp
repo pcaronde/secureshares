@@ -15,8 +15,6 @@
     <div id="content">
         <div id="loginTop"></div>
         <div id="loginMiddle">
-            <img alt="plusbelleavie logo" src="images/plusbellelavie.png">            <br/><br/>
-
             <form method="post" action="j_security_check" name="login" id="frmlogin">
                 <table class="login" border="0" cellpadding="3" cellspacing="0">
                     <tbody>

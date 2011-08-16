@@ -77,26 +77,90 @@
       <file leaf-file-name="Upload.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/applet/src/ro/panzo/secureshares/Upload.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="204" column="33" selection-start="7933" selection-end="7933" vertical-scroll-proportion="0.0">
+            <state line="168" column="0" selection-start="6305" selection-end="6305" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="web.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/webmodule/web/WEB-INF/web.xml">
-          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
-            <state />
-          </provider>
-          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
-            <state />
-          </provider>
-          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
-            <state />
-          </provider>
+      <file leaf-file-name="index.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webmodule/web/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="30" selection-start="805" selection-end="805" vertical-scroll-proportion="0.62737644">
+            <state line="12" column="71" selection-start="824" selection-end="824" vertical-scroll-proportion="-7.5">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="addEditUser.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webmodule/web/addEditUser.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="47" selection-start="585" selection-end="585" vertical-scroll-proportion="-8.125">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IpInfoUtil.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/util/IpInfoUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="34" column="67" selection-start="1111" selection-end="1111" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="I18NTag.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/tld/I18NTag.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="0" selection-start="195" selection-end="195" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="i18n.tld" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/webmodule/web/WEB-INF/i18n.tld">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="40" selection-start="667" selection-end="667" vertical-scroll-proportion="0.7479224">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DBManager.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/db/DBManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="455" column="27" selection-start="15823" selection-end="15823" vertical-scroll-proportion="0.0">
+              <folding>
+                <marker date="1313487351000" expanded="true" signature="2433:2500" placeholder="select u.*, ..users..." />
+                <marker date="1313487351000" expanded="true" signature="3056:3142" placeholder="select u.*, ..users..." />
+                <marker date="1313487351000" expanded="true" signature="3876:3956" placeholder="select u.*, ..users..." />
+                <marker date="1313487351000" expanded="true" signature="4582:4624" placeholder="insert into users..." />
+                <marker date="1313487351000" expanded="true" signature="4837:4874" placeholder="insert into roles..." />
+                <marker date="1313487351000" expanded="true" signature="5820:5867" placeholder="update users..." />
+                <marker date="1313487351000" expanded="true" signature="6425:6507" placeholder="delete from roles..." />
+                <marker date="1313487351000" expanded="true" signature="6461:6506" placeholder="select u.use..users..." />
+                <marker date="1313487351000" expanded="true" signature="6668:6698" placeholder="delete from users..." />
+                <marker date="1313487351000" expanded="true" signature="7648:7696" placeholder="select dt.* ..downloadTypes..." />
+                <marker date="1313487351000" expanded="true" signature="8243:8292" placeholder="select dt.* ..downloadTypes..." />
+                <marker date="1313487351000" expanded="true" signature="9312:9434" placeholder="select f.*, ..files..." />
+                <marker date="1313487351000" expanded="true" signature="9982:10072" placeholder="insert into files..." />
+                <marker date="1313487351000" expanded="true" signature="10015:10060" placeholder="select u.id ..users..." />
+                <marker date="1313487351000" expanded="true" signature="10832:10963" placeholder="update files..." />
+                <marker date="1313487351000" expanded="true" signature="10859:10904" placeholder="select u.id ..users..." />
+                <marker date="1313487351000" expanded="true" signature="11441:11471" placeholder="delete from files..." />
+                <marker date="1313487351000" expanded="true" signature="11936:12081" placeholder="select f.*, ..files..." />
+                <marker date="1313487351000" expanded="true" signature="12629:12768" placeholder="select f.*, ..files..." />
+                <marker date="1313487351000" expanded="true" signature="13860:13911" placeholder="insert into downloads..." />
+                <marker date="1313487351000" expanded="true" signature="14689:14919" placeholder="select f.*, ..files..." />
+                <marker date="1313487351000" expanded="true" signature="15460:15503" placeholder="update downloads..." />
+                <marker date="1313487351000" expanded="true" signature="16008:16061" placeholder="select `valu..i18n..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -115,13 +179,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/servlet/DownloadServlet.java" />
-        <option value="$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/util/Invoker.java" />
-        <option value="$PROJECT_DIR$/webmodule/web/WEB-INF/invoker.tld" />
-        <option value="$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/servlet/tag/InvokerTag.java" />
-        <option value="$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/servlet/tag/InvokerParamTag.java" />
-        <option value="$PROJECT_DIR$/webmodule/web/addEditUser.jsp" />
-        <option value="$PROJECT_DIR$/webmodule/web/index.jsp" />
         <option value="$PROJECT_DIR$/resources/tki_EN.properties" />
         <option value="$PROJECT_DIR$/resources/tki_DE.properties" />
         <option value="$PROJECT_DIR$/webmodule/web/sendDownloadLink.jsp" />
@@ -131,6 +188,13 @@
         <option value="$PROJECT_DIR$/webmodule/web/contentFiles.jsp" />
         <option value="$PROJECT_DIR$/applet/src/ro/panzo/secureshares/Upload.java" />
         <option value="$PROJECT_DIR$/webmodule/web/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/webmodule/web/login.jsp" />
+        <option value="$PROJECT_DIR$/webmodule/web/css/ss.css" />
+        <option value="$PROJECT_DIR$/webmodule/web/index.jsp" />
+        <option value="$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/util/IpInfoUtil.java" />
+        <option value="$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/db/DBManager.java" />
+        <option value="$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/tld/I18NTag.java" />
+        <option value="$PROJECT_DIR$/webmodule/web/WEB-INF/i18n.tld" />
       </list>
     </option>
   </component>
@@ -183,8 +247,9 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Favorites" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Favorites" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -319,28 +384,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="secure-shares" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="secure-shares" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webmodule" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -361,6 +404,84 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="Resource Bundle 'tki'" />
               <option name="myItemType" value="com.intellij.lang.properties.projectView.ResourceBundleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="secure-shares" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="secure-shares" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javamodule" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="secure-shares" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="secure-shares" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javamodule" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ro" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="panzo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="secureshares" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="secure-shares" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="secure-shares" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javamodule" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ro" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="panzo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="secureshares" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tld" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -441,7 +562,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -452,7 +572,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="RESOURCE_BUNDLE_SPLITTER_PROPORTION" value="0.5" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="options.lastSelected" value="preferences.externalResources" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="recentsLimit" value="5" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
@@ -460,9 +580,9 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="PublishConfig">
     <servers>
@@ -585,6 +705,18 @@
         <option name="PhingTarget" enabled="false" />
       </method>
     </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+        <option name="PhingTarget" enabled="false" />
+      </method>
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" />
       <module name="" />
@@ -608,18 +740,6 @@
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
         <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-        <option name="PhingTarget" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
-      <JSDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSDebuggerConfigurationSettings>
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
         <option name="Maven.BeforeRunTask" enabled="false" />
         <option name="PhingTarget" enabled="false" />
       </method>
@@ -699,28 +819,28 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="25" width="1368" height="721" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="25" width="1360" height="718" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Phing Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24580152" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32342657" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24577573" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39927623" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31993008" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32902735" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32671756" sideWeight="0.99826086" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3264209" sideWeight="0.99826086" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32810616" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32342657" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="IntelliJad Console" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32809773" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -795,50 +915,9 @@
     </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/servlet/tag/InvokerParamTag.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="25" selection-start="571" selection-end="571" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/servlet/tag/InvokerTag.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="0" selection-start="945" selection-end="945" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webmodule/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="37" selection-start="1249" selection-end="1255" vertical-scroll-proportion="0.5535714" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/tki_EN.properties">
-      <provider editor-type-id="ResourceBundle">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="13" selection-start="4119" selection-end="4119" vertical-scroll-proportion="-12.142858" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/tki_DE.properties">
-      <provider editor-type-id="ResourceBundle">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="22" selection-start="1154" selection-end="1154" vertical-scroll-proportion="0.45546558" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/servlet/services/SendDownloadLinkService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="36" selection-start="1398" selection-end="1398" vertical-scroll-proportion="0.06032907" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/util/Invoker.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="48" selection-start="813" selection-end="813" vertical-scroll-proportion="0.30164534" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webmodule/web/css/ss.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="206" column="0" selection-start="3534" selection-end="3534" vertical-scroll-proportion="0.7129799" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/build.xml">
@@ -861,35 +940,114 @@
         <state line="76" column="147" selection-start="2266" selection-end="2266" vertical-scroll-proportion="0.47897622" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webmodule/web/addEditUser.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="54" selection-start="640" selection-end="640" vertical-scroll-proportion="-0.72848946" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webmodule/web/contentFiles.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="53" column="49" selection-start="2454" selection-end="2454" vertical-scroll-proportion="0.77380955" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/applet/src/ro/panzo/secureshares/Upload.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="204" column="33" selection-start="7933" selection-end="7933" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webmodule/web/WEB-INF/web.xml">
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
-        <state />
-      </provider>
       <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="30" selection-start="805" selection-end="805" vertical-scroll-proportion="0.62737644">
+        <state line="22" column="30" selection-start="805" selection-end="805" vertical-scroll-proportion="0.028680688">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/applet/src/ro/panzo/secureshares/Upload.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="168" column="0" selection-start="6305" selection-end="6305" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webmodule/web/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="29" selection-start="957" selection-end="957" vertical-scroll-proportion="-13.75">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webmodule/web/css/ss.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="21" selection-start="304" selection-end="304" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webmodule/web/addEditUser.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="47" selection-start="585" selection-end="585" vertical-scroll-proportion="-8.125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webmodule/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="71" selection-start="824" selection-end="824" vertical-scroll-proportion="-7.5">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/util/IpInfoUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="67" selection-start="1111" selection-end="1111" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/db/DBManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="455" column="27" selection-start="15823" selection-end="15823" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1313487351000" expanded="true" signature="2433:2500" placeholder="select u.*, ..users..." />
+            <marker date="1313487351000" expanded="true" signature="3056:3142" placeholder="select u.*, ..users..." />
+            <marker date="1313487351000" expanded="true" signature="3876:3956" placeholder="select u.*, ..users..." />
+            <marker date="1313487351000" expanded="true" signature="4582:4624" placeholder="insert into users..." />
+            <marker date="1313487351000" expanded="true" signature="4837:4874" placeholder="insert into roles..." />
+            <marker date="1313487351000" expanded="true" signature="5820:5867" placeholder="update users..." />
+            <marker date="1313487351000" expanded="true" signature="6425:6507" placeholder="delete from roles..." />
+            <marker date="1313487351000" expanded="true" signature="6461:6506" placeholder="select u.use..users..." />
+            <marker date="1313487351000" expanded="true" signature="6668:6698" placeholder="delete from users..." />
+            <marker date="1313487351000" expanded="true" signature="7648:7696" placeholder="select dt.* ..downloadTypes..." />
+            <marker date="1313487351000" expanded="true" signature="8243:8292" placeholder="select dt.* ..downloadTypes..." />
+            <marker date="1313487351000" expanded="true" signature="9312:9434" placeholder="select f.*, ..files..." />
+            <marker date="1313487351000" expanded="true" signature="9982:10072" placeholder="insert into files..." />
+            <marker date="1313487351000" expanded="true" signature="10015:10060" placeholder="select u.id ..users..." />
+            <marker date="1313487351000" expanded="true" signature="10832:10963" placeholder="update files..." />
+            <marker date="1313487351000" expanded="true" signature="10859:10904" placeholder="select u.id ..users..." />
+            <marker date="1313487351000" expanded="true" signature="11441:11471" placeholder="delete from files..." />
+            <marker date="1313487351000" expanded="true" signature="11936:12081" placeholder="select f.*, ..files..." />
+            <marker date="1313487351000" expanded="true" signature="12629:12768" placeholder="select f.*, ..files..." />
+            <marker date="1313487351000" expanded="true" signature="13860:13911" placeholder="insert into downloads..." />
+            <marker date="1313487351000" expanded="true" signature="14689:14919" placeholder="select f.*, ..files..." />
+            <marker date="1313487351000" expanded="true" signature="15460:15503" placeholder="update downloads..." />
+            <marker date="1313487351000" expanded="true" signature="16008:16061" placeholder="select `valu..i18n..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javamodule/src/ro/panzo/secureshares/tld/I18NTag.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="0" selection-start="195" selection-end="195" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webmodule/web/WEB-INF/i18n.tld">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="40" selection-start="667" selection-end="667" vertical-scroll-proportion="0.7479224">
           <folding />
         </state>
       </provider>

@@ -13,6 +13,12 @@ body {
     background-image: url("../images/header.png");
     width: 960px;
     height: 258px;
+    text-align: right;
+}
+
+#languages{
+    padding-top: 5px;
+    padding-right: 15px;
 }
 
 #content{

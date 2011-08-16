@@ -1,3 +1,4 @@
+<%@ page import="ro.panzo.secureshares.util.IpInfoUtil" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="/WEB-INF/security.tld" prefix="s" %>
@@ -19,10 +20,21 @@
             return;
         }
     }
+    String countryCode = (String)session.getAttribute("lang");
+    if(countryCode == null){
+        countryCode = IpInfoUtil.getInstance().getCountryCodeFromIp(request.getRemoteAddr());
+        session.setAttribute("lang", countryCode);
+    }
 %>
 <body>
 <div id="page">
-    <div id="header"></div>
+    <div id="header">
+        <div id="languages">
+            <a href="#"><img src="images/de.png" width="16" height="11" alt="de"/></a>
+            <a href="#"><img src="images/gb.png" width="16" height="11" alt="gb"/></a>
+            <a href="#"><img src="images/fr.png" width="16" height="11" alt="fr"/></a>
+        </div>
+    </div>
     <div id="content">
         <div id="indexTop">
             <div id="indexNavStart"></div>
