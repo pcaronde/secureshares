@@ -452,4 +452,24 @@ public class DBManager {
         return result;
     }
 
+    public String getI18NFor(String lang, String key) throws NamingException, SQLException {
+        String result = key;
+        Connection c = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        try{
+            c = this.getConnection();
+            ps = c.prepareStatement("select `value` from i18n where lang = ? and `key` = ?");
+            ps.setString(1, lang);
+            ps.setString(2, key);
+            rs = ps.executeQuery();
+            if(rs.next()){
+                result = rs.getString("value");
+            }
+        } finally {
+            close(c, ps, rs);
+        }
+        return result;
+    }
+
 }
