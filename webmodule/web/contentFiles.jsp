@@ -3,6 +3,9 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%@ taglib uri="/WEB-INF/security.tld" prefix="s" %>
+<%
+    session.setAttribute("lastAction", 5);
+%>
 <s:check role="admin">
 <h3>Secure Files</h3>
 <div id="contentList">

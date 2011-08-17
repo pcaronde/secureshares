@@ -25,14 +25,18 @@
         countryCode = IpInfoUtil.getInstance().getCountryCodeFromIp(request.getRemoteAddr());
         session.setAttribute("lang", countryCode);
     }
+    int lastAction = 1;
+    if(session.getAttribute("lastAction") != null){
+        lastAction = (Integer)session.getAttribute("lastAction");
+    }
 %>
 <body>
 <div id="page">
     <div id="header">
         <div id="languages">
-            <a href="#"><img src="images/de.png" width="16" height="11" alt="de"/></a>
-            <a href="#"><img src="images/gb.png" width="16" height="11" alt="gb"/></a>
-            <a href="#"><img src="images/fr.png" width="16" height="11" alt="fr"/></a>
+            <a href="#" id="lng_de"><img src="images/de.png" width="16" height="11" alt="de"/></a>
+            <a href="#" id="lng_gb"><img src="images/gb.png" width="16" height="11" alt="gb"/></a>
+            <a href="#" id="lng_fr"><img src="images/fr.png" width="16" height="11" alt="fr"/></a>
         </div>
     </div>
     <div id="content">
@@ -73,7 +77,15 @@
 </div>
 <script type="text/javascript">
     $(function(){
-       goToHome();
+        var lastAction = <%=lastAction%>;
+        switch(lastAction){
+            case 1 : goToHome(); break;
+            case 2 : goToHowTo(); break;
+            case 3 : goToSupport(); break;
+            case 4 : goToUsers(); break;
+            case 5 : goToFiles(); break;
+            case 6 : goToUpload(); break;
+        }
     });
     $('#lnkusers').bind('click', function(){
        goToUsers();
@@ -92,6 +104,15 @@
     });
     $('#lnksupport').bind('click', function(){
        goToSupport();
+    });
+    $('#lng_de').bind('click', function(){
+        changeLanguage("de");
+    });
+    $('#lng_gb').bind('click', function(){
+        changeLanguage("gb");
+    });
+    $('#lng_fr').bind('click', function(){
+        changeLanguage("fr");
     });
 </script>
 </body>
