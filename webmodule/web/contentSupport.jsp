@@ -1,7 +1,8 @@
+<%@ taglib uri="/WEB-INF/i18n.tld" prefix="l" %>
 <div style="text-align: left">
-<h3>Support for SecureShares</h3>
-If something has gone wrong please alert our security administrators so we can help you.<br>
+<h3><l:text key="contentSupportTitle"/></h3>
+<l:text key="contentSupportP1"/><br>
 <br/>
-Send mail to our <a href="mailto:help@secure-shares.net?subject=SecureShare Request">help desk</a> help(at)secure-shares.net. 
+<l:text key="contentSupportP2"/>
 <br>
 </div>
