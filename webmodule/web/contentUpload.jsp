@@ -1,4 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%
+    session.setAttribute("lastAction", 6);
+%>
 <h3>Secure Uploads</h3>
 <P>Choose files from your local computer and securely upload to the server</P>
 <div id="upload" style="text-indent:0px;">

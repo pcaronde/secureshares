@@ -1,5 +1,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="/WEB-INF/i18n.tld" prefix="l" %>
+<%
+    session.setAttribute("lastAction", 2);
+%>
 <div style="text-align: left">
     <h3><l:text key="contentHowItWorksTitle"/></h3>
     <br/>

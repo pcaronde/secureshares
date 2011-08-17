@@ -1,24 +1,24 @@
 goToUsers=function(){
-        showLoading();
-        $.get('contentUsers.jsp', function(data){
-            $('#indexContainer').html(data);
-            $('.active').each(function(index, item){
-               $(item).removeClass("active");
-            });
-            $('#lnkusers').parent().addClass("active");
-       });
-    }
+    showLoading();
+    $.get('contentUsers.jsp', function(data){
+        $('#indexContainer').html(data);
+        $('.active').each(function(index, item){
+           $(item).removeClass("active");
+        });
+        $('#lnkusers').parent().addClass("active");
+   });
+}
 
 goToUpload=function(){
-        showLoading();
-        $.get('contentUpload.jsp', function(data){
-            $('#indexContainer').html(data);
-            $('.active').each(function(index, item){
-               $(item).removeClass("active");
-            });
-            $('#lnkupload').parent().addClass("active");
-       });
-    }
+    showLoading();
+    $.get('contentUpload.jsp', function(data){
+        $('#indexContainer').html(data);
+        $('.active').each(function(index, item){
+           $(item).removeClass("active");
+        });
+        $('#lnkupload').parent().addClass("active");
+   });
+}
 
 goToFiles=function(){
     showLoading();
@@ -54,7 +54,7 @@ goToSupport=function(){
 }
 
 goToHowTo=function(){
-   showLoading();
+    showLoading();
     $.get('contentHowItWorks.jsp', function(data){
        $('#indexContainer').html(data);
        $('.active').each(function(index, item){
@@ -62,6 +62,12 @@ goToHowTo=function(){
        });
        $('#lnkhow').parent().addClass("active");
    });
+}
+
+changeLanguage=function(lang){
+    $.post('language.jsp', {l: lang}, function(data){
+        window.location.reload(true);
+    });
 }
 
 showErrorMessage=function(bt, field, messages){

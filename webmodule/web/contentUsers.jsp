@@ -1,5 +1,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="/WEB-INF/security.tld" prefix="s" %>
+<%
+    session.setAttribute("lastAction", 4);
+%>
 <s:check role="admin">
 <h3>Manage Secure Shares Users</h3>
 <P>Here you can define the premissions for users internal and external</P>
