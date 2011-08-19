@@ -472,4 +472,22 @@ public class DBManager {
         return result;
     }
 
+    public boolean isLanguageSupported(String language) throws NamingException, SQLException {
+        boolean result = false;
+        Connection c = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        try{
+            c = this.getConnection();
+            ps = c.prepareStatement("select count(*) as valid from i18n where lang = ?");
+            ps.setString(1, language);
+            rs = ps.executeQuery();
+            if(rs.next()){
+                result = rs.getInt("valid") > 0;
+            }
+        } finally {
+            close(c, ps, rs);
+        }
+        return result;
+    }
 }
