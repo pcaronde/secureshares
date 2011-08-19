@@ -3,6 +3,7 @@ package ro.panzo.secureshares.util;
 import org.apache.log4j.Logger;
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
+import ro.panzo.secureshares.db.DBManager;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -41,8 +42,14 @@ public class IpInfoUtil {
                 int responseCode = connection.getResponseCode();  // 200, 404, etc
                 String responseMsg = connection.getResponseMessage(); // OK, Forbidden, etc
                 if(responseCode == 200 && "OK".equals(responseMsg)) {
-                    countryCode = parseCountryCode(connection).toLowerCase();
-                    log.debug("CountryCode for: " + ipAddress + " is " + countryCode);
+                    String requstedCountryCode = parseCountryCode(connection).toLowerCase();
+                    log.debug("CountryCode for: " + ipAddress + " is " + requstedCountryCode);
+                    boolean isValid = DBManager.getInstance().isLanguageSupported(requstedCountryCode);
+                    if(isValid){
+                        countryCode = requstedCountryCode;
+                    } else {
+                        log.debug("Language not supported: " + requstedCountryCode);
+                    }
                 }
             } catch(Exception ex){
                 log.error(ex.getMessage(), ex);
