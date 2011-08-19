@@ -31,7 +31,7 @@ public class IpInfoUtil {
     }
 
     public String getCountryCodeFromIp(String ipAddress){
-        String countryCode = "GB";
+        String countryCode = "gb";
         if(ipAddress != null && !"127.0.0.1".equals(ipAddress) && !"0:0:0:0:0:0:0:1".equals(ipAddress)){
             try{
                 log.debug("Trying for: " + ipAddress);
@@ -41,7 +41,7 @@ public class IpInfoUtil {
                 int responseCode = connection.getResponseCode();  // 200, 404, etc
                 String responseMsg = connection.getResponseMessage(); // OK, Forbidden, etc
                 if(responseCode == 200 && "OK".equals(responseMsg)) {
-                    countryCode = parseCountryCode(connection);
+                    countryCode = parseCountryCode(connection).toLowerCase();
                     log.debug("CountryCode for: " + ipAddress + " is " + countryCode);
                 }
             } catch(Exception ex){
