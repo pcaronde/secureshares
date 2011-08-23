@@ -1,4 +1,5 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!--  The following line breaks utf-8 support! -->
+<!-- %@ page contentType="text/html;charset=UTF-8" language="java" % -->
 <%@ taglib uri="/WEB-INF/i18n.tld" prefix="l" %>
 <%
     session.setAttribute("lastAction", 2);
