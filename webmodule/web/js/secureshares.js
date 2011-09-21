@@ -64,6 +64,17 @@ goToHowTo=function(){
    });
 }
 
+goToProfile=function(){
+    showLoading();
+    $.get('contentProfile.jsp', function(data){
+       $('#indexContainer').html(data);
+       $('.active').each(function(index, item){
+          $(item).removeClass("active");
+       });
+       $('#lnkprofile').parent().addClass("active");
+   });
+}
+
 changeLanguage=function(lang){
     $.post('language.jsp', {l: lang}, function(data){
         window.location.reload(true);

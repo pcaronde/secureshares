@@ -4,17 +4,15 @@ import org.apache.log4j.Logger;
 import ro.panzo.secureshares.db.DBManager;
 import ro.panzo.secureshares.pojo.DownloadType;
 import ro.panzo.secureshares.pojo.File;
-import ro.panzo.secureshares.pojo.User;
 import ro.panzo.secureshares.servlet.Service;
 import ro.panzo.secureshares.util.EncryptionUtil;
 import ro.panzo.secureshares.util.ServiceUtil;
 import ro.panzo.secureshares.util.Util;
 
-import javax.naming.NamingException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.sql.SQLException;
+import java.text.MessageFormat;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -30,9 +28,11 @@ public class SendDownloadLinkService implements Service {
         String downloadTypeId = request.getParameter("dtid");
         String recipients = request.getParameter("r");
         String message = request.getParameter("msg");
+        String language = (String)request.getSession().getAttribute("lang");
         log.debug("FileId: " + fileId);
         log.debug("DownloadTypeId: " + downloadTypeId);
         log.debug("Recipients: " + recipients);
+        log.debug("Language: " + language);
         try{
             if(su.validateLong(fileId) && su.validateLong(downloadTypeId) && recipients != null && recipients.length() > 0){
                 File f = DBManager.getInstance().getFileById(Long.parseLong(fileId));
@@ -43,8 +43,8 @@ public class SendDownloadLinkService implements Service {
                     if(downloadId != -1){
                         String url =  request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + request.getContextPath();
                         String path = "/download?t=" + EncryptionUtil.getInstance().encryptDES(downloadId + "^" + System.currentTimeMillis());
-                        String subject = "Secure-Shares Download Notify";
-                        StringBuilder text = new StringBuilder();
+                        String subject = DBManager.getInstance().getI18NFor(language, "download_notify_email_subject");
+                        /*StringBuilder text = new StringBuilder();
                         text.append("<html>");
                         text.append("<body>");
                         text.append("<p>").append("Dear Secure Shares User, ").append("</p><p>").append(" This is a download notification. ")
@@ -56,9 +56,12 @@ public class SendDownloadLinkService implements Service {
                         text.append("<p>").append(message).append("</p>");
                         text.append("<p>").append("Thank you for using secure-shares.<br/> Your Secure-Shares Team").append("</p>");
                         text.append("</body>");
-                        text.append("</html>");
+                        text.append("</html>");*/
+                        String pattern = DBManager.getInstance().getI18NFor(language, "download_notify_email_text");
+                        String text = MessageFormat.format(pattern, url + path, f.getFilename(), downloadType.getName(), message);
                         log.debug("You can download your file via this link: " + url + path);
-                        Util.getInstance().sendUploadNotifyMail(recipients.split(","), subject, text.toString());
+                        log.debug("Email Text: " + text);
+                        Util.getInstance().sendUploadNotifyMail(recipients.split(","), subject, text);
                         result = true;
                     } else {
                         messages.add("Internal error!!!(db)");
