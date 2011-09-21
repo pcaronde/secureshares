@@ -25,9 +25,9 @@
         countryCode = IpInfoUtil.getInstance().getCountryCodeFromIp(request.getRemoteAddr());
         session.setAttribute("lang", countryCode);
     }
-    int lastAction = 1;
+    long lastAction = 1;
     if(session.getAttribute("lastAction") != null){
-        lastAction = (Integer)session.getAttribute("lastAction");
+        lastAction = (Long)session.getAttribute("lastAction");
     }
 %>
 <body>
@@ -59,6 +59,7 @@
                         <li><a href="#" id="lnkfiles"><l:text key="menuLeftFileManagement"/></a></li>
                     </s:check>
                     <li><a href="#" id="lnkupload"><l:text key="menuLeftUploadFiles"/></a></li>
+                    <li><a href="#" id="lnkprofile"><l:text key="menuLeftProfile"/></a></li>
                 </ul>
             </div>
             <div id="indexContainer"></div>
@@ -85,6 +86,7 @@
             case 4 : goToUsers(); break;
             case 5 : goToFiles(); break;
             case 6 : goToUpload(); break;
+            case 7 : goToProfile(); break;
         }
     });
     $('#lnkusers').bind('click', function(){
@@ -104,6 +106,9 @@
     });
     $('#lnksupport').bind('click', function(){
        goToSupport();
+    });
+    $('#lnkprofile').bind('click', function(){
+       goToProfile();
     });
     $('#lng_de').bind('click', function(){
         changeLanguage("de");

@@ -1,9 +1,8 @@
 <!--  The following line breaks utf-8 support! -->
 <!-- %@ page contentType="text/html;charset=UTF-8" language="java" % -->
 <%@ taglib uri="/WEB-INF/i18n.tld" prefix="l" %>
-<%
-    session.setAttribute("lastAction", 2);
-%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<c:set var="lastAction" value="${2}" scope="session"/>
 <div style="text-align: left">
     <h3><l:text key="contentHowItWorksTitle"/></h3>
     <br/>
