@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.text.MessageFormat;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -25,6 +26,7 @@ public class InsertFileService implements Service {
         List<String> messages = new LinkedList<String>();
         ServiceUtil su = ServiceUtil.getInstance();
         String filename = request.getParameter("fn");
+        String language = (String)request.getSession().getAttribute("lang");
         try{
             DBManager db = DBManager.getInstance();
             File file = db.getFileByName(filename);
@@ -32,16 +34,19 @@ public class InsertFileService implements Service {
             if(file == null){
                 fileId = db.insertFile(request.getUserPrincipal().getName(), filename);
                 result = fileId != -1;
+                log.debug("Insert file: " + filename + "(" +fileId + ")");
             } else {
                 fileId = file.getId();
                 result = db.updateFile(request.getUserPrincipal().getName(), filename);
+                log.debug("Update file: " + filename + "(" +fileId + ")");
             }
             //in case of success upload send the email with the link and download type is not disabled
             if(result){
-                //DownloadType dt = DBManager.getInstance().getDownloadTypeById(lDownloadTypeId);
-                //String url =  request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + request.getContextPath();
-                //String path = "/download?t=" + EncryptionUtil.getInstance().encryptDES(fileId + "^" + System.currentTimeMillis());
-                String subject = "Secure-Shares Upload Notify";
+                String subject = DBManager.getInstance().getI18NFor(language, "upload_notify_email_subject");
+                String pattern = DBManager.getInstance().getI18NFor(language, "upload_notify_email_text");
+                String text = MessageFormat.format(pattern, filename);
+
+                /*String subject = "Secure-Shares Upload Notify";
                 StringBuffer text = new StringBuffer();
                 text.append("<html>");
                 text.append("<body>");
@@ -50,8 +55,8 @@ public class InsertFileService implements Service {
                 text.append("<p>").append("Thank you for using SecureShares.<br/> Secure-Shares Team").append("</p>");
                 text.append("</body>");
                 text.append("</html>");
-
-                Util.getInstance().sendUploadNotifyMail(getAdminsEmailAddresses(), subject, text.toString());
+*/
+                Util.getInstance().sendUploadNotifyMail(getAdminsEmailAddresses(), subject, text);
             }
         } catch (Exception ex){
             log.debug(ex.getMessage(), ex);
