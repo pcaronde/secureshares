@@ -44,23 +44,9 @@ public class SendDownloadLinkService implements Service {
                         String url =  request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + request.getContextPath();
                         String path = "/download?t=" + EncryptionUtil.getInstance().encryptDES(downloadId + "^" + System.currentTimeMillis());
                         String subject = DBManager.getInstance().getI18NFor(language, "download_notify_email_subject");
-                        /*StringBuilder text = new StringBuilder();
-                        text.append("<html>");
-                        text.append("<body>");
-                        text.append("<p>").append("Dear Secure Shares User, ").append("</p><p>").append(" This is a download notification. ")
-                                .append("You have been send a secure shares file and can download the file using the link below. ")
-                                .append("<br/>").append("Though secure-shares makes every effort to assure the integrity and files please make sure to check all downloaded")
-                                .append("file with an up-to-date anti-virus program to insure the security of your workstation.").append("<p>");
-                        text.append("<p><a href='").append(url).append(path).append("' target=\"_blank\"><b>").append(f.getFilename()).append("</b></a><p>");
-                        text.append("<p>The link is available for: ").append(downloadType.getName()).append("</p>");
-                        text.append("<p>").append(message).append("</p>");
-                        text.append("<p>").append("Thank you for using secure-shares.<br/> Your Secure-Shares Team").append("</p>");
-                        text.append("</body>");
-                        text.append("</html>");*/
                         String pattern = DBManager.getInstance().getI18NFor(language, "download_notify_email_text");
                         String text = MessageFormat.format(pattern, url + path, f.getFilename(), downloadType.getName(), message);
                         log.debug("You can download your file via this link: " + url + path);
-                        log.debug("Email Text: " + text);
                         Util.getInstance().sendUploadNotifyMail(recipients.split(","), subject, text);
                         result = true;
                     } else {
