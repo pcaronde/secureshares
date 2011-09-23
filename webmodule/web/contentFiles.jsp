@@ -3,15 +3,16 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%@ taglib uri="/WEB-INF/security.tld" prefix="s" %>
+<%@ taglib uri="/WEB-INF/i18n.tld" prefix="l" %>
 <c:set var="lastAction" value="${5}" scope="session"/>
 <s:check role="admin">
-<h3>Secure Files</h3>
+<h3><l:text key="contentFilesTitle"/></h3>
 <div id="contentList">
     <table border="0" cellpadding="0" cellspacing="0" class="files">
         <tr>
             <th>&nbsp;</th>
-            <th>Name</th>
-            <th>Date</th>
+            <th><l:text key="contentFilesName"/></th>
+            <th><l:text key="contentFilesDate"/></th>
         </tr>
         <c:forEach var="file" items="${dbManager.files}" varStatus="status">
             <tr>
@@ -26,8 +27,8 @@
         </c:forEach>
         <tr>
             <td colspan="3" align="right">
-                <input type="button" id="send" value="Send Download Link"/>
-                <input type="button" id="delete" value="Delete File"/>
+                <input type="button" id="send" value="<l:text key="contentFilesSendDownloadLink"/>"/>
+                <input type="button" id="delete" value="<l:text key="contentFilesDeleteFile"/>"/>
             </td>
         </tr>
     </table>
