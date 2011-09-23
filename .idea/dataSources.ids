@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><component name="dataSourceStorage">
+  <data-source source="LOCAL" name="mysql" product="MySQL" version="5.1.54-1ubuntu4" jdbc-version="4.0" driver-version="mysql-connector-java-5.1.16 ( Revision: ${bzr.revision-id} )" uuid="fae3491e-cbe0-42d7-a781-2dccc14ae415">
+    <extra-name-characters>#@</extra-name-characters>
+    <identifier-quote-string>`</identifier-quote-string>
+    <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+    <jdbc-url>jdbc:mysql://localhost:3306/secureshares</jdbc-url>
+    <user-name>root</user-name>
+    <user-password>dfdadfcbdfc4dfd0dfc5df9bdf98df99</user-password>
+    <schema-pattern>secureshares.*</schema-pattern>
+    <default-schemas>secureshares.*</default-schemas>
+    <default-dialect>MySQL</default-dialect>
+    <libraries>
+      <library>
+        <url>jar:///opt/idea/lib/mysql-connector-java-5.1.16-bin.jar!/</url>
+      </library>
+      <library>
+        <url>file:///opt/idea/lib/mysql-connector-license.txt</url>
+      </library>
+    </libraries>
+    <table name="downloadTypes" schema="" catalog="secureshares" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="name" sqlType="VARCHAR" length="45" precision="0" nullable="false" jdbcType="12" />
+      <column name="count" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="validity" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <primary-key name="PRIMARY" columns="id" />
+      <index name="id_UNIQUE" unique="true" columns="id" />
+    </table>
+    <table name="downloads" schema="" catalog="secureshares" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="fileId" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="downloadTypeId" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="date" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <column name="count" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <primary-key name="PRIMARY" columns="id" />
+    </table>
+    <table name="files" schema="" catalog="secureshares" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="userId" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="filename" sqlType="VARCHAR" length="250" precision="0" nullable="false" jdbcType="12" />
+      <column name="date" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <primary-key name="PRIMARY" columns="id" />
+      <foreign-key name="fk_to_users" columns="userId" ref-table="users" ref-schema="" ref-catalog="secureshares" ref-columns="id" />
+      <index name="id_UNIQUE" unique="true" columns="id" />
+      <index name="UQ_filename" unique="true" columns="filename" />
+    </table>
+    <table name="i18n" schema="" catalog="secureshares" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="lang" sqlType="CHAR" length="2" precision="0" nullable="false" jdbcType="1" />
+      <column name="key" sqlType="VARCHAR" length="50" precision="0" nullable="false" jdbcType="12" />
+      <column name="value" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1" />
+      <primary-key name="PRIMARY" columns="id" />
+      <index name="uq_lang_key" unique="true" columns="lang,key" />
+    </table>
+    <table name="roles" schema="" catalog="secureshares" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="username" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12" />
+      <column name="rolename" sqlType="VARCHAR" length="50" precision="0" nullable="false" jdbcType="12" />
+      <primary-key name="PRIMARY" columns="id" />
+      <index name="uq_username" unique="true" columns="username" />
+    </table>
+    <table name="users" schema="" catalog="secureshares" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="username" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12" />
+      <column name="password" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12" />
+      <primary-key name="PRIMARY" columns="id" />
+      <index name="uq_username" unique="true" columns="username" />
+    </table>
+  </data-source>
+</component>
