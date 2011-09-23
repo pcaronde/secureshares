@@ -1,16 +1,17 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="/WEB-INF/security.tld" prefix="s" %>
+<%@ taglib uri="/WEB-INF/i18n.tld" prefix="l" %>
 <c:set var="lastAction" value="${4}" scope="session"/>
 <s:check role="admin">
-<h3>Manage Secure Shares Users</h3>
-<P>Here you can define the premissions for users internal and external</P>
+<h3><l:text key="contentUsersTitle"/></h3>
+<P><l:text key="contentUsersP1"/></P>
 <div id="contentList">
     <span style="color:red;" id="error"></span>
     <table border="0" cellpadding="0" cellspacing="0">
         <tr>
             <th>&nbsp;</th>
-            <th>Username</th>
-            <th>Role</th>
+            <th><l:text key="contentUsersUsername"/></th>
+            <th><l:text key="contentUsersRole"/></th>
         </tr>
         <c:forEach var="user" items="${dbManager.users}" varStatus="status">
             <tr>
@@ -23,9 +24,9 @@
         </c:forEach>
         <tr>
             <td colspan="3" align="right">
-                <input type="button" id="add" value="Add User"/>
-                <input type="button" id="edit" value="Edit User"/>
-                <input type="button" id="delete" value="Delete User"/>
+                <input type="button" id="add" value="<l:text key="contentUsersAddUser"/>"/>
+                <input type="button" id="edit" value="<l:text key="contentUsersEditUser"/>"/>
+                <input type="button" id="delete" value="<l:text key="contentUsersDeleteUser"/>"/>
             </td>
         </tr>
     </table>
