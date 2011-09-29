@@ -74,6 +74,16 @@
         <servlet-class>ro.panzo.secureshares.servlet.DownloadServlet</servlet-class>
     </servlet>
 
+    <servlet>
+        <servlet-name>applet</servlet-name>
+        <servlet-class>ro.panzo.secureshares.servlet.AppletServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>applet</servlet-name>
+        <url-pattern>/applet</url-pattern>
+    </servlet-mapping>
+
     <servlet-mapping>
         <servlet-name>download</servlet-name>
         <url-pattern>/download</url-pattern>

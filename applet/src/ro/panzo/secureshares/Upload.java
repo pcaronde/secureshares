@@ -2,18 +2,41 @@ package ro.panzo.secureshares;
 
 import com.jcraft.jsch.SftpProgressMonitor;
 import netscape.javascript.JSObject;
+import ro.panzo.secureshares.util.ConnectionParameters;
 import ro.panzo.secureshares.util.SFTPPutTask;
 
+import javax.crypto.Cipher;
+import javax.crypto.CipherInputStream;
+import javax.crypto.NoSuchPaddingException;
+import javax.crypto.SecretKeyFactory;
+import javax.crypto.spec.PBEKeySpec;
+import javax.crypto.spec.PBEParameterSpec;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.DataInputStream;
 import java.io.File;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.security.InvalidAlgorithmParameterException;
+import java.security.InvalidKeyException;
+import java.security.Key;
+import java.security.NoSuchAlgorithmException;
+import java.security.spec.InvalidKeySpecException;
 import java.text.MessageFormat;
 import java.text.NumberFormat;
 import java.util.Date;
 
 public class Upload  extends JApplet implements ActionListener, Runnable, SftpProgressMonitor{
+
+    private final byte[] salt = {
+                (byte)0xc7, (byte)0x73, (byte)0x21, (byte)0x8c,
+                (byte)0x7e, (byte)0xc8, (byte)0xee, (byte)0x99
+            };
+    private final int enccount = 20;
 
     private JButton browseButton;
     private JButton uploadButton;
@@ -28,11 +51,15 @@ public class Upload  extends JApplet implements ActionListener, Runnable, SftpPr
     private SFTPPutTask task;
     private boolean uploadCanceled;
 
-    private String host = "mobile3.pcconsultants.de";
+    //private String host = "mobile3.pcconsultants.de";
     //private String host = "188.138.97.183";
-    private int port = 22;
-    private String username = "guesftp";
-    private String password = "GuesFTP123!";
+    //secure00
+    //private String host = "212.223.119.68";
+    //private int port = 22;
+    //private String username = "guesftp";
+    //private String password = "GuesFTP123!";
+    //private String username = "secureftp";
+    //private String password = "SecureFTP123!";
     private long uploadMaxSize = 20 * 1024 * 1024;
 
     private static final NumberFormat nf = NumberFormat.getInstance();
@@ -183,11 +210,44 @@ public class Upload  extends JApplet implements ActionListener, Runnable, SftpPr
         this.reset();
     }
 
+    private ConnectionParameters getConnectionParameters() throws IOException, NoSuchAlgorithmException, NoSuchPaddingException, InvalidKeySpecException, InvalidKeyException, InvalidAlgorithmParameterException {
+        ConnectionParameters result = null;
+        String encPassword = "this_is_the_password";
+        URL url = new URL(this.getCodeBase().toString() + "applet");
+        HttpURLConnection connection = (HttpURLConnection)url.openConnection();
+        connection.setRequestMethod("POST");
+        connection.setDoOutput(true);
+        OutputStream out = connection.getOutputStream();
+        out.write(encPassword.getBytes());
+        out.flush();
+        out.close();
+        connection.connect();
+        int responseCode = connection.getResponseCode();  // 200, 404, etc
+        String responseMsg = connection.getResponseMessage(); // OK, Forbidden, etc
+        if(responseCode == 200 && "OK".equals(responseMsg))
+        {
+            SecretKeyFactory factory = SecretKeyFactory.getInstance("PBEWithMD5AndDES");
+            Key key = factory.generateSecret(new PBEKeySpec(encPassword.toCharArray()));
+            Cipher cipher = Cipher.getInstance("PBEWithMD5AndDES");
+            PBEParameterSpec pbeParamSpec = new PBEParameterSpec(salt, enccount);
+            cipher.init(Cipher.DECRYPT_MODE, key, pbeParamSpec);
+            DataInputStream din = new DataInputStream(new CipherInputStream(connection.getInputStream(), cipher));
+            String host = din.readUTF();
+            int port = din.readInt();
+            String user = din.readUTF();
+            String password = din.readUTF();
+            result = new ConnectionParameters(host, port, user, password);
+            din.close();
+        }
+        return result;
+    }
+
     public void run()
     {
         try {
             String fileName = this.selectedFile.getName();
-            task = new SFTPPutTask(host, port, username, password, this);
+            ConnectionParameters cp = this.getConnectionParameters();
+            task = new SFTPPutTask(cp.getHost(), cp.getPort(), cp.getUser(), cp.getPassword(), this);
             task.execute(this.selectedFile.getParent(), fileName, "secureshares");
             this.setBusy(false);
             this.reset();
