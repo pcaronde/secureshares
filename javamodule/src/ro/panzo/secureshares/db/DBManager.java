@@ -1,10 +1,7 @@
 package ro.panzo.secureshares.db;
 
 import org.apache.log4j.Logger;
-import ro.panzo.secureshares.pojo.Download;
-import ro.panzo.secureshares.pojo.DownloadType;
-import ro.panzo.secureshares.pojo.File;
-import ro.panzo.secureshares.pojo.User;
+import ro.panzo.secureshares.pojo.*;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
@@ -76,7 +73,7 @@ public class DBManager {
         ResultSet rs = null;
         try{
             c = this.getConnection();
-            ps = c.prepareStatement("select u.*, r.* from users u, roles r where u.username = r.username");
+            ps = c.prepareStatement("select u.*, r.*, c.* from users u, roles r, companies c where c.id = u.companyId and u.username = r.username");
             rs = ps.executeQuery();
             while(rs.next()){
                 result.add(getUserFromResultSet(rs));
@@ -94,7 +91,7 @@ public class DBManager {
         ResultSet rs = null;
         try{
             c = this.getConnection();
-            ps = c.prepareStatement("select u.*, r.* from users u, roles r where u.username = r.username and r.rolename = ?");
+            ps = c.prepareStatement("select u.*, r.*, c.* from users u, roles r, companies c where c.id = u.companyId and u.username = r.username and r.rolename = ?");
             ps.setString(1, rolename);
             rs = ps.executeQuery();
             while(rs.next()){
@@ -107,7 +104,8 @@ public class DBManager {
     }
 
     private User getUserFromResultSet(ResultSet rs) throws SQLException {
-        return new User(rs.getLong("u.id"), rs.getString("u.username"), rs.getString("r.rolename"));
+        return new User(rs.getLong("u.id"), rs.getString("u.username"), rs.getString("r.rolename"),
+                new Company(rs.getLong("c.id"), rs.getString("c.name"), rs.getString("c.subrepositoryname")));
     }
 
     public User getUserById(Long id) throws NamingException, SQLException {
@@ -117,7 +115,7 @@ public class DBManager {
         ResultSet rs = null;
         try{
             c = this.getConnection();
-            ps = c.prepareStatement("select u.*, r.* from users u, roles r where u.username = r.username and u.id = ?");
+            ps = c.prepareStatement("select u.*, r.*, c.* from users u, roles r, companies c where c.id = u.companyId and u.username = r.username and u.id = ?");
             ps.setLong(1, id);
             rs = ps.executeQuery();
             if(rs.next()){
@@ -278,7 +276,8 @@ public class DBManager {
         ResultSet rs = null;
         try{
             c = this.getConnection();
-            ps = c.prepareStatement("select f.*, u.*, r.* from files f, users u, roles r where f.userId = u.id and u.username = r.username order by f.date desc");
+            ps = c.prepareStatement("select f.*, u.*, r.*, c.* from companies c, files f, users u, roles r " +
+                    "where c.id = u.companyId and f.userId = u.id and u.username = r.username order by f.date desc");
             rs = ps.executeQuery();
             while(rs.next()){
                 result.add(getFileFromResultSet(rs));
@@ -352,8 +351,8 @@ public class DBManager {
         ResultSet rs = null;
         try{
             c = this.getConnection();
-            ps = c.prepareStatement("select f.*, u.*, r.* from files f, users u, roles r " +
-                    "where f.userId = u.id and u.username = r.username and f.filename = ?");
+            ps = c.prepareStatement("select f.*, u.*, r.*, c.* from files f, users u, roles r, companies c " +
+                    "where c.id = u.companyId and f.userId = u.id and u.username = r.username and f.filename = ?");
             ps.setString(1, filename);
             rs = ps.executeQuery();
             if(rs.next()){
@@ -372,8 +371,8 @@ public class DBManager {
         ResultSet rs = null;
         try{
             c = this.getConnection();
-            ps = c.prepareStatement("select f.*, u.*, r.* from files f, users u, roles r " +
-                    "where f.userId = u.id and u.username = r.username and f.id = ?");
+            ps = c.prepareStatement("select f.*, u.*, r.*, c.* from companies c, files f, users u, roles r " +
+                    "where c.id = u.companyId and f.userId = u.id and u.username = r.username and f.id = ?");
             ps.setLong(1, id);
             rs = ps.executeQuery();
             if(rs.next()){
@@ -423,8 +422,8 @@ public class DBManager {
         ResultSet rs = null;
         try{
             c = this.getConnection();
-            ps = c.prepareStatement("select f.*, u.*, r.*, d.*, dt.* from files f, users u, roles r, downloads d, downloadTypes dt " +
-                    "where f.userId = u.id and u.username = r.username and f.id = d.fileId and dt.id = d.downLoadTypeId and d.id = ?");
+            ps = c.prepareStatement("select f.*, u.*, r.*, d.*, dt.*, c.* from companies c, files f, users u, roles r, downloads d, downloadTypes dt " +
+                    "where c.id = u.companyId and f.userId = u.id and u.username = r.username and f.id = d.fileId and dt.id = d.downLoadTypeId and d.id = ?");
             ps.setLong(1, id);
             rs = ps.executeQuery();
             if(rs.next()){

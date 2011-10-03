@@ -4,11 +4,13 @@ public class User {
     private long id;
     private String username;
     private String role;
+    private Company company;
 
-    public User(long id, String username, String role) {
+    public User(long id, String username, String role, Company company) {
         this.id = id;
         this.username = username;
         this.role = role;
+        this.company = company;
     }
 
     public long getId() {
@@ -21,5 +23,9 @@ public class User {
 
     public String getRole() {
         return role;
+    }
+
+    public Company getCompany() {
+        return company;
     }
 }
