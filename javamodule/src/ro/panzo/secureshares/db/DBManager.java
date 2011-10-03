@@ -66,14 +66,15 @@ public class DBManager {
         }
     }
 
-    public List<User> getUsers() throws NamingException, SQLException {
+    public List<User> getUsers(long companyId) throws NamingException, SQLException {
         List<User> result = new LinkedList<User>();
         Connection c = null;
         PreparedStatement ps = null;
         ResultSet rs = null;
         try{
             c = this.getConnection();
-            ps = c.prepareStatement("select u.*, r.*, c.* from users u, roles r, companies c where c.id = u.companyId and u.username = r.username");
+            ps = c.prepareStatement("select u.*, r.*, c.* from users u, roles r, companies c where c.id = u.companyId and u.username = r.username and c.id = ?");
+            ps.setLong(1, companyId);
             rs = ps.executeQuery();
             while(rs.next()){
                 result.add(getUserFromResultSet(rs));
@@ -117,6 +118,25 @@ public class DBManager {
             c = this.getConnection();
             ps = c.prepareStatement("select u.*, r.*, c.* from users u, roles r, companies c where c.id = u.companyId and u.username = r.username and u.id = ?");
             ps.setLong(1, id);
+            rs = ps.executeQuery();
+            if(rs.next()){
+                user = getUserFromResultSet(rs);
+            }
+        } finally {
+            close(c, ps, rs);
+        }
+        return user;
+    }
+
+    public User getUserByUsername(String username) throws NamingException, SQLException {
+        User user = null;
+        Connection c = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        try{
+            c = this.getConnection();
+            ps = c.prepareStatement("select u.*, r.*, c.* from users u, roles r, companies c where c.id = u.companyId and u.username = r.username and u.username = ?");
+            ps.setString(1, username);
             rs = ps.executeQuery();
             if(rs.next()){
                 user = getUserFromResultSet(rs);

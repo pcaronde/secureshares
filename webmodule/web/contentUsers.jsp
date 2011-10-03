@@ -1,8 +1,15 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="/WEB-INF/security.tld" prefix="s" %>
 <%@ taglib uri="/WEB-INF/i18n.tld" prefix="l" %>
+<%@ taglib uri="/WEB-INF/invoker.tld" prefix="invk" %>
 <c:set var="lastAction" value="${4}" scope="session"/>
 <s:check role="admin">
+    <invk:execute var="user" target="dbManager" method="getUserByUsername">
+        <invk:param type="java.lang.String" value="${pageContext.request.userPrincipal.name}"/>
+    </invk:execute>
+    <invk:execute var="users" target="dbManager" method="getUsers">
+        <invk:param type="long" value="${user.company.id}"/>
+    </invk:execute>
 <h3><l:text key="contentUsersTitle"/></h3>
 <P><l:text key="contentUsersP1"/></P>
 <div id="contentList">
@@ -13,7 +20,7 @@
             <th><l:text key="contentUsersUsername"/></th>
             <th><l:text key="contentUsersRole"/></th>
         </tr>
-        <c:forEach var="user" items="${dbManager.users}" varStatus="status">
+        <c:forEach var="user" items="${users}" varStatus="status">
             <tr>
                 <td align="center" <c:if test="${status.count % 2 == 0}">class="highlighted"</c:if>>
                     <input type="radio" name="user" value="${user.id}" align="left" <c:if test="${status.first}">checked="checked"</c:if>/>
