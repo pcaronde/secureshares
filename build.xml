@@ -122,6 +122,21 @@
             <replacefilter
                 token="##OUTGOING_MAIL_PASSWORD##"
                 property="${ENV}.OUTGOING_MAIL_PASSWORD"/>
+            <replacefilter
+                token="##SFTP_HOST##"
+                property="${ENV}.SFTP_HOST"/>
+            <replacefilter
+                token="##SFTP_PORT##"
+                property="${ENV}.SFTP_PORT"/>
+            <replacefilter
+                token="##SFTP_USER##"
+                property="${ENV}.SFTP_USER"/>
+            <replacefilter
+                token="##SFTP_PASSWORD##"
+                property="${ENV}.SFTP_PASSWORD"/>
+            <replacefilter
+                token="##SFTP_REPOSITORY##"
+                property="${ENV}.SFTP_REPOSITORY"/>
         </replace>
 
     </target>

@@ -36,7 +36,6 @@ public class Upload  extends JApplet implements ActionListener, Runnable, SftpPr
                 (byte)0xc7, (byte)0x73, (byte)0x21, (byte)0x8c,
                 (byte)0x7e, (byte)0xc8, (byte)0xee, (byte)0x99
             };
-    private final int enccount = 20;
 
     private JButton browseButton;
     private JButton uploadButton;
@@ -50,17 +49,6 @@ public class Upload  extends JApplet implements ActionListener, Runnable, SftpPr
     private Thread uploadThred;
     private SFTPPutTask task;
     private boolean uploadCanceled;
-
-    //private String host = "mobile3.pcconsultants.de";
-    //private String host = "188.138.97.183";
-    //secure00
-    //private String host = "212.223.119.68";
-    //private int port = 22;
-    //private String username = "guesftp";
-    //private String password = "GuesFTP123!";
-    //private String username = "secureftp";
-    //private String password = "SecureFTP123!";
-    private long uploadMaxSize = 20 * 1024 * 1024;
 
     private static final NumberFormat nf = NumberFormat.getInstance();
     private long count;
@@ -141,6 +129,7 @@ public class Upload  extends JApplet implements ActionListener, Runnable, SftpPr
         } else if( e.getSource() == this.uploadButton ){
             if( !this.isBusy() ) {
                 if( this.selectedFile != null ) {
+                    long uploadMaxSize = 20 * 1024 * 1024;
                     if(this.selectedFile.length() < uploadMaxSize) {
                         this.setBusy( true );
                         this.uploadThred = new Thread(this);
@@ -229,6 +218,7 @@ public class Upload  extends JApplet implements ActionListener, Runnable, SftpPr
             SecretKeyFactory factory = SecretKeyFactory.getInstance("PBEWithMD5AndDES");
             Key key = factory.generateSecret(new PBEKeySpec(encPassword.toCharArray()));
             Cipher cipher = Cipher.getInstance("PBEWithMD5AndDES");
+            int enccount = 20;
             PBEParameterSpec pbeParamSpec = new PBEParameterSpec(salt, enccount);
             cipher.init(Cipher.DECRYPT_MODE, key, pbeParamSpec);
             DataInputStream din = new DataInputStream(new CipherInputStream(connection.getInputStream(), cipher));
@@ -236,7 +226,8 @@ public class Upload  extends JApplet implements ActionListener, Runnable, SftpPr
             int port = din.readInt();
             String user = din.readUTF();
             String password = din.readUTF();
-            result = new ConnectionParameters(host, port, user, password);
+            String repository = din.readUTF();
+            result = new ConnectionParameters(host, port, user, password, repository);
             din.close();
         }
         return result;
@@ -248,7 +239,7 @@ public class Upload  extends JApplet implements ActionListener, Runnable, SftpPr
             String fileName = this.selectedFile.getName();
             ConnectionParameters cp = this.getConnectionParameters();
             task = new SFTPPutTask(cp.getHost(), cp.getPort(), cp.getUser(), cp.getPassword(), this);
-            task.execute(this.selectedFile.getParent(), fileName, "secureshares");
+            task.execute(this.selectedFile.getParent(), fileName, cp.getRepository());
             this.setBusy(false);
             this.reset();
             this.saveFileTransaction(fileName);
@@ -257,9 +248,9 @@ public class Upload  extends JApplet implements ActionListener, Runnable, SftpPr
                 SwingUtilities.invokeLater( new Runnable() {
                     public void run()
                     {
-                        if( e.getMessage().indexOf("Auth fail") != -1 ) {
+                        if(e.getMessage().contains("Auth fail")) {
                             JOptionPane.showMessageDialog(null, "Invalid user name or password!" , "Error", JOptionPane.ERROR_MESSAGE);
-                        } else if( e.getMessage().indexOf("UnknownHostException") != -1 ){
+                        } else if(e.getMessage().contains("UnknownHostException")){
                             JOptionPane.showMessageDialog(null, "Unknown host", "Error", JOptionPane.ERROR_MESSAGE);
                         } else {
                             JOptionPane.showMessageDialog(null, "Upload file error", "Error", JOptionPane.ERROR_MESSAGE);

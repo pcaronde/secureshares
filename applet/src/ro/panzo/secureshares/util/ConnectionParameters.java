@@ -5,12 +5,14 @@ public class ConnectionParameters {
     private int port;
     private String user;
     private String password;
+    private String repository;
 
-    public ConnectionParameters(String host, int port, String user, String password) {
+    public ConnectionParameters(String host, int port, String user, String password, String repository) {
         this.host = host;
         this.port = port;
         this.user = user;
         this.password = password;
+        this.repository = repository;
     }
 
     public String getHost() {
@@ -27,5 +29,9 @@ public class ConnectionParameters {
 
     public String getPassword() {
         return password;
+    }
+
+    public String getRepository() {
+        return repository;
     }
 }

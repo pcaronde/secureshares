@@ -33,4 +33,11 @@
     <Environment name="OUTGOING_MAIL_SERVER" type="java.lang.String" value="##OUTGOING_MAIL_SERVER##" description="mail server ip"/>
     <Environment name="OUTGOING_MAIL_FROM" type="java.lang.String" value="##OUTGOING_MAIL_FROM##" description="email address from where the email is sent"/>
     <Environment name="OUTGOING_MAIL_PASSWORD" type="java.lang.String" value="##OUTGOING_MAIL_PASSWORD##" description="email password"/>
+
+    <Environment name="SFTP_HOST" type="java.lang.String" value="##SFTP_HOST##" description="sftp host"/>
+    <Environment name="SFTP_PORT" type="java.lang.String" value="##SFTP_PORT##" description="sftp port"/>
+    <Environment name="SFTP_USER" type="java.lang.String" value="##SFTP_USER##" description="sftp user"/>
+    <Environment name="SFTP_PASSWORD" type="java.lang.String" value="##SFTP_PASSWORD##" description="sftp password"/>
+    <Environment name="SFTP_REPOSITORY" type="java.lang.String" value="##SFTP_REPOSITORY##" description="sftp repository"/>
+
 </Context>
