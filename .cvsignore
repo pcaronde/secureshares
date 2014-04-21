@@ -1,9 +1,0 @@
-deploy
-build
-dist
-out
-*.jad
-*.log
-deployed
-nbproject
-nbbuild.xml
