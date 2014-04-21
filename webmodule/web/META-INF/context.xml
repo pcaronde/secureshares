@@ -34,6 +34,9 @@
     <Environment name="OUTGOING_MAIL_FROM" type="java.lang.String" value="##OUTGOING_MAIL_FROM##" description="email address from where the email is sent"/>
     <Environment name="OUTGOING_MAIL_PASSWORD" type="java.lang.String" value="##OUTGOING_MAIL_PASSWORD##" description="email password"/>
 
+    <Environment name="OUTGOING_MAIL_USER" type="java.lang.String" value="##OUTGOING_MAIL_USER##" description="SendGrid User"/>
+    <Environment name="OUTGOING_MAIL_PORT" type="java.lang.String" value="##OUTGOING_MAIL_PORT##" description="SSL/TLS Mail Port"/>
+
     <Environment name="SFTP_HOST" type="java.lang.String" value="##SFTP_HOST##" description="sftp host"/>
     <Environment name="SFTP_PORT" type="java.lang.String" value="##SFTP_PORT##" description="sftp port"/>
     <Environment name="SFTP_USER" type="java.lang.String" value="##SFTP_USER##" description="sftp user"/>
