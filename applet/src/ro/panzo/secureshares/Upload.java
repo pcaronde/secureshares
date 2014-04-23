@@ -1,3 +1,7 @@
+//
+// Applet for uploads
+//
+
 package ro.panzo.secureshares;
 
 import com.jcraft.jsch.SftpProgressMonitor;
