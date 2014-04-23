@@ -56,6 +56,7 @@ public class InsertFileService implements Service {
                 text.append("</body>");
                 text.append("</html>");
 */
+                //@todo add support for SendGrid which requires a username OUTGOING_MAIL_USER instead of an email address as sender. Also as well we need to define a port (eg 587 or 25) OUTGOING_MAIL_PORT
                 Util.getInstance().sendUploadNotifyMail(getAdminsEmailAddresses(), subject, text);
             }
         } catch (Exception ex){
@@ -67,6 +68,7 @@ public class InsertFileService implements Service {
     }
 
     private String[] getAdminsEmailAddresses() throws NamingException, SQLException {
+        //@todo to avoid sending alerts to all admins, we need to limit this - perhaps filter admin and company
         List<User> admins = DBManager.getInstance().getUsersByRole("admin");
         String[] emailAddresses = new String[admins.size()];
         int index = 0;
