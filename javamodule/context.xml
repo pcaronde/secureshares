@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+    <Resource
+            auth="Container"
+            driverClassName="com.mysql.jdbc.Driver"
+            maxActive="4"
+            maxIdle="2"
+            maxWait="5000"
+            name="jdbc/secureshares"
+            password="db_password"
+            type="javax.sql.DataSource"
+            url="jdbc:mysql://mysql_ip/secureshares?connectTimeout=5000&amp;socketTimeout=8000&amp;useUsageAdvisor=false"
+            username="db_username"
+            validationQuery="select 1"
+            testOnBorrow="true"
+            testWhileIdle="true"
+            timeBetweenEvictionRunsMillis="3600000"
+            numTestsPerEvictionRun="5"
+            minEvictableIdleTimeMillis="600000"/>
+
+    <Realm className="org.apache.catalina.realm.JDBCRealm"
+           connectionName="mysql_user"
+           connectionPassword="mysql_pass"
+           url="jdbc:mysql://mysql_ip/secureshares?connectTimeout=5000&amp;socketTimeout=8000&amp;useUsageAdvisor=false"
+           digest="md5"
+           driverName="com.mysql.jdbc.Driver"
+           roleNameCol="rolename"
+           userCredCol="password"
+           userNameCol="username"
+           userRoleTable="roles"
+           userTable="users"/>
+    <Environment name="REPOSITORY" type="java.lang.String" value="/path_to_repo/secureshares" description="secureshares repository"/>
+    <Environment name="OUTGOING_MAIL_SERVER" type="java.lang.String" value="snmp_server" description="Mail Server"/>
+    <Environment name="OUTGOING_MAIL_USER" type="java.lang.String" value="mail_user" description="Mail User"/>
+    <Environment name="OUTGOING_MAIL_PORT" type="java.lang.String" value="port_number" description="SSL/TLS Mail Port"/>
+    <Environment name="OUTGOING_MAIL_FROM" type="java.lang.String" value="noreply@your_domain" description="email address from where the email is sent"/>
+    <Environment name="OUTGOING_MAIL_PASSWORD" type="java.lang.String" value="4gramscI!" description="email password"/>
+    <Environment name="SFTP_HOST" type="java.lang.String" value="sftp_host_ip" description="sftp host"/>
+    <Environment name="SFTP_PORT" type="java.lang.String" value="22" description="sftp port"/>
+    <Environment name="SFTP_USER" type="java.lang.String" value="secureftp_user" description="sftp user"/>
+    <Environment name="SFTP_PASSWORD" type="java.lang.String" value="secureftp_user_password" description="sftp password"/>
+    <Environment name="SFTP_REPOSITORY" type="java.lang.String" value="secureshares" description="sftp repository"/>
+</Context>
+
