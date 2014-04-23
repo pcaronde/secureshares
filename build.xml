@@ -2,9 +2,10 @@
 
 <project name="secure-shares" default="build" basedir=".">
 
-    <property file="../build.properties"/>
+    <!--property file="../build.properties"/-->
     <property file="conf/project.properties"/>
     <!-- set global properties for this project -->
+    <property name="appserver6.lib" value="/usr/share/tomcat7/lib"/>
     <property name="build.compiler" value="modern"/>
     <property name="root" value="."/>
     <property name="src" value="${root}/javamodule/src"/>
@@ -29,8 +30,8 @@
     <path id="classpath">
         <pathelement path="${java.class.path}"/>
         <pathelement path="${appserver6.lib}/servlet-api.jar"/>
-        <pathelement path="${appserver6.lib}/jsp-api.jar"/>
-        <pathelement path="${appserver6.lib}/mail.jar"/>
+        <pathelement path="${appserver6.lib}/jsp-api-2.2.jar"/>
+        <pathelement path="${appserver6.lib}/mail-1.4.5.jar"/>
         <pathelement path="${appserver6.lib}/catalina.jar"/>
         <fileset dir="${root}/lib">
             <include name="*.jar"/>
