@@ -38,16 +38,20 @@ public class Util {
             @Override
             public void run() {
                 String mailServer = Util.getInstance().getEnviromentValue("OUTGOING_MAIL_SERVER");
-                String mailBoxUser = Util.getInstance().getEnviromentValue("OUTGOING_MAIL_FROM");
+                /* Add SendGrid Support */
+                String mailBoxUser = Util.getInstance().getEnviromentValue("OUTGOING_MAIL_USER");
                 String mailBoxPassword = Util.getInstance().getEnviromentValue("OUTGOING_MAIL_PASSWORD");
                 String from = Util.getInstance().getEnviromentValue("OUTGOING_MAIL_FROM");
-                Util.getInstance().sendMail(mailServer, mailBoxUser, mailBoxPassword, subject, from, toEmailAddress, text, "text/html; charset=utf-8");
+                /* Add SendGrid support */
+                String smtpPort = Util.getInstance().getEnviromentValue("OUTGOING_MAIL_PORT");
+                String mailBoxFrom = Util.getInstance().getEnviromentValue("OUTGOING_MAIL_FROM");
+                Util.getInstance().sendMail(mailServer, smtpPort, mailBoxUser, mailBoxPassword, subject, from, toEmailAddress, text, "text/html; charset=utf-8");
             }
         });
         t.start();
     }
 
-    private boolean sendMail(String smtpHost, String mailboxUser, String mailboxPassword, String subject, String from,
+    private boolean sendMail(String smtpHost, String smtpPort, String mailboxUser, String mailboxPassword, String subject, String from,
                             String[] to, String text, String contentType)
     {
         boolean rez = false;
@@ -65,11 +69,12 @@ public class Util {
             Properties props = new Properties();
             props.put("mail.smtp.host", smtpHost);
             props.put("mail.smtp.auth", "true");
+            props.put("mail.smtp.port", smtpPort);
             try
             {
                 Session session = Session.getInstance(props, new SMTPAuthenticator(mailboxUser, mailboxPassword));
                 //session.setDebug(true);
-                //session.setDebugOut(new PrintStream(new FileOutputStream("/opt/tomcat6/logs/ewops_smtp.log")));
+                //session.setDebugOut(new PrintStream(new FileOutputStream("/opt/tomcat6/logs/xyz_smtp.log")));
                 MimeMessage msg = new MimeMessage(session);
                 msg.setFrom(new InternetAddress(from));
                 msg.setRecipients(Message.RecipientType.TO, this.getInternetAddresses(to));

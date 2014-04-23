@@ -239,6 +239,12 @@ public class DBManager {
         return result;
     }
 
+    /**
+     * Download types are one-time, one day, one week, etc. Currently to change this you must edit the DB directly.
+     * @return
+     * @throws NamingException
+     * @throws SQLException
+     */
     public List<DownloadType> getDownloadTypes() throws NamingException, SQLException {
         List<DownloadType> result = new LinkedList<DownloadType>();
         Connection c = null;
