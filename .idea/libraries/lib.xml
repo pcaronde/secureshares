@@ -6,10 +6,9 @@
       <root url="jar://$PROJECT_DIR$/lib/plugin.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/commons-codec-1.4.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/jstl-impl-1.2.jar!/" />
-      <root url="jar://$PROJECT_DIR$/../../../../../share/java/servlet-api-3.0.jar!/" />
-      <root url="jar://$PROJECT_DIR$/../../../../../share/java/ant-javamail-1.8.2.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/mail-1.4.5.jar!/" />
-      <root url="jar://$PROJECT_DIR$/../../../../../share/java/jsp-api-2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jsp-api-2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/servlet-api.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
