@@ -34,7 +34,7 @@
     <Environment name="OUTGOING_MAIL_USER" type="java.lang.String" value="mail_user" description="Mail User"/>
     <Environment name="OUTGOING_MAIL_PORT" type="java.lang.String" value="port_number" description="SSL/TLS Mail Port"/>
     <Environment name="OUTGOING_MAIL_FROM" type="java.lang.String" value="noreply@your_domain" description="email address from where the email is sent"/>
-    <Environment name="OUTGOING_MAIL_PASSWORD" type="java.lang.String" value="4gramscI!" description="email password"/>
+    <Environment name="OUTGOING_MAIL_PASSWORD" type="java.lang.String" value="mail_password" description="email password"/>
     <Environment name="SFTP_HOST" type="java.lang.String" value="sftp_host_ip" description="sftp host"/>
     <Environment name="SFTP_PORT" type="java.lang.String" value="22" description="sftp port"/>
     <Environment name="SFTP_USER" type="java.lang.String" value="secureftp_user" description="sftp user"/>
