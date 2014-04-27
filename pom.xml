@@ -70,7 +70,7 @@
     <testOutputDirectory>/data/IdeaProjects/secureshares/out/test-classes</testOutputDirectory>
     <resources>
       <resource>
-        <directory>/data/IdeaProjects/secureshares/src/main/resources</directory>
+        <directory>/data/IdeaProjects/secureshares/code/resources</directory>
       </resource>
     </resources>
     <testResources>
