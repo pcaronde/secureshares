@@ -3,3 +3,4 @@ conf/project.properties
 *.iml
 build.xml
 out/*
+.object
