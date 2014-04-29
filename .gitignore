@@ -4,3 +4,4 @@ conf/project.properties
 build.xml
 out/*
 .object
+target
