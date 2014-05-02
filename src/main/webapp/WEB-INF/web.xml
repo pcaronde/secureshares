@@ -78,6 +78,10 @@
         <servlet-name>applet</servlet-name>
         <servlet-class>ro.panzo.secureshares.servlet.AppletServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>UploadServlet</servlet-name>
+        <servlet-class>ro.panzo.secureshares.servlet.UploadServlet</servlet-class>
+    </servlet>
 
     <servlet-mapping>
         <servlet-name>applet</servlet-name>
