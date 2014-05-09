@@ -11,6 +11,26 @@
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/secureshares.js"></script>
     <script type="text/javascript" src="http://www.java.com/js/deployJava.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/uploader.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            var $b = $('#upload'),
+                    $f = $('#file'),
+                    $p = $('#progress'),
+                    up = new uploader($f.get(0), {
+                        url:'/',
+                        progress:function(ev){ console.log('progress'); $p.html(((ev.loaded/ev.total)*100)+'%'); $p.css('width',$p.html()); },
+                        error:function(ev){ console.log('error'); },
+                        success:function(data){ console.log('success'); $p.html('100%'); $p.css('width',$p.html()); }
+                    });
+
+            $b.click(function(){
+                up.send();
+            });
+        });
+    </script>
+
 </head>
 <%
     if ("yes".equals(request.getParameter("logout"))) {
