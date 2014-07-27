@@ -5,7 +5,7 @@
 
     <appender name="StandardAppender" class="org.apache.log4j.DailyRollingFileAppender">
         <param name="DatePattern" value="'.'yyyy-MM-dd"/>
-        <param name="File" value="##TOMCAT_HOME##/logs/secure-shares.log"/>
+        <param name="File" value="${tomcat6.home}/logs/secure-shares.log"/>
         <param name="Append" value="true"/>
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern"

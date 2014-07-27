@@ -3,7 +3,7 @@
 
   <meta content="text/html; charset=UTF-8" http-equiv="content-type">
   <link rel="stylesheet" type="text/css" href="css/ss.css"/>
-  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/jquery.min.js"></script>
   <title>Secure Shares</title></head>
 <body>
 <%

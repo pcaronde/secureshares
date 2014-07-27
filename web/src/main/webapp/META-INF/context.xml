@@ -7,10 +7,10 @@
           maxIdle="2"
           maxWait="5000"
           name="jdbc/secureshares"
-          password="##db.pwd##"
+          password="${db.password}"
           type="javax.sql.DataSource"
           url="jdbc:mysql://localhost:3306/secureshares?connectTimeout=5000&amp;socketTimeout=8000&amp;useUsageAdvisor=false"
-          username="##db.user##"
+          username="${db.user}"
           validationQuery="select 1"
           testOnBorrow="true"
           testWhileIdle="true"
@@ -19,8 +19,8 @@
           minEvictableIdleTimeMillis="600000"/>
 
     <Realm className="org.apache.catalina.realm.JDBCRealm"
-           connectionName="##db.user##"
-           connectionPassword="##db.pwd##"
+           connectionName="${db.user}"
+           connectionPassword="${db.password}"
            connectionURL="jdbc:mysql://localhost:3306/secureshares?connectTimeout=5000&amp;socketTimeout=8000&amp;useUsageAdvisor=false"
            digest="md5"
            driverName="com.mysql.jdbc.Driver"
@@ -29,18 +29,11 @@
            userNameCol="username"
            userRoleTable="roles"
            userTable="users"/>
-    <Environment name="REPOSITORY" type="java.lang.String" value="##REPOSITORY##" description="secureshares repository"/>
+    <Environment name="REPOSITORY" type="java.lang.String" value="${ss.repository}" description="secureshares repository"/>
     <Environment name="OUTGOING_MAIL_SERVER" type="java.lang.String" value="##OUTGOING_MAIL_SERVER##" description="mail server ip"/>
     <Environment name="OUTGOING_MAIL_FROM" type="java.lang.String" value="##OUTGOING_MAIL_FROM##" description="email address from where the email is sent"/>
     <Environment name="OUTGOING_MAIL_PASSWORD" type="java.lang.String" value="##OUTGOING_MAIL_PASSWORD##" description="email password"/>
 
     <Environment name="OUTGOING_MAIL_USER" type="java.lang.String" value="##OUTGOING_MAIL_USER##" description="SendGrid User"/>
     <Environment name="OUTGOING_MAIL_PORT" type="java.lang.String" value="##OUTGOING_MAIL_PORT##" description="SSL/TLS Mail Port"/>
-
-    <Environment name="SFTP_HOST" type="java.lang.String" value="##SFTP_HOST##" description="sftp host"/>
-    <Environment name="SFTP_PORT" type="java.lang.String" value="##SFTP_PORT##" description="sftp port"/>
-    <Environment name="SFTP_USER" type="java.lang.String" value="##SFTP_USER##" description="sftp user"/>
-    <Environment name="SFTP_PASSWORD" type="java.lang.String" value="##SFTP_PASSWORD##" description="sftp password"/>
-    <Environment name="SFTP_REPOSITORY" type="java.lang.String" value="##SFTP_REPOSITORY##" description="sftp repository"/>
-
 </Context>

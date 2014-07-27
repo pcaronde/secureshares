@@ -11,7 +11,7 @@ goToUsers=function(){
 
 goToUpload=function(){
     showLoading();
-    $.get('contentUpload.jsp', function(data){
+    $.get('contentUpload2.jsp', function(data){
         $('#indexContainer').html(data);
         $('.active').each(function(index, item){
            $(item).removeClass("active");
