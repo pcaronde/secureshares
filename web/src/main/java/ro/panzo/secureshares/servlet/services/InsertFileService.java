@@ -23,6 +23,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.text.MessageFormat;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -71,20 +72,9 @@ public class InsertFileService implements Service {
                     if (result) {
                         String subject = DBManager.getInstance().getI18NFor(language, "upload_notify_email_subject");
                         String pattern = DBManager.getInstance().getI18NFor(language, "upload_notify_email_text");
-                        //String text = MessageFormat.format(pattern, filename);
+                        String text = MessageFormat.format(pattern, filename);
 
-                        /*String subject = "Secure-Shares Upload Notify";
-                        StringBuffer text = new StringBuffer();
-                        text.append("<html>");
-                        text.append("<body>");
-                        text.append("<p>").append("Dear Secure Shares User, ").append("</p><p>").append(" this is an automated message from secure-shares. A new file has been uploaded.").append("<p>");
-                        text.append("<p><b>").append(filename).append("</b><p>");
-                        text.append("<p>").append("Thank you for using SecureShares.<br/> Secure-Shares Team").append("</p>");
-                        text.append("</body>");
-                        text.append("</html>");
-                        */
-                        //@todo add support for SendGrid which requires a username OUTGOING_MAIL_USER instead of an email address as sender. Also as well we need to define a port (eg 587 or 25) OUTGOING_MAIL_PORT
-                        //Util.getInstance().sendUploadNotifyMail(getAdminsEmailAddresses(), subject, text);
+                        Util.getInstance().sendUploadNotifyMail(getAdminsEmailAddresses(), subject, text);
                     }
                 }
             }

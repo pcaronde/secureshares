@@ -38,13 +38,10 @@ public class Util {
             @Override
             public void run() {
                 String mailServer = Util.getInstance().getEnviromentValue("OUTGOING_MAIL_SERVER");
-                /* Add SendGrid Support */
+                String smtpPort = Util.getInstance().getEnviromentValue("OUTGOING_MAIL_PORT");
                 String mailBoxUser = Util.getInstance().getEnviromentValue("OUTGOING_MAIL_USER");
                 String mailBoxPassword = Util.getInstance().getEnviromentValue("OUTGOING_MAIL_PASSWORD");
                 String from = Util.getInstance().getEnviromentValue("OUTGOING_MAIL_FROM");
-                /* Add SendGrid support */
-                String smtpPort = Util.getInstance().getEnviromentValue("OUTGOING_MAIL_PORT");
-                String mailBoxFrom = Util.getInstance().getEnviromentValue("OUTGOING_MAIL_FROM");
                 Util.getInstance().sendMail(mailServer, smtpPort, mailBoxUser, mailBoxPassword, subject, from, toEmailAddress, text, "text/html; charset=utf-8");
             }
         });
@@ -63,7 +60,7 @@ public class Util {
         }
         if (smtpHost != null && smtpHost.trim().length() > 0 &&
                 from != null && from.trim().length() > 0 &&
-                text != null && text.trim().length() > 0 &&
+                text.trim().length() > 0 &&
                 to != null && to.length > 0)
         {
             Properties props = new Properties();
