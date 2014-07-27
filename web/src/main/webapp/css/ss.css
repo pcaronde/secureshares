@@ -336,10 +336,11 @@ body {
     width:0%;
     overflow:hidden;
     height:40px;
+    line-height: 40px;
     display:inline-block;
     vertical-align:middle;
     color:#FFF;
-    text-align:right;
+    text-align:center;
     text-shadow:1px 1px 0 #000;
     background:-o-linear-gradient(top,#888888,#333333);
     background:-moz-linear-gradient(top,#888888,#333333);

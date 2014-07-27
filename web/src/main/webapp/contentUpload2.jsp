@@ -13,7 +13,9 @@
     <p>
         <button id="uploadbt">Upload</button>
     </p>
-    <p><span id="progress" class="progress">0%</span></p>
+    <div style="text-align: left">
+        <span id="progress" class="progress">0%</span>
+    </div>
 </div>
 
 
@@ -24,16 +26,16 @@
                 $p = $('#progress'),
                 up = new uploader($f.get(0), {
                     url: 'service?a=4',
-                    progress: function (ev) {
-                        console.log('progress');
-                        $p.html(((ev.loaded / ev.total) * 100) + '%');
+                    onprogress: function (ev) {
+                        $p.html(Math.round((ev.loaded / ev.total) * 100) + '%');
                         $p.css('width', $p.html());
+                        //console.log('progress: ' + $p.html());
                     },
                     error: function (ev) {
-                        console.log('error');
+                        //console.log('error');
                     },
                     success: function (data) {
-                        console.log('success');
+                        //console.log('success');
                         $p.html('100%');
                         $p.css('width', $p.html());
                     }
