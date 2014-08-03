@@ -7,12 +7,14 @@ public class File {
     private User user;
     private String filename;
     private Calendar date;
+    private String mongoFileId;
 
-    public File(long id, User user, String filename, Calendar date) {
+    public File(long id, User user, String filename, Calendar date, String mongoFileId) {
         this.id = id;
         this.user = user;
         this.filename = filename;
         this.date = date;
+        this.mongoFileId = mongoFileId;
     }
 
     public long getId() {
@@ -29,5 +31,9 @@ public class File {
 
     public Calendar getDate() {
         return date;
+    }
+
+    public String getMongoFileId() {
+        return mongoFileId;
     }
 }

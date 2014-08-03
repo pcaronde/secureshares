@@ -2,6 +2,7 @@ package ro.panzo.secureshares.servlet.services;
 
 import org.apache.log4j.Logger;
 import ro.panzo.secureshares.db.DBManager;
+import ro.panzo.secureshares.pojo.User;
 import ro.panzo.secureshares.servlet.Service;
 import ro.panzo.secureshares.util.ServiceUtil;
 
@@ -24,7 +25,8 @@ public class InsertUserService implements Service {
         String retypePassword = request.getParameter("rp");
         try{
             if(su.validateEmail(username) && su.validateString(password) && su.validateString(retypePassword) && password.equals(retypePassword)){
-                result = DBManager.getInstance().insertUser(username, password);
+                User loggedUser = DBManager.getInstance().getUserByUsername(request.getUserPrincipal().getName());
+                result = DBManager.getInstance().insertUser(username, password, loggedUser.getCompany().getId());
             } else {
                 if(!su.validateEmail(username)){
                     messages.add("Invalid username (eg: myuser@mydomain.com)!!!");

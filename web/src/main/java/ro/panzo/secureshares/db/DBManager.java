@@ -147,7 +147,7 @@ public class DBManager {
         return user;
     }
 
-    public boolean insertUser(String username, String password) throws NamingException, SQLException {
+    public boolean insertUser(String username, String password, long companyId) throws NamingException, SQLException {
         boolean result = false;
         Connection c = null;
         PreparedStatement psUsers = null;
@@ -155,9 +155,10 @@ public class DBManager {
         try{
             c = this.getConnection();
             c.setAutoCommit(false);
-            psUsers = c.prepareStatement("insert into users values (null, ?, md5(?))");
+            psUsers = c.prepareStatement("insert into users values (null, ?, md5(?), ?)");
             psUsers.setString(1, username);
             psUsers.setString(2, password);
+            psUsers.setLong(3, companyId);
             result = psUsers.executeUpdate() == 1;
             if(result){
                 psRoles = c.prepareStatement("insert into roles values (null, ?, ?)");
@@ -314,16 +315,17 @@ public class DBManager {
         return result;
     }
 
-    public long insertFile(String username, String filename) throws NamingException, SQLException {
+    public long insertFile(String username, String filename, String mongoFileId) throws NamingException, SQLException {
         long fileId = -1;
         Connection c = null;
         PreparedStatement ps = null;
         ResultSet generatedKeys = null;
         try{
             c = this.getConnection();
-            ps = c.prepareStatement("insert into files values (null, (select u.id from users u where u.username = ?), ?, now())", PreparedStatement.RETURN_GENERATED_KEYS);
+            ps = c.prepareStatement("insert into files values (null, (select u.id from users u where u.username = ?), ?, now(), ?)", PreparedStatement.RETURN_GENERATED_KEYS);
             ps.setString(1, username);
             ps.setString(2, filename);
+            ps.setString(3, mongoFileId);
             boolean result = ps.executeUpdate() == 1;
             if(result){
                 generatedKeys = ps.getGeneratedKeys();
@@ -337,16 +339,17 @@ public class DBManager {
         return fileId;
     }
 
-    public boolean updateFile(String username, String filename) throws NamingException, SQLException {
+    public boolean updateFile(String username, String filename, String mongoFileId) throws NamingException, SQLException {
         boolean result = false;
         Connection c = null;
         PreparedStatement ps = null;
         try{
             c = this.getConnection();
             ps = c.prepareStatement("update files set userId = (select u.id from users u where u.username = ?), " +
-                    "date = now() where filename = ?");
+                    "date = now(), mongofileid = ? where filename = ?");
             ps.setString(1, username);
-            ps.setString(2, filename);
+            ps.setString(2, mongoFileId);
+            ps.setString(3, filename);
             result = ps.executeUpdate() == 1;
         } finally {
             close(c, ps);
@@ -411,11 +414,13 @@ public class DBManager {
     }
 
     private File getFileFromResultSet(ResultSet rs) throws SQLException {
-        return new File(rs.getLong("id"), this.getUserFromResultSet(rs), rs.getString("filename"), this.convertToCalendar(rs.getTimestamp("date")));
+        return new File(rs.getLong("id"), this.getUserFromResultSet(rs), rs.getString("filename"),
+                this.convertToCalendar(rs.getTimestamp("date")), rs.getString("mongofileid"));
     }
 
     private Download getDownloadFromResultSet(ResultSet rs) throws SQLException {
-        return new Download(rs.getLong("d.id"), this.getFileFromResultSet(rs), this.getDownloadTypeFromResultSet(rs), this.convertToCalendar(rs.getTimestamp("d.date")), rs.getInt("d.count"));
+        return new Download(rs.getLong("d.id"), this.getFileFromResultSet(rs), this.getDownloadTypeFromResultSet(rs),
+                this.convertToCalendar(rs.getTimestamp("d.date")), rs.getInt("d.count"));
     }
 
     public long insertDownload(long fileId, long downloadTypeId) throws NamingException, SQLException {

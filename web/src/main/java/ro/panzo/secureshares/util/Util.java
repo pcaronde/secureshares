@@ -64,6 +64,7 @@ public class Util {
                 to != null && to.length > 0)
         {
             Properties props = new Properties();
+            props.put("mail.transport.protocol", "smtp");
             props.put("mail.smtp.host", smtpHost);
             props.put("mail.smtp.auth", "true");
             props.put("mail.smtp.port", smtpPort);
@@ -90,7 +91,11 @@ public class Util {
 
                 mixedPart.addBodyPart(alternativeBodyPart);
                 msg.setContent(mixedPart);
-                Transport.send(msg);
+
+                Transport transport = session.getTransport();
+                transport.connect();
+                transport.sendMessage(msg, msg.getRecipients(Message.RecipientType.TO));
+                transport.close();
                 rez = true;
             }
             catch (MessagingException mex){

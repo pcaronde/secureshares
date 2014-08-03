@@ -10,6 +10,7 @@ import org.apache.commons.fileupload.servlet.ServletFileUpload;
 import org.apache.commons.io.IOUtils;
 import org.apache.log4j.Logger;
 import ro.panzo.secureshares.db.DBManager;
+import ro.panzo.secureshares.mongo.MongoDB;
 import ro.panzo.secureshares.pojo.File;
 import ro.panzo.secureshares.pojo.User;
 import ro.panzo.secureshares.servlet.Service;
@@ -37,6 +38,7 @@ public class InsertFileService implements Service {
         List<String> messages = new LinkedList<String>();
         ServiceUtil su = ServiceUtil.getInstance();
         boolean isMultipart = ServletFileUpload.isMultipartContent(request);
+        DBManager db = DBManager.getInstance();
         try{
             if(isMultipart) {
                 DiskFileItemFactory factory = new DiskFileItemFactory();
@@ -45,27 +47,31 @@ public class InsertFileService implements Service {
                 ServletFileUpload upload = new ServletFileUpload(factory);
                 List<FileItem> items = upload.parseRequest(request);
                 String filename = null;
-                long size = 0;
+                String mongoFileId = null;
                 //look for uploaded file and save it
                 for (FileItem fileItem : items) {
                     if (!fileItem.isFormField() && "file".equals(fileItem.getFieldName())) {
-                        String repository = Util.getInstance().getEnviromentValue("REPOSITORY");
+                        //String repository = Util.getInstance().getEnviromentValue("REPOSITORY");
                         filename = fileItem.getName();
-                        size = IOUtils.copyLarge(fileItem.getInputStream(), new FileOutputStream(repository + "/" + filename));
+                        //size = IOUtils.copyLarge(fileItem.getInputStream(), new FileOutputStream(repository + "/" + filename));
+                        User loggedUser = db.getUserByUsername(request.getUserPrincipal().getName());
+                        mongoFileId = MongoDB.getInstance().saveFile(loggedUser.getCompany().getId(), filename,
+                                fileItem.getContentType(), fileItem.getInputStream());
                     }
                 }
-                //if file found and saved save the info to database
-                if(filename != null && size > 0){
-                    DBManager db = DBManager.getInstance();
+                //if file found and saved then save the info to database
+                if(filename != null && mongoFileId != null){
+
                     File file = db.getFileByName(filename);
                     long fileId = -1;
                     if(file == null){
-                        fileId = db.insertFile(request.getUserPrincipal().getName(), filename);
+                        fileId = db.insertFile(request.getUserPrincipal().getName(), filename, mongoFileId);
                         result = fileId != -1;
                         log.debug("Insert file: " + filename + "(" +fileId + ")");
                     } else {
                         fileId = file.getId();
-                        result = db.updateFile(request.getUserPrincipal().getName(), filename);
+                        //@todo delete old file from mongo
+                        result = db.updateFile(request.getUserPrincipal().getName(), filename, mongoFileId);
                         log.debug("Update file: " + filename + "(" +fileId + ")");
                     }
                     //in case of success upload send the email with info to admins

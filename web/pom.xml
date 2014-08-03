@@ -13,6 +13,10 @@
     <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
 
+    <properties>
+        <tomcat.url>http://127.0.0.1:8080/manager</tomcat.url>
+    </properties>
+
     <dependencies>
 
         <dependency>
@@ -25,6 +29,13 @@
             <artifactId>mail</artifactId>
             <version>1.5.0-b01</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongo-java-driver</artifactId>
+            <version>2.12.3</version>
+        </dependency>
+
 
         <dependency>
             <groupId>commons-codec</groupId>
@@ -159,6 +170,16 @@
                             <artifactId>maven-project-info-reports-plugin</artifactId>
                         </reportPlugin>
                     </reportPlugins>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat6-maven-plugin</artifactId>
+                <version>2.2</version>
+                <configuration>
+                    <server>Tomcat6Local</server>
+                    <url>${tomcat.url}</url>
+                    <path>/${project.build.finalName}</path>
                 </configuration>
             </plugin>
         </plugins>
