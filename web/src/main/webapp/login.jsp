@@ -43,9 +43,8 @@
     </div>
     <div id="bottomBar"><span>imprint | agb</span></div>
     <div id="footer">
-        <br>A product of <b>PCConsultants Ltd &amp; Co KG</b> in cooperation with <b>E Majuscule S.A.R.L.</b>
-        <br>For more information, please contact us at <i>pcaron.secureshares(a)gmail.com</i>
-        <img src="images/pcconsultants-logo.png" alt="https://www.secure-shares.net/secure-shares" height="53" width="88">&nbsp;&nbsp;&nbsp;
+        <br>An opensource porject sponsored by <b>E Majuscule S.A.R.L.</b>
+        <br>For more information, please visit us on <a href="https://sourceforge.net/projects/secureshares/">SourceForge</a>
         <img src="images/emajuscule-logo.png" alt="www.e-majuscule.fr" height="53" width="51">
     </div>
 </div>

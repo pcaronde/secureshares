@@ -72,10 +72,8 @@
     </div>
     <div id="bottomBar"><span><l:text key="footerImprint"/> | <l:text key="footerTerms"/></span></div>
     <div id="footer">
-        <br>A product of <b>PCConsultants Ltd &amp; Co KG</b> in cooperation with <b>E Majuscule S.A.R.L.</b>
-        <br>For more information, please contact us at <i>secure(at)pcconsultants.de</i>
-        <br>or visit: <a href="http://www.pcconsultants.de">www.pcconsultants.de</a><br/>
-        <img src="images/pcconsultants-logo.png" alt="www.pcconsultants.de" height="53" width="88">&nbsp;&nbsp;&nbsp;
+        <br>An opensource project sponsored by <b>E-Majuscule S.A.R.L.</b>
+        <br>For more information, please visit <a href="https://sourceforge.net/projects/secureshares/">SourceForge</a>
         <img src="images/emajuscule-logo.png" alt="www.e-majuscule.fr" height="53" width="51">
     </div>
 </div>
