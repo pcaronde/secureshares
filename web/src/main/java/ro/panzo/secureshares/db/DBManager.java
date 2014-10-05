@@ -147,7 +147,7 @@ public class DBManager {
         return user;
     }
 
-    public boolean insertUser(String username, String password, long companyId) throws NamingException, SQLException {
+    public boolean insertUser(String username, String password, long companyId, String role) throws NamingException, SQLException {
         boolean result = false;
         Connection c = null;
         PreparedStatement psUsers = null;
@@ -163,7 +163,7 @@ public class DBManager {
             if(result){
                 psRoles = c.prepareStatement("insert into roles values (null, ?, ?)");
                 psRoles.setString(1, username);
-                psRoles.setString(2, "user");
+                psRoles.setString(2, role);
                 result = psRoles.executeUpdate() == 1;
             }
             if(result){
@@ -196,6 +196,22 @@ public class DBManager {
             ps = c.prepareStatement("update users set password = md5(?) where id = ?");
             ps.setString(1, password);
             ps.setLong(2, id);
+            result = ps.executeUpdate() == 1;
+        } finally {
+            close(c, ps);
+        }
+        return result;
+    }
+
+    public boolean updateRole(long userId, String rolename) throws NamingException, SQLException {
+        boolean result = false;
+        Connection c = null;
+        PreparedStatement ps = null;
+        try{
+            c = this.getConnection();
+            ps = c.prepareStatement("update roles set rolename = ? where username = (select username from users where id = ?)");
+            ps.setString(1, rolename);
+            ps.setLong(2, userId);
             result = ps.executeUpdate() == 1;
         } finally {
             close(c, ps);

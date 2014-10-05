@@ -18,7 +18,15 @@ public class SecurityTag extends TagSupport {
 
     public int doStartTag() throws JspException
     {
-        return ((HttpServletRequest)pageContext.getRequest()).isUserInRole(this.getRole()) ? EVAL_BODY_INCLUDE : SKIP_BODY;
+        String roles[] = this.getRole().split(",");
+        boolean allow = false;
+        for(String role : roles) {
+            allow = ((HttpServletRequest) pageContext.getRequest()).isUserInRole(role.trim());
+            if(allow){
+                break;
+            }
+        }
+        return allow ? EVAL_BODY_INCLUDE : SKIP_BODY;
     }
 
     public int doEndTag() {
