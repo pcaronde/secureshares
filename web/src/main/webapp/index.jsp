@@ -9,7 +9,7 @@
     <title>Secure Shares</title>
     <link rel="stylesheet" type="text/css" href="css/ss.css" />
     <script type="text/javascript" src="js/secureshares.js"></script>
-    <script type="text/javascript" src="http://www.java.com/js/deployJava.js"></script>
+    <%--<script type="text/javascript" src="http://www.java.com/js/deployJava.js"></script>--%>
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/uploader.js"></script>
 
@@ -61,7 +61,12 @@
                         <li><a href="#" id="lnkusers"><l:text key="menuLeftUserManagement"/></a></li>
                         <li><a href="#" id="lnkfiles"><l:text key="menuLeftFileManagement"/></a></li>
                     </s:check>
-                    <li><a href="#" id="lnkupload"><l:text key="menuLeftUploadFiles"/></a></li>
+                    <s:check role="admin,user">
+                        <li><a href="#" id="lnkupload"><l:text key="menuLeftUploadFiles"/></a></li>
+                    </s:check>
+                    <s:check role="admin,user,viewer">
+                        <li><a href="#" id="lnkdownload"><l:text key="menuLeftDownloadFiles"/></a></li>
+                    </s:check>
                     <li><a href="#" id="lnkprofile"><l:text key="menuLeftProfile"/></a></li>
                 </ul>
             </div>
@@ -88,6 +93,7 @@
             case 5 : goToFiles(); break;
             case 6 : goToUpload(); break;
             case 7 : goToProfile(); break;
+            case 8 : goToDownload(); break;
         }
     });
     $('#lnkusers').bind('click', function(){
@@ -95,6 +101,9 @@
     });
     $('#lnkupload').bind('click', function(){
        goToUpload();
+    });
+    $('#lnkdownload').bind('click', function(){
+       goToDownload();
     });
     $('#lnkfiles').bind('click', function(){
        goToFiles();

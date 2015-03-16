@@ -23,10 +23,11 @@ public class InsertUserService implements Service {
         String username = request.getParameter("u");
         String password = request.getParameter("p");
         String retypePassword = request.getParameter("rp");
+        String role = request.getParameter("r");
         try{
             if(su.validateEmail(username) && su.validateString(password) && su.validateString(retypePassword) && password.equals(retypePassword)){
                 User loggedUser = DBManager.getInstance().getUserByUsername(request.getUserPrincipal().getName());
-                result = DBManager.getInstance().insertUser(username, password, loggedUser.getCompany().getId());
+                result = DBManager.getInstance().insertUser(username, password, loggedUser.getCompany().getId(), role);
             } else {
                 if(!su.validateEmail(username)){
                     messages.add("Invalid username (eg: myuser@mydomain.com)!!!");

@@ -20,6 +20,17 @@ goToUpload=function(){
    });
 }
 
+goToDownload=function(){
+    showLoading();
+    $.get('contentDownload.jsp', function(data){
+        $('#indexContainer').html(data);
+        $('.active').each(function(index, item){
+           $(item).removeClass("active");
+        });
+        $('#lnkdownload').parent().addClass("active");
+   });
+}
+
 goToFiles=function(){
     showLoading();
     $.get('contentFiles.jsp', function(data){

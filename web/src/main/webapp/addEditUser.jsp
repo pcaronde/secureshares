@@ -30,6 +30,14 @@
             <td><input type="password" id="retypepassword" value=""/></td>
         </tr>
         <tr>
+            <td><l:text key="contentUsersRoles"/>:</td>
+            <td>
+                <input type="radio" name="userrole" value="admin" <c:if test="${(empty user) || (user.role eq 'admin')}">checked="checked" </c:if> >admin&nbsp;&nbsp;
+                <input type="radio" name="userrole" value="user" <c:if test="${(!empty user) && (user.role eq 'user')}">checked="checked" </c:if>>user&nbsp;&nbsp;
+                <input type="radio" name="userrole" value="viewer" <c:if test="${(!empty user) && (user.role eq 'viewer')}">checked="checked" </c:if>>viewer
+            </td>
+        </tr>
+        <tr>
             <td colspan="2" align="right">
                 <input type="button" id="ok" value="<c:choose><c:when test="${empty param.id}"><l:text key="contentUsersInsert"/></c:when><c:otherwise><l:text key="contentUsersSave"/></c:otherwise></c:choose>"/>
                 <input type="button" id="cancel" value="<l:text key="contentUsersCancel"/>"/>
@@ -43,24 +51,28 @@
         $('#ok').attr("disabled", "true");
         <c:choose>
             <c:when test="${empty param.id}">
-                $.post("service", {a: 1, u: $("#username").val(), p :$("#password").val(), rp: $("#retypepassword").val()}, function(data){
-                    var response = $.parseJSON(data);
-                    if("OK" == response.status){
-                        goToUsers();
-                    } else {
-                        showErrorMessage($('#ok'), $('#error'), response.messages);
-                    }
-                });
+                $.post("service", {a: 1, u: $("#username").val(), p :$("#password").val(),
+                    rp: $("#retypepassword").val(), r: $('input:radio[name=userrole]:checked').val()},
+                        function(data){
+                            var response = $.parseJSON(data);
+                            if("OK" == response.status){
+                                goToUsers();
+                            } else {
+                                showErrorMessage($('#ok'), $('#error'), response.messages);
+                            }
+                        });
             </c:when>
             <c:otherwise>
-                $.post("service", {a: 2, id: $("#id").val(), p :$("#password").val(), rp: $("#retypepassword").val()}, function(data){
-                    var response = $.parseJSON(data);
-                    if("OK" == response.status){
-                        goToUsers();
-                    } else {
-                        showErrorMessage($('#ok'), $('#error'), response.messages);
-                    }
-                });
+                $.post("service", {a: 2, id: $("#id").val(), p :$("#password").val(), rp: $("#retypepassword").val(),
+                    r: $('input:radio[name=userrole]:checked').val()},
+                        function(data){
+                            var response = $.parseJSON(data);
+                            if("OK" == response.status){
+                                goToUsers();
+                            } else {
+                                showErrorMessage($('#ok'), $('#error'), response.messages);
+                            }
+                        });
             </c:otherwise>
         </c:choose>
     });

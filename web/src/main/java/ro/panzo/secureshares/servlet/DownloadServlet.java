@@ -34,24 +34,12 @@ public class DownloadServlet extends HttpServlet {
                             (System.currentTimeMillis() - download.getDate().getTimeInMillis()) < download.getDownloadType().getValidity() * 60 * 60 * 1000))){
                 response.setContentType("application/x-unknown");
                 response.setHeader("Content-Disposition", "attachment; filename=" + download.getFile().getFilename());
-                //String repository = Util.getInstance().getEnviromentValue("REPOSITORY");
-                //BufferedInputStream bin = null;
                 try {
-                    /*bin = new BufferedInputStream(new FileInputStream(repository + "/" + download.getFile().getFilename()));
-                    byte[] buffer = new byte[1024];
-                    int read;
-                    while((read = bin.read(buffer)) != -1){
-                        response.getOutputStream().write(buffer, 0, read);
-                    }*/
                     MongoDB.getInstance().writeToOutputStream(download.getFile().getUser().getCompany().getId(), download.getFile().getMongoFileId(), response.getOutputStream());
                     DBManager.getInstance().updateDownloadCount(download.getId(), download.getCount() + 1);
                 } catch (IOException ioex){
                     log.debug(ioex.getMessage(), ioex);
-                } /*finally {
-                    if(bin != null){
-                        bin.close();
-                    }
-                }*/
+                }
             } else {
                 response.sendError(HttpServletResponse.SC_NOT_FOUND);
             }

@@ -22,19 +22,27 @@ public class UpdateUserService implements Service {
         String id = request.getParameter("id");
         String password = request.getParameter("p");
         String retypePassword = request.getParameter("rp");
+        String role = request.getParameter("r");
         try{
-            if(su.validateLong(id) && su.validateString(password) && su.validateString(retypePassword) && password.equals(retypePassword)){
-                result = DBManager.getInstance().updateUser(Long.parseLong(id), password);
+            if(su.validateString(password) || su.validateString(retypePassword)) {
+                if (su.validateLong(id) && su.validateString(password) && su.validateString(retypePassword) && password.equals(retypePassword)) {
+                    result = DBManager.getInstance().updateUser(Long.parseLong(id), password);
+                    if(result){
+                        result = DBManager.getInstance().updateRole(Long.parseLong(id), role);
+                    }
+                } else {
+                    if (!su.validateString(password)) {
+                        messages.add("Invalid password!!!");
+                    }
+                    if (!su.validateString(retypePassword)) {
+                        messages.add("Invalid retyped password!!!");
+                    }
+                    if (su.validateString(password) && su.validateString(retypePassword) && !password.equals(retypePassword)) {
+                        messages.add("The retyped password must match password!!!");
+                    }
+                }
             } else {
-                if(!su.validateString(password)){
-                    messages.add("Invalid password!!!");
-                }
-                if(!su.validateString(retypePassword)){
-                    messages.add("Invalid retyped password!!!");
-                }
-                if(su.validateString(password) && su.validateString(retypePassword) && !password.equals(retypePassword)){
-                    messages.add("The retyped password must match password!!!");
-                }
+                result = DBManager.getInstance().updateRole(Long.parseLong(id), role);
             }
         } catch (Exception ex){
             messages.add("Internal error!!!");
