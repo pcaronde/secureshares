@@ -5,7 +5,7 @@ build.xml
 out/*
 .object
 target
-
+.repo/*
 
 # Compiled source #
 ###################
