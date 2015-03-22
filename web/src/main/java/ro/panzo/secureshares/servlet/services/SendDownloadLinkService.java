@@ -68,6 +68,7 @@ public class SendDownloadLinkService implements Service {
         return "Delete File";
     }
 
+    //TODO why is the default admin?
     public String getRole() {
         return "admin";
     }
