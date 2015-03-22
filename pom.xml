@@ -7,7 +7,7 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>applet</module>
+        <!--module>applet</module-->
         <module>web</module>
     </modules>
 
@@ -50,10 +50,33 @@
     <distributionManagement>
         <repository>
             <id>ssh-repository</id>
-            <url>scpexe://23.251.139.198/repository</url>
+<!--            <url>scpexe://23.251.139.198/repository</url> -->
+		<url>scpexe://localhost/repository</url>
         </repository>
     </distributionManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
+
+        </dependency>
+    </dependencies>
+
     <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.18.1</version>
+                <configuration>
+                    <parallel>methods</parallel>
+                    <threadCount>10</threadCount>
+                    <skipTests>false</skipTests>
+                </configuration>
+            </plugin>
+        </plugins>
         <extensions>
             <extension>
                 <groupId>org.apache.maven.wagon</groupId>
