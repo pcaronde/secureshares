@@ -48,7 +48,7 @@ public class Util {
         t.start();
     }
 
-    private boolean sendMail(String smtpHost, String smtpPort, String mailboxUser, String mailboxPassword, String subject, String from,
+    public boolean sendMail(String smtpHost, String smtpPort, String mailboxUser, String mailboxPassword, String subject, String from,
                             String[] to, String text, String contentType)
     {
         boolean rez = false;

@@ -13,7 +13,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class DBManager {
-    private static DBManager ourInstance = new DBManager();
+    public static DBManager ourInstance = new DBManager();
 
     public static DBManager getInstance() {
         return ourInstance;
@@ -104,7 +104,7 @@ public class DBManager {
         return result;
     }
 
-    private User getUserFromResultSet(ResultSet rs) throws SQLException {
+    public User getUserFromResultSet(ResultSet rs) throws SQLException {
         return new User(rs.getLong("u.id"), rs.getString("u.username"), rs.getString("r.rolename"),
                 new Company(rs.getLong("c.id"), rs.getString("c.name"), rs.getString("c.subrepositoryname")));
     }
@@ -299,7 +299,7 @@ public class DBManager {
         return result;
     }
 
-    private DownloadType getDownloadTypeFromResultSet(ResultSet rs) throws SQLException {
+    public DownloadType getDownloadTypeFromResultSet(ResultSet rs) throws SQLException {
         return new DownloadType(rs.getLong("dt.id"), rs.getString("dt.name"), rs.getInt("dt.count"), rs.getInt("dt.validity"));
     }
 
@@ -429,12 +429,12 @@ public class DBManager {
         return result;
     }
 
-    private File getFileFromResultSet(ResultSet rs) throws SQLException {
+    public File getFileFromResultSet(ResultSet rs) throws SQLException {
         return new File(rs.getLong("id"), this.getUserFromResultSet(rs), rs.getString("filename"),
                 this.convertToCalendar(rs.getTimestamp("date")), rs.getString("mongofileid"));
     }
 
-    private Download getDownloadFromResultSet(ResultSet rs) throws SQLException {
+    public Download getDownloadFromResultSet(ResultSet rs) throws SQLException {
         return new Download(rs.getLong("d.id"), this.getFileFromResultSet(rs), this.getDownloadTypeFromResultSet(rs),
                 this.convertToCalendar(rs.getTimestamp("d.date")), rs.getInt("d.count"));
     }
