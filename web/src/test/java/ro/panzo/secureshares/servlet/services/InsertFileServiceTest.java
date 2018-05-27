@@ -1,6 +1,13 @@
 package ro.panzo.secureshares.servlet.services;
 
 import org.junit.Test;
+import org.junit.Assert;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.runners.MockitoJUnitRunner;
+//import sun.jvm.hotspot.utilities.Assert;
 
 public class InsertFileServiceTest {
 
@@ -9,6 +16,13 @@ public class InsertFileServiceTest {
 
     }
 
+    //@InjectMocks annotation is used to create and inject the mock object
+    @InjectMocks
+    InsertFileService fileService = new InsertFileService();
+
+//    @Mock
+//    InsertUserService insertUser;
+
     @Test
     public void testGetName() throws Exception {
 
@@ -16,21 +30,7 @@ public class InsertFileServiceTest {
 
     @Test
     public void testGetRole() throws Exception {
-
+        Assert.assertEquals(fileService.getRole(),"user||admin");
     }
 
-    @Test
-    public void testExecute1() throws Exception {
-
-    }
-
-    @Test
-    public void testGetName1() throws Exception {
-
-    }
-
-    @Test
-    public void testGetRole1() throws Exception {
-
-    }
 }
