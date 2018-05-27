@@ -1,11 +1,21 @@
 package ro.panzo.secureshares.pojo;
 
 import org.junit.Test;
+import org.junit.Assert;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.runners.MockitoJUnitRunner;
 
 import static org.junit.Assert.assertEquals;
 
+
 public class CompanyTest {
 
+    //@InjectMocks annotation is used to create and inject the mock object
+    @InjectMocks
+    Company tester = new Company(1, "caron", "repo");
     @Test
     public void testGetId() throws Exception {
 
@@ -13,20 +23,15 @@ public class CompanyTest {
 
     @Test
     public void testGetName() throws Exception {
-        Company tester = new Company(1, "caron", "repo");
-        assertEquals("Name should be caron", "caron", tester.getName());
+
+        Assert.assertEquals(tester.getName(),"caron");
+
     }
 
     @Test
     public void testGetSubrepositoryName() throws Exception {
-        String s = "/\\r ";
-        for(int i = 0; i < s.length(); i++)
-        {
-            char c = s.charAt(i);
-            String s1 = Character.toString(c);
-            System.out.println("Count is: " + i);
-            Company tester = new Company(1, "caron", s1);
-            assertEquals("Repo should be "+s1, s1, tester.getSubrepositoryName());
+
+            Assert.assertEquals(tester.getSubrepositoryName(),"repo");
+
         }
     }
-}

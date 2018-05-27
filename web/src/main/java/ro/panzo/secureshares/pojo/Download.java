@@ -17,6 +17,7 @@ public class Download {
         this.count = count;
     }
 
+
     public long getId() {
         return id;
     }
