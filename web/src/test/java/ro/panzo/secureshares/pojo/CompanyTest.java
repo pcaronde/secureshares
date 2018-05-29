@@ -18,7 +18,7 @@ public class CompanyTest {
     Company tester = new Company(1, "caron", "repo");
     @Test
     public void testGetId() throws Exception {
-
+        Assert.assertEquals("", tester.getId(), 1);
     }
 
     @Test
