@@ -13,6 +13,13 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+            <java.version>1.8</java.version>
+            <junit.version>4.12</junit.version>
+            <junit.jupiter.version>5.2.0</junit.jupiter.version>
+            <junit.vintage.version>${junit.version}.0</junit.vintage.version>
+            <junit.jupiter.version>5.0.0</junit.jupiter.version>
+            <junit.platform.version>1.0.0</junit.platform.version>
+
     </properties>
 
     <name>SecureShares</name>
@@ -21,7 +28,7 @@
     <repositories>
         <repository>
             <id>java.net</id>
-            <url>http://download.java.net/maven/2</url>
+            <url>http://maven.java.net</url>
         </repository>
         <repository>
             <snapshots>
@@ -58,28 +65,77 @@
 
     <dependencies>
 
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.11</version>
-            <scope>test</scope>
-        </dependency>
 	<dependency>
     		<groupId>org.mockito</groupId>
     		<artifactId>mockito-all</artifactId>
     		<version>1.9.5</version>
     		<scope>test</scope>
 	</dependency>
+
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
-            <version>5.0.0</version>
+            <version>${junit.jupiter.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- To run tests on IDE such as Eclipse, Intellij -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.platform</groupId>
+            <artifactId>junit-platform-runner</artifactId>
+            <version>${junit.platform.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.powermock/powermock-api-mockito -->
+        <dependency>
+            <groupId>org.powermock</groupId>
+            <artifactId>powermock-api-easymock</artifactId>
+            <version>1.7.4</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.junit.vintage</groupId>
+            <artifactId>junit-vintage-engine</artifactId>
+            <version>${junit.vintage.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
 
     <build>
     <plugins>
+        <plugin>
+            <groupId>org.jacoco</groupId>
+            <artifactId>jacoco-maven-plugin</artifactId>
+            <version>0.8.1</version>
+            <executions>
+                <execution>
+                    <id>jacoco-initialize</id>
+                    <goals>
+                        <goal>prepare-agent</goal>
+                    </goals>
+                </execution>
+                <execution>
+                    <id>jacoco-site</id>
+                    <phase>package</phase>
+                    <goals>
+                        <goal>report</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <configuration>
+                <source>1.5</source>
+                <target>1.5</target>
+            </configuration>
+        </plugin>
         <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
