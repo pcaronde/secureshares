@@ -6,9 +6,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 public interface Service {
-    public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException;
+    void execute(HttpServletRequest request, HttpServletResponse response) throws IOException;
 
-    public String getName();
+    String getName();
 
-    public String getRole();
+    String getRole();
 }
