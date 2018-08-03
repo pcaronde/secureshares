@@ -4,6 +4,9 @@ import org.junit.Test;
 
 public class SecurityTagTest {
 
+    SecurityTag secTag = new SecurityTag();
+
+
     @Test
     public void testGetRole() throws Exception {
 

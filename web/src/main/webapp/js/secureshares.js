@@ -7,7 +7,7 @@ goToUsers=function(){
         });
         $('#lnkusers').parent().addClass("active");
    });
-}
+};
 
 goToUpload=function(){
     showLoading();
@@ -18,7 +18,7 @@ goToUpload=function(){
         });
         $('#lnkupload').parent().addClass("active");
    });
-}
+};
 
 goToDownload=function(){
     showLoading();
@@ -29,7 +29,7 @@ goToDownload=function(){
         });
         $('#lnkdownload').parent().addClass("active");
    });
-}
+};
 
 goToFiles=function(){
     showLoading();
@@ -40,7 +40,7 @@ goToFiles=function(){
             });
             $('#lnkfiles').parent().addClass("active");
        });
-}
+};
 
 goToHome=function(){
     showLoading();
@@ -51,7 +51,7 @@ goToHome=function(){
        });
        $('#lnkhome').parent().addClass("active");
    });
-}
+};
 
 goToSupport=function(){
     showLoading();
@@ -62,7 +62,7 @@ goToSupport=function(){
        });
        $('#lnksupport').parent().addClass("active");
    });
-}
+};
 
 goToHowTo=function(){
     showLoading();
@@ -73,7 +73,7 @@ goToHowTo=function(){
        });
        $('#lnkhow').parent().addClass("active");
    });
-}
+};
 
 goToProfile=function(){
     showLoading();
@@ -84,13 +84,13 @@ goToProfile=function(){
        });
        $('#lnkprofile').parent().addClass("active");
    });
-}
+};
 
 changeLanguage=function(lang){
     $.post('language.jsp', {l: lang}, function(data){
         window.location.reload(true);
     });
-}
+};
 
 showErrorMessage=function(bt, field, messages){
     bt.removeAttr("disabled");
@@ -99,11 +99,11 @@ showErrorMessage=function(bt, field, messages){
     $.each(messages, function(i, current){
         ul.append("<li>" + current.message + "</li>");
     });
-}
+};
 
 showLoading=function(){
     $('#indexContainer').html("<img src='images/content-loader.gif' alt='loading' style='margin-top: 50px'/><br/><p>loading. please be patient ...</p>");
-}
+};
 
 saveFileTransaction=function(fileName){
     $.post("service", {a: 4, fn: fileName}, function(data){
@@ -114,4 +114,4 @@ saveFileTransaction=function(fileName){
                 //showErrorMessage($('#ok'), $('#error'), response.messages);
             }
         });
-}
+};

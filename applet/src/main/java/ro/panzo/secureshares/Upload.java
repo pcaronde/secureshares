@@ -50,7 +50,7 @@ public class Upload  extends JApplet implements ActionListener, Runnable, SftpPr
     private File selectedFile;
     private JScrollPane sc;
     private boolean busy;
-    private Thread uploadThred;
+    private Thread uploadThread;
     private SFTPPutTask task;
     private boolean uploadCanceled;
 

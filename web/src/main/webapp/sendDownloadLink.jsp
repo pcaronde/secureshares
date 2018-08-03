@@ -74,7 +74,7 @@
         if(recipients.length == 0){
             $('#send').attr("disabled", "disabled");
         }
-    }
+    };
 
     $('#send').bind('click', function(){
         $('#send').attr("disabled", "true");
@@ -99,7 +99,7 @@
                 $('#btadd').attr("disabled", "true");
                 var index = recipients.length;
                 recipients[index] = recipient;
-                $('#recipientsList').append("<div class='recipientRow' id='" + index + "'><div>" + recipient + "</div><a href='#' class='deleteRecipientBt' title='delete' onclick='deleteRecipient(" + index+ ")'>&nbsp;</a></div>")
+                $('#recipientsList').append("<div class='recipientRow' id='" + index + "'><div>" + recipient + "</div><a href='#' class='deleteRecipientBt' title='delete' onclick='deleteRecipient(" + index+ ")'>&nbsp;</a></div>");
                 $("#recipient").val("");
                 $('#btadd').removeAttr("disabled");
                 $('#send').removeAttr("disabled");
