@@ -28,4 +28,5 @@ public class DownloadType {
     public int getValidity() {
         return validity;
     }
+
 }

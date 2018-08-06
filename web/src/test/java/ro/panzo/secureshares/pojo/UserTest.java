@@ -10,13 +10,13 @@ import org.mockito.MockitoAnnotations;
 
 /**
  * Created by petercaron on 29.05.18.
+ *
+ * This class tests the class and methods in User.java
  */
 public class UserTest {
     @Mock
     Company company;
- /**   @InjectMocks
-    User user;
-*/
+    @InjectMocks
     User user = new User(1, "caron", "admin", company);
 
 

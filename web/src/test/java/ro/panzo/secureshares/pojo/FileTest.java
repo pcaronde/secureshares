@@ -13,6 +13,8 @@ import static org.mockito.Mockito.*;
 
 /**
  * Created by petercaron on 29.05.18.
+ *
+ * This class tests the class and methods in File.java
  */
 public class FileTest {
     @Mock
@@ -22,11 +24,7 @@ public class FileTest {
     @InjectMocks
     File file = new File(1, user, "filename.txt", date, "some_field");
 
-    /**@Before
-    public void setUp() {
-        MockitoAnnotations.initMocks(this);
-    }
-*/
+
     @Test
     public void testGetFilename() throws Exception {
 
