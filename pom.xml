@@ -64,14 +64,6 @@
     </distributionManagement>
 
     <dependencies>
-
-	<dependency>
-    		<groupId>org.mockito</groupId>
-    		<artifactId>mockito-all</artifactId>
-    		<version>1.9.5</version>
-    		<scope>test</scope>
-	</dependency>
-
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
@@ -91,12 +83,7 @@
             <version>${junit.platform.version}</version>
             <scope>test</scope>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.powermock/powermock-api-mockito -->
-        <dependency>
-            <groupId>org.powermock</groupId>
-            <artifactId>powermock-api-easymock</artifactId>
-            <version>1.7.4</version>
-        </dependency>
+
 
         <dependency>
             <groupId>org.junit.vintage</groupId>

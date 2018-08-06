@@ -55,7 +55,7 @@ public class DownloadServletTest {
 
     @Before
     public void setup() {
-        //we spy the tested clas to be able to verify if some of the private methods are called while testing parent method: service
+        //we spy the tested class to be able to verify if some of the private methods are called while testing parent method: service
         servlet = spy(new DownloadServlet());
         //both MongoDB and DBmanager need to be prepared for test so you will find them in the
         // @PrepateForTest annotation for the test class, together with the class under test (we what to spy it)
