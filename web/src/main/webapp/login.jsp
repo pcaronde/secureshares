@@ -43,9 +43,11 @@
     </div>
     <div id="bottomBar"><span>imprint | agb</span></div>
     <div id="footer">
-        <br>An opensource porject sponsored by <b>E Majuscule S.A.R.L.</b>
+        <br>An opensource project originally sponsored by <b>E Majuscule S.A.R.L.</b> and <b>PCConsultants Ltd & Co Kg</b>
         <br>For more information, please visit us on <a href="https://sourceforge.net/projects/secureshares/">SourceForge</a>
-        <img src="images/emajuscule-logo.png" alt="www.e-majuscule.fr" height="53" width="51">
+        <br>Or
+        <br><a href="https://github.com/pcaronde/secureshares">GitHub</a>
+        <br>The original project was architected and written by Ciprian Ticu and Peter Caron
     </div>
 </div>
 <script type="text/javascript">
