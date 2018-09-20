@@ -1,14 +1,11 @@
 package ro.panzo.secureshares.util;
 
 import org.apache.log4j.Logger;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-
-import javax.mail.internet.InternetAddress;
 
 import java.lang.String;
 
@@ -31,27 +28,32 @@ public class UtilTest {
     }
 
     @Test
-    public void testGetEnviromentValue() throws Exception {
+    public void testGetEnvironmentValue() throws Exception {
         try {
-            String result = util.getEnviromentValue("env");
+            String result = util.getEnvironmentValue("env");
             //Assert.assertEquals("replaceMeWithExpectedResult", result);
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
-/**
+
     @Test
     public void testSendUploadNotifyMail() throws Exception {
-        when(ourInstance.getInstance()).thenReturn(null);
-        when(ourInstance.getEnviromentValue("OUTGOING_MAIL_SERVER")).thenReturn("smtp.pcconsultants.de");
+        //when(ourInstance.getInstance()).thenReturn(null);
+        //when(ourInstance.getEnvironmentValue("OUTGOING_MAIL_SERVER")).thenReturn("smtp.pcconsultants.de");
 
-        String mailServer = Util.getInstance().getEnviromentValue("OUTGOING_MAIL_SERVER");
-        String smtpPort = Util.getInstance().getEnviromentValue("OUTGOING_MAIL_PORT");
-        String mailBoxUser = Util.getInstance().getEnviromentValue("OUTGOING_MAIL_USER");
-        String mailBoxPassword = Util.getInstance().getEnviromentValue("OUTGOING_MAIL_PASSWORD");
-        String from = Util.getInstance().getEnviromentValue("OUTGOING_MAIL_FROM");
+        String mailServer = Util.getInstance().getEnvironmentValue("OUTGOING_MAIL_SERVER");
+        String smtpPort = Util.getInstance().getEnvironmentValue("OUTGOING_MAIL_PORT");
+        String mailBoxUser = Util.getInstance().getEnvironmentValue("OUTGOING_MAIL_USER");
+        String mailBoxPassword = Util.getInstance().getEnvironmentValue("OUTGOING_MAIL_PASSWORD");
+        String from = Util.getInstance().getEnvironmentValue("OUTGOING_MAIL_FROM");
 
-        //Util.getInstance().sendMail(mailServer, smtpPort, mailBoxUser, mailBoxPassword, subject, from, toEmailAddress, text, "text/html; charset=utf-8");
+
+        String subject = "Test Subject";
+        String[] toEmailAddress = {"pcaron.de@pm.me"};
+        String text = "Hi Mom";
+
+        Util.getInstance().sendMail(mailServer, smtpPort, mailBoxUser, mailBoxPassword, subject, from, toEmailAddress, text, "text/html; charset=utf-8");
         //when(ourInstance.sendMail(mailServer, smtpPort, mailBoxUser, mailBoxPassword, subject, from, toEmailAddress, text, "text/h);
        when(ourInstance.sendMail(mailServer, smtpPort, mailBoxUser, mailBoxPassword, "subject", from, toEmailAddress, "Here is your mail", "text/html; charset=utf-8"));
     // when(ourInstance.sendMail(any(), any(), any(), any(), any(), any(), any(), any(), any())).thenReturn(true);
@@ -59,7 +61,7 @@ public class UtilTest {
 
         //util.sendUploadNotifyMail(new String[]{"toEmailAddress"}, "subject", "text");
     }
- */
+
 }
 
 //Generated with love by TestMe :) Please report issues and submit feature requests at: http://weirddev.com/forum#!/testme
