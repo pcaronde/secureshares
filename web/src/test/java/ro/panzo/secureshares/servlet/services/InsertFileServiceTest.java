@@ -1,12 +1,8 @@
 package ro.panzo.secureshares.servlet.services;
 
-import org.junit.Test;
 import org.junit.Assert;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.mockito.runners.MockitoJUnitRunner;
 //import sun.jvm.hotspot.utilities.Assert;
 
 public class InsertFileServiceTest {
@@ -25,7 +21,8 @@ public class InsertFileServiceTest {
 
     @Test
     public void testGetName() throws Exception {
-
+        //Assert.assertEquals(fileService.getName(),"File Name");
+        Assert.assertEquals(fileService.getName(),"Insert File");
     }
 
     @Test

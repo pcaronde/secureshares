@@ -1,16 +1,11 @@
 package ro.panzo.secureshares.pojo;
 
-import org.junit.Test;
 import org.junit.Assert;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.mockito.runners.MockitoJUnitRunner;
 //import sun.util.resources.cldr.cgg.CalendarData_cgg_UG;
 
 import java.util.Calendar;
-import java.util.Date;
 
 
 public class DownloadTest {

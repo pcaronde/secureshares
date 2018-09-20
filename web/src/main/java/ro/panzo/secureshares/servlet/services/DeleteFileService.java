@@ -7,11 +7,9 @@ import ro.panzo.secureshares.pojo.File;
 import ro.panzo.secureshares.pojo.User;
 import ro.panzo.secureshares.servlet.Service;
 import ro.panzo.secureshares.util.ServiceUtil;
-import ro.panzo.secureshares.util.Util;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.tools.JavaCompiler;
 import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
@@ -32,7 +30,7 @@ public class DeleteFileService implements Service {
                 if(f != null){
                     result = db.deleteFile(f.getId());
                     if(result){
-                        /*String path = Util.getInstance().getEnviromentValue("REPOSITORY");
+                        /**String path = Util.getInstance().getEnvironmentValue("REPOSITORY");
                         java.io.File ioFile = new java.io.File(path + "/" + f.getFilename());
                         if(ioFile.exists()){
                             ioFile.delete();

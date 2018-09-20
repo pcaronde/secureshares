@@ -29,11 +29,11 @@ public class AppletServlet extends HttpServlet {
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try{
-            String host = Util.getInstance().getEnviromentValue("SFTP_HOST");
-            int port = Integer.parseInt(Util.getInstance().getEnviromentValue("SFTP_PORT"));
-            String user = Util.getInstance().getEnviromentValue("SFTP_USER");
-            String password = Util.getInstance().getEnviromentValue("SFTP_PASSWORD");
-            String repository = Util.getInstance().getEnviromentValue("SFTP_REPOSITORY");
+            String host = Util.getInstance().getEnvironmentValue("SFTP_HOST");
+            int port = Integer.parseInt(Util.getInstance().getEnvironmentValue("SFTP_PORT"));
+            String user = Util.getInstance().getEnvironmentValue("SFTP_USER");
+            String password = Util.getInstance().getEnvironmentValue("SFTP_PASSWORD");
+            String repository = Util.getInstance().getEnvironmentValue("SFTP_REPOSITORY");
 
             BufferedReader br = new BufferedReader(new InputStreamReader(request.getInputStream()));
             String encPassword = br.readLine();

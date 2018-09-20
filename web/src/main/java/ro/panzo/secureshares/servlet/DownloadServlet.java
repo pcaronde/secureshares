@@ -8,14 +8,11 @@ import ro.panzo.secureshares.pojo.File;
 import ro.panzo.secureshares.servlet.Action;
 import ro.panzo.secureshares.util.EncryptionException;
 import ro.panzo.secureshares.util.EncryptionUtil;
-import ro.panzo.secureshares.util.Util;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.BufferedInputStream;
-import java.io.FileInputStream;
 import java.io.IOException;
 
 public class DownloadServlet extends HttpServlet {

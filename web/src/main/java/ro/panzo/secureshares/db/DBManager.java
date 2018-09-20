@@ -335,7 +335,7 @@ public class DBManager {
         long fileId = -1;
         Connection c = null;
         PreparedStatement ps = null;
-        ResultSet generatedKeys = null;
+        ResultSet generatedKeys; // = null;
         try{
             c = this.getConnection();
             ps = c.prepareStatement("insert into files values (null, (select u.id from users u where u.username = ?), ?, now(), ?)", PreparedStatement.RETURN_GENERATED_KEYS);

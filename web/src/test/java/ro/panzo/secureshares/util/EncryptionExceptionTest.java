@@ -7,8 +7,6 @@ import org.mockito.MockitoAnnotations;
 
 import java.util.List;
 
-import static org.mockito.Mockito.*;
-
 /**
  * Created by petercaron on 27.05.18.
  */

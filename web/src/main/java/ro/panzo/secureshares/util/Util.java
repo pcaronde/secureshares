@@ -20,7 +20,7 @@ public class Util {
     private Util() {
     }
 
-    public String getEnviromentValue(String env)
+    public String getEnvironmentValue(String env)
     {
         String rez = null;
         try {
@@ -37,11 +37,11 @@ public class Util {
         Thread t = new Thread(new Runnable() {
             @Override
             public void run() {
-                String mailServer = Util.getInstance().getEnviromentValue("OUTGOING_MAIL_SERVER");
-                String smtpPort = Util.getInstance().getEnviromentValue("OUTGOING_MAIL_PORT");
-                String mailBoxUser = Util.getInstance().getEnviromentValue("OUTGOING_MAIL_USER");
-                String mailBoxPassword = Util.getInstance().getEnviromentValue("OUTGOING_MAIL_PASSWORD");
-                String from = Util.getInstance().getEnviromentValue("OUTGOING_MAIL_FROM");
+                String mailServer = Util.getInstance().getEnvironmentValue("OUTGOING_MAIL_SERVER");
+                String smtpPort = Util.getInstance().getEnvironmentValue("OUTGOING_MAIL_PORT");
+                String mailBoxUser = Util.getInstance().getEnvironmentValue("OUTGOING_MAIL_USER");
+                String mailBoxPassword = Util.getInstance().getEnvironmentValue("OUTGOING_MAIL_PASSWORD");
+                String from = Util.getInstance().getEnvironmentValue("OUTGOING_MAIL_FROM");
                 Util.getInstance().sendMail(mailServer, smtpPort, mailBoxUser, mailBoxPassword, subject, from, toEmailAddress, text, "text/html; charset=utf-8");
             }
         });
